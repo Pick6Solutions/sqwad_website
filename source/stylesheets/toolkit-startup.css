@@ -180,6 +180,9 @@ body {
   .show_on_ipad{
     display: block;
   }
+  .remove_on_ipad{
+    display: none;
+  }
 }
 
 article,
