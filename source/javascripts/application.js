@@ -6,6 +6,8 @@ $(function () {
     
     event.preventDefault();
     
+    $('.se-pre-con').show();
+    
     var email = $('#email').val();
     
     var name = $('#name').val();
@@ -28,7 +30,7 @@ $(function () {
         
         success: function(data){
           
-          alert(data)
+           $('.se-pre-con').hide();
           
           $(this).closest('form').find("input[type=text], textarea, input[type=email]").val(null);
           
@@ -37,6 +39,8 @@ $(function () {
         },
         
         error: function(){
+          
+           $('.se-pre-con').hide();
                     
           $('#posting_error').show().delay(5000).fadeOut(1000)
           
@@ -45,6 +49,8 @@ $(function () {
       })
     
     } else {
+      
+      $('.se-pre-con').hide();
       
       $("#blank_error").show().delay(5000).fadeOut(1000)
       
