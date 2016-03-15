@@ -16,7 +16,7 @@ $(function () {
     
       $.ajax({
         
-        url: "https://sqwadpage-contact.herokuapp.com",
+        url: "https://pick6page-contact.herokuapp.com",
         
         type: "POST",
         
