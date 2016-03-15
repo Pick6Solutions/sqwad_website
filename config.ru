@@ -1,6 +1,5 @@
 require 'rubygems'
 require 'rack'
-require 'rack/contrib/try_static'
 
 # Serve files from the build directory
 use Rack::TryStatic,
