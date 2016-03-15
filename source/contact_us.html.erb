@@ -8,6 +8,8 @@
     <fieldset>
 
       <legend>Contact Us Today!</legend>
+      
+      <div class="vertical-spacer-lg"></div>
 
       <div class="form-group">
         
@@ -27,6 +29,8 @@
         
       </div>
       
+      <div class="vertical-spacer-lg"></div>
+      
       <div class="form-group">
         
         <label class="col-md-4 control-label">E-Mail</label>  
@@ -44,10 +48,12 @@
         </div>
       
       </div>
+      
+      <div class="vertical-spacer-lg"></div>
         
       <div class="form-group">
         
-        <label class="col-md-4 control-label">What You Want To Say</label>
+        <label class="col-md-4 control-label">About</label>
         
         <div class="col-md-4 inputGroupContainer">
           
@@ -69,21 +75,24 @@
       <div class="alert alert-warning" role="alert" style="display:none" id="blank_error">Oh No! One or more fields was left blank.  Fill in the fields and try again.</div>
       
       <div class="alert alert-danger" role="alert" style="display:none" id="posting_error">Oh No! There was a posting error!  Make sure all fields are filled in correctly and try again.</div>
-
-      <!-- Button -->
+      
+      <div class="vertical-spacer-lg"></div>
+      
       <div class="form-group">
         
         <label class="col-md-4 control-label"></label>
         
         <div class="col-md-4">
           
-          <button type="submit" class="btn btn-success">GO!<span class="glyphicon glyphicon-send"></span></button>
+          <button type="submit" class="btn btn-danger">SEND<span class="glyphicon glyphicon-send"></span></button>
           
-          <button class="btn btn-default"><%= link_to 'Back', 'index.html'%></button>
+          <button class="btn btn-default"><%= link_to 'Back', 'index.html', :style => 'color:black'%></button>
           
         </div>
         
       </div>
+      
+      <div class="vertical-spacer-lg"></div>
 
     </fieldset>
       

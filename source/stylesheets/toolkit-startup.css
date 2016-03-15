@@ -1,6 +1,5 @@
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
-  font-family: sans-serif;
   background: url(../images/background.png) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -9,7 +8,7 @@ html {
 }
 body {
   text-align: center;
-  font-family: sans-serif;
+  font-family: Dense;
   margin: 0;
 }
 .vertical-spacer{
@@ -49,20 +48,40 @@ body {
   position: absolute;
     content:'';
     width: 5px;
-    height: 55%;
+    height: 35%;
     top: 70px;
     left: -5px;
-    background-color: rgb(255,0,51);
+    background-color: white;
 }
 
 #left-line:after{
     position: absolute;
     content:'';
-    width: 40%;
+    width: 20%;
     height: 5px;
     left: -5px;
     top: 70px;
-    background-color: rgb(255,0,51);
+    background-color: white;
+}
+
+#add_bracket:before {
+  position: absolute;
+    content:'';
+    width: 5px;
+    height: 55%;
+    top: -20px;
+    left: 5px;
+    background-color: white;
+}
+
+#add_bracket:after{
+    position: absolute;
+    content:'';
+    width: 40%;
+    height: 5px;
+    left: 5px;
+    top: -20px;
+    background-color: white;
 }
 
 
@@ -427,7 +446,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Work sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Ironstrike-Black";
   font-weight: 500;
   line-height: 1.2;
   color: #2d3238;
@@ -6159,6 +6178,18 @@ body {
   font-family: "toolkit-entypo";
   src: url('../fonts/toolkit-entypo.eot');
   src: url('../fonts/toolkit-entypo.eot?#iefix') format('eot'), url('../fonts/toolkit-entypo.woff2') format('woff2'), url('../fonts/toolkit-entypo.woff') format('woff'), url('../fonts/toolkit-entypo.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face{
+  font-family: "Ironstrike-Black";
+  src: url('../fonts/Ironstrike_Black.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face{
+  font-family: "Dense";
+  src: url('../fonts/Dense-Regular.otf');
   font-weight: normal;
   font-style: normal;
 }
