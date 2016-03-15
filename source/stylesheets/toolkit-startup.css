@@ -103,6 +103,10 @@ body {
   display: none;
 }
 
+.show_on_ipad{
+  display: none;
+}
+
 @media screen and (max-width: 600px) {
   #add_bracket:before {
     display:none;
@@ -169,6 +173,12 @@ body {
 
   #left-line:after{
     display: none;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .show_on_ipad{
+    display: block;
   }
 }
 
