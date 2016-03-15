@@ -92,6 +92,18 @@ body {
   text-overflow: ellipsis;
 }
 
+@media screen and (max-width: 600px) {
+  #title_message {
+    display:none;
+  }
+  #mobile_enter {
+    width:auto;
+  }
+  .change_size{
+    padding: 5px;
+  }
+}
+
 article,
 aside,
 details,
