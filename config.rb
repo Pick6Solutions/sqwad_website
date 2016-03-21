@@ -23,6 +23,18 @@
 # with_layout :admin do
 #   page "/admin/*"
 # end
+# nameArray = ["nick_lawson", "manuel_pineryo", "lee_jorgensen"]
+
+ready do
+  data['influencers']['people'].each do |person|
+    name = person.name.downcase.tr!(" ", "_") || person.name.downcase
+    proxy "/#{name}.html", "/template.html", :locals => { :person_name => name }, :ignore => true
+  end
+end 
+
+# nameArray.each do |name|
+#   proxy "/#{name}.html", "/template.html", :locals => { :person_name => name }, :ignore => true
+# end
 
 # Proxy pages (https://middlemanapp.com/advanced/dynamic_pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {

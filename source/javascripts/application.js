@@ -58,7 +58,25 @@ $(function () {
     
   })
 
-  // doc nav js
+  function capitalizeFirstLetter(string) {
+      return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
+  
+  var url = window.location.toString();
+  var n = url.lastIndexOf('/');
+  var dirtyResult = url.substring(n + 1);
+  var noSpaceResult = dirtyResult.substring(0, dirtyResult.lastIndexOf('.'))
+  var lowerCaseResult = noSpaceResult.replace("_", " ") || noSpaceResult
+  var splitLowerCaseResult = lowerCaseResult.split(" ") || lowerCaseResult
+  var resultArray = [];
+  for(var i = 0; i < splitLowerCaseResult.length; i++){
+   resultArray.push(capitalizeFirstLetter(splitLowerCaseResult[i]))
+  }
+  var result = resultArray.join(" ")
+  document.getElementById("nameVariable").innerHTML = result
+  
+
   var $toc    = $('#markdown-toc')
   var $window = $(window)
 

@@ -1,0 +1,16 @@
+{
+	"people":[
+		{
+		"name": "Lee Jorgensen",
+		"image": "griner.png"
+		},
+		{
+		"name": "Nick Lawson",
+		"image": "loyd.png"
+		},
+		{
+		"name": "Manuel Pineryo",
+		"image": "moore.png"
+		}
+	]
+}
