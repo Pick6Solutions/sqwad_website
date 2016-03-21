@@ -25,12 +25,14 @@
 # end
 # nameArray = ["nick_lawson", "manuel_pineryo", "lee_jorgensen"]
 
-ready do
-  data['influencers']['people'].each do |person|
-    name = person.name.downcase.tr!(" ", "_") || person.name.downcase
-    proxy "/#{name}.html", "/template.html", :locals => { :person_name => name }, :ignore => true
-  end
-end 
+  
+data['influencers']['people'].each do |person|
+  
+  name = person.name.downcase.tr!(" ", "_") || person.name.downcase
+  
+  proxy "/#{name}.html", "/template.html", :locals => { :person_name => name }, :ignore => true
+  
+end
 
 # nameArray.each do |name|
 #   proxy "/#{name}.html", "/template.html", :locals => { :person_name => name }, :ignore => true
