@@ -63,18 +63,41 @@ $(function () {
   }
 
   
-  var url = window.location.toString();
-  var n = url.lastIndexOf('/');
-  var dirtyResult = url.substring(n + 1);
-  var noSpaceResult = dirtyResult.substring(0, dirtyResult.lastIndexOf('.'))
-  var lowerCaseResult = noSpaceResult.replace("_", " ") || noSpaceResult
-  var splitLowerCaseResult = lowerCaseResult.split(" ") || lowerCaseResult
-  var resultArray = [];
-  for(var i = 0; i < splitLowerCaseResult.length; i++){
-   resultArray.push(capitalizeFirstLetter(splitLowerCaseResult[i]))
-  }
-  var result = resultArray.join(" ")
-  document.getElementById("nameVariable").innerHTML = result
+  // var url = window.location.toString();
+  // var n = url.lastIndexOf('/');
+  // var dirtyResult = url.substring(n + 1);
+  // var noSpaceResult = dirtyResult.substring(0, dirtyResult.lastIndexOf('.'))
+  // var lowerCaseResult = noSpaceResult.replace("_", " ") || noSpaceResult
+  // var splitLowerCaseResult = lowerCaseResult.split(" ") || lowerCaseResult
+  // var resultArray = [];
+  // for(var i = 0; i < splitLowerCaseResult.length; i++){
+  //  resultArray.push(capitalizeFirstLetter(splitLowerCaseResult[i]))
+  // }
+  // var result = resultArray.join(" ")
+  // document.getElementById("nameVariable").innerHTML = result
+  
+  var query_string = {};
+  var query = window.location.search.substring(1);
+  if(query){
+    var vars = query.split("&");
+    for (var i=0;i<vars.length;i++) {
+      var pair = vars[i].split("=");
+         // If first entry with this name
+       if (typeof query_string[pair[0]] === "undefined") {
+         query_string[pair[0]] = decodeURIComponent(pair[1]);
+    //       // If second entry with this name
+       } else if (typeof query_string[pair[0]] === "string") {
+         var arr = [ query_string[pair[0]],decodeURIComponent(pair[1]) ];
+         query_string[pair[0]] = arr;
+    //       // If third or later entry with this name
+       } else {
+         query_string[pair[0]].push(decodeURIComponent(pair[1]));
+       }
+     } 
+     document.getElementById("nameInfluencer").innerHTML = query_string.name
+     document.getElementById("influencerImage").src = query_string.image
+   }
+   
   
 
   var $toc    = $('#markdown-toc')
