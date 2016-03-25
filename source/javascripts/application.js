@@ -76,12 +76,39 @@ $(function () {
   // var result = resultArray.join(" ")
   // document.getElementById("nameVariable").innerHTML = result
   
+  function findListStyles(list) {
+    $('.hideIcons').hide();
+    switch(list){
+      case "startuppdx":
+       document.body.style.backgroundImage = "url('/images/pdxsportsbg.png')"
+       document.getElementById("influencerCopy").innerHTML = "we recognize game when we see it.  You are a catalyst for the Portland Startup Community.  We would like to invite you to be an influencer on Portlands next big sports platform.  Give us a shout on Twitter to confirm you've got our back and we will shoot you updates on our product launch"
+       document.getElementById("two-left-line").innerHTML = "Rip City Startup<br>Specialists"
+       // document.body.style.backgroundImage = "url('/images/loyd.png')"
+        break;
+      case "sportspdx":
+        document.body.style.backgroundImage = "url('/images/pdxsportsbg.png')"
+        document.getElementById("influencerCopy").innerHTML = "we recognize game when we see it.  You are a catalyst for the Portland Startup Community.  We would like to invite you to be an influencer on Portlands next big sports platform.  Give us a shout on Twitter to confirm you've got our back and we will shoot you updates on our product launch"
+        document.getElementById("two-left-line").innerHTML = "Sports PDX<br>Is the Best"
+        break;
+      case "pitchfestnw":
+        console.log("fuckit")
+        break;
+      default:
+        console.log("No Styles Found")
+    }
+  }
+  
+  
   var query_string = {};
   var query = window.location.search.substring(1);
   if(query){
     var vars = query.split("&");
     for (var i=0;i<vars.length;i++) {
       var pair = vars[i].split("=");
+      if(pair[0] == "list"){
+        findListStyles(pair[1])
+      }
+      
          // If first entry with this name
        if (typeof query_string[pair[0]] === "undefined") {
          query_string[pair[0]] = decodeURIComponent(pair[1]);
