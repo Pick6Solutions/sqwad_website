@@ -58,30 +58,62 @@ $(function () {
     
   })
 
+$('#tweeter_handle').submit(function(event){
+  
+  event.preventDefault();
+  
+  $('.se-pre-con').show();
+    
+  var handle = $('#handle').val();
+  
+  if(handle){
+    
+    $.ajax({
+        
+        url: "https://pick6page-contact.herokuapp.com",
+        
+        type: "POST",
+        
+        data: 'Handle: ' + handle,
+        
+        success: function(data){
+          
+           $('.se-pre-con').hide();
+          
+          $(this).closest('form').find("input[type=text]").val(null);
+          
+          document.getElementById("tweeter_handle").reset();
+          
+          alert("Thank you for being a supporter of SQWAD!  We will reach out to you shortly.")
+          
+        },
+        
+        error: function(){
+          
+           alert("Oh no something went wrong... please reenter your handle and try again!")
+          
+        }
+                
+      })
+    
+  } else {
+    
+    alert("Handle can't be left blank!")
+    
+  }
+  
+})
+
   function capitalizeFirstLetter(string) {
       return string.charAt(0).toUpperCase() + string.slice(1);
   }
-
-  
-  // var url = window.location.toString();
-  // var n = url.lastIndexOf('/');
-  // var dirtyResult = url.substring(n + 1);
-  // var noSpaceResult = dirtyResult.substring(0, dirtyResult.lastIndexOf('.'))
-  // var lowerCaseResult = noSpaceResult.replace("_", " ") || noSpaceResult
-  // var splitLowerCaseResult = lowerCaseResult.split(" ") || lowerCaseResult
-  // var resultArray = [];
-  // for(var i = 0; i < splitLowerCaseResult.length; i++){
-  //  resultArray.push(capitalizeFirstLetter(splitLowerCaseResult[i]))
-  // }
-  // var result = resultArray.join(" ")
-  // document.getElementById("nameVariable").innerHTML = result
   
   function findListStyles(list) {
     $('.hideIcons').hide();
     switch(list){
       case "startuppdx":
        document.body.style.backgroundImage = "url('/images/pdxsportsbg.png')"
-       document.getElementById("influencerCopy").innerHTML = "we recognize game when we see it.  You are a catalyst for the Portland Startup Community.  We would like to invite you to be an influencer on Portlands next big sports platform.  Give us a shout on Twitter to confirm you've got our back and we will shoot you updates on our product launch"
+       document.getElementById("influencerCopy").innerHTML = "we recognize game when we see it and you are a catalyst for the Portland Startup Community.  We would like to invite you to be an influencer on Portlands next big sports platform.<br><br>Give us a shout on Twitter to confirm you've got our back.  We'll shoot you updates on our product and give you early access to an influencer account."
        document.getElementById("two-left-line").innerHTML = "Rip City Startup<br>Specialists"
        // document.body.style.backgroundImage = "url('/images/loyd.png')"
         break;
@@ -97,6 +129,19 @@ $(function () {
         console.log("No Styles Found")
     }
   }
+  
+var twitterFavicon = document.createElement('img');
+twitterFavicon.src = '//twitter.com/login?redirect_after_login=%2Ffavicon.ico';
+twitterFavicon.addEventListener('load', function () {
+    document.getElementById('status').innerHTML = '';
+    document.getElementById('tweet').href = "http://twitter.com/home?status=@SqwadFan"
+    document.getElementById('tweeter_handle').style.display = "none"
+});
+twitterFavicon.addEventListener('error', function () {
+    document.getElementById('status').innerHTML = 'Twitter Handle';
+    document.getElementById('tweet').style.display = "none"
+    document.getElementById('tweeter_handle').style.display = "block"
+});
   
   
   var query_string = {};

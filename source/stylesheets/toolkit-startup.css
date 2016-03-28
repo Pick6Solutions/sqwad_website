@@ -14,6 +14,19 @@ body {
   height:10px;
 }
 
+#status{
+  color:white;
+}
+
+.copy-font{
+  color:white;
+  font-family: Dense;
+}
+
+  .show_on_phone {
+    display: none;
+  }
+
 .no-js #loader { display: none;  }
 .js #loader { display: block; position: absolute; left: 0; top: 0; }
 .se-pre-con {
@@ -31,8 +44,18 @@ body {
   height:40px;
 }
 
+.shrink_text{
+  margin-left: 5px;
+  width:80%;
+}
+
+.real_shrink_text{
+  margin-left: 5px;
+  width:80%;
+}
+
 #influencerImage{
-  float:right;
+  float:middle;
   width:130px;
   height:auto;
 }
@@ -155,9 +178,31 @@ body {
   display: none;
 }
 
+.shrink_text{
+  text-align: left;
+}
+
+#twitter_stuff{
+  text-align: left;
+}
+
 @media screen and (max-width: 600px) {
   #add_bracket:before {
     display:none;
+  }
+  
+  #twitter_stuff{
+  text-align: center;
+}
+  
+ .show_on_phone{
+   display:block; 
+ }
+  
+  .shrink_text{
+    width:100%;
+    margin-left: 0;
+    text-align: center;
   }
   
   #phoneImage{
@@ -183,8 +228,9 @@ body {
   }
   
   #makeFullWidth{
+    text-align: center;
     width:100%;
-    padding-right: 0;
+    padding-right: 10px;
   }
   
   #top_image{
@@ -197,6 +243,11 @@ body {
   
   .shrink_text{
     font-size: 20px;
+  }
+  
+   .real_shrink_text{
+    font-size: 20px;
+    text-align: center;
   }
   
   .shrink_big_text{
@@ -266,6 +317,9 @@ body {
   #two-left-line:after{
     display: none;
   }
+  .show_on_ipad{
+    display: none;
+  }
 }
 
 @media screen and (max-width: 769px) {
@@ -276,9 +330,28 @@ body {
     left: 0;
     right: 0;
   }
+  
+  .input-group{
+    margin-right: auto;
+    margin-left: auto;
+  }
   .show_on_ipad{
     display: block;
   }
+  
+    #twitter_stuff{
+  text-align: center;
+}
+  
+  .shrink_text{
+    width:100%;
+    text-align: center;
+  }
+  
+  .real_shrink_text{
+    width:100%;
+  }
+  
   .remove_on_ipad{
     display: none;
   }
@@ -295,10 +368,18 @@ body {
   font-size:40px;
   text-align: center;
   }
+  
+  #two-left-line:before {
+    display:none;
+  }
+
+  #two-left-line:after{
+    display: none;
+  }
   #two-outer { 
   float: none;
   font-size: 35px;
-}
+  }
 }
 
 @media screen and (max-width: 993px){

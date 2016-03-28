@@ -1,3 +1,5 @@
+<div class="se-pre-con" id="loader" style="display:none"></div>
+
 <nav class="navbar navbar-default" style="margin-bottom:0">
   
   <div class="container-fluid">
@@ -14,7 +16,9 @@
 
 <div class="container-fluid">
 	
-	<div class="vertical-spacer-lg"></div>
+	<div class="vertical-spacer-lg "></div>
+	
+	<div class="vertical-spacer show_on_phone"></div>
 		
 	<div class="col-md-4 col-md-offset-1 col-sm-4" id="hidden">
 			
@@ -24,7 +28,7 @@
 	
 	<div class="row">
 		
-		<div class="col-md-7 col-sm-10 col-xs-12 col-md-offset-1 col-sm-offset-1 col-xs-offset-0" id="makeFullWidth">
+		<div class="col-md-6 col-sm-10 col-xs-12 col-md-offset-1 col-sm-offset-1 col-xs-offset-0" id="makeFullWidth">
 					
 			<div id="two-outer">
 						
@@ -33,18 +37,16 @@
 			</div>
 						
  			<!-- <div class="vertical-spacer-lg remove_on_phone"></div> -->
- 			<div class="vertical-spacer remove_on_phone"></div>
- 			<div class="vertical-spacer remove_on_phone"></div>
+ 			<div class="vertical-spacer remove_on_ipad"></div>
+ 			<div class="vertical-spacer remove_on_ipad"></div>
 	
 			<img src="" alt="" id="influencerImage">
-			
-			<div class="vertical-spacer-lg remove_on_ipad"></div>
-			
-			<div class ="vertical-spacer"></div>
-			
-			<hr style="width:120%; margin-top:0" class="remove_on_ipad">
+						
+			<div class="vertical-spacer"></div>
+									
+			<hr style="width:130%; margin-top:0" class="remove_on_ipad">
  			
-			<h2 style="color:white; margin-left:5px; font-family:Dense; margin-top:0" class="change_size shrink_text" align="left"> 
+			<h2 style="color:white; font-family:Dense; margin-top:0" class="change_size shrink_text"> 
 				
 				<span id="nameInfluencer"></span>,
 				
@@ -52,11 +54,45 @@
 				
 			</h2>
 			
+			<div id="twitter_stuff">
+							
+				<h2 id="status" style="color:white; font-family:Dense" target="_blank" class="shrink_text"></h2>
+								
+				<a href="" class="btn btn-primary" id="tweet" target="_blank" >Tweet</a>
+				
+				<form class="form-horizontal" method="post" id="tweeter_handle">
+					
+					<fieldset>
+						
+						<div class="form-group">
+			        
+			        <div class="col-md-4 inputGroupContainer">
+			          
+			          <div class="input-group">
+			          			        
+			            <input style="border-radius:5px 5px 5px 5px" type="text" name="handle" value="@" placholder="Twitter Handle" class="form-control" id="handle">
+			            
+			            <button type="submit" class="btn btn-success">SEND</button>
+        
+			          </div>
+			          
+			        </div>
+			        
+			      </div>
+						
+					</fieldset>
+					
+				</form>
+			
+			</div>
+			
+				<div class="vertical-spacer show_on_ipad"></div>
+			
 		</div>
-		
+				
 		<div class"vertical-spacer"></div>
 		
-		<div class="col-md-4 col-sm-12 col-xs-12 remove_on_phone"  id="phoneImage">
+		<div class="col-md-4 col-sm-12 col-xs-12 col-md-push-1 remove_on_phone"  id="phoneImage">
 			
 			<img src="images/phone.png" width="300px" height="auto">
 			
