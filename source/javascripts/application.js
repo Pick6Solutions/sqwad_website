@@ -145,7 +145,6 @@ twitterFavicon.addEventListener('error', function () {
     document.getElementById('tweeter_handle').style.display = "block"
 });
   
-  
   var query_string = {};
   var query = window.location.search.substring(1);
   if(query){
