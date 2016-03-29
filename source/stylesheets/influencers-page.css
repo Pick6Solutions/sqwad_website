@@ -1,0 +1,19 @@
+#long_hr{
+	width:140%; 
+	margin-top:0
+}
+
+#influencerText{
+	color:white; 
+	font-family:Dense; 
+	margin-top:0
+}
+
+#status{
+  color:white;
+  font-family: Dense;
+}
+
+.roundAllEdges{
+	border-radius:5px 5px 5px 5px;
+}

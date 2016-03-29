@@ -14,10 +14,6 @@ body {
   height:10px;
 }
 
-#status{
-  color:white;
-}
-
 .copy-font{
   color:white;
   font-family: Dense;
@@ -60,8 +56,13 @@ body {
   height:auto;
 }
 
+.circular-image{
+  border-radius: 160px;
+  border: 1px solid white;
+}
+
 #phoneImage{
-  float: center;
+  float:left;
   top: -90px;
   margin: 0px;
   padding:0px;
@@ -93,6 +94,8 @@ body {
 }
 
 #left-line{
+  color:white;
+  margin:0;
   font-size:70px
 }
 
