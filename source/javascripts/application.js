@@ -136,7 +136,7 @@ var twitterFavicon = document.createElement('img');
 twitterFavicon.src = '//twitter.com/login?redirect_after_login=%2Ffavicon.ico';
 twitterFavicon.addEventListener('load', function () {
     document.getElementById('status').innerHTML = '';
-    document.getElementById('tweet').href = "http://twitter.com/home?status=@SqwadFan #sqwadInfluencer"
+    document.getElementById('tweet').href = "http://twitter.com/home?status=@SqwadFan %23SqwadInfluencer"
     document.getElementById('tweeter_handle').style.display = "none"
 });
 twitterFavicon.addEventListener('error', function () {
