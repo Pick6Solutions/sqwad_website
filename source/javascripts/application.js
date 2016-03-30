@@ -2,6 +2,8 @@
 // back to top button - docs
 $(function () {
   
+  // jQuery("#left-line").fitText();
+  
   $('#contact_form').submit(function(event){
     
     event.preventDefault();

@@ -80,7 +80,7 @@ body {
 }
 
 #outer { 
-  width: 200px; padding-top: 0;
+  padding-top: 0;
   margin-right: 55px;
 }
 
@@ -99,7 +99,10 @@ body {
 #left-line{
   color:white;
   margin:0;
-  font-size:70px
+  font-family: 'Oswald', sans-serif !important; 
+  font-size: 55px;
+  font-weight: 700;
+  text-align: left;
 }
 
 #two-left-line{
@@ -221,9 +224,9 @@ body {
   }
   
   #influencerCopy{
-  color:white;
-  text-align:center;
-} 
+    color:white;
+    text-align:center;
+  } 
 
 #influencerImage{
   float:none;
@@ -291,6 +294,7 @@ body {
   .change_size{
     padding: 5px;
     color:white;
+    text-align: center;
   }
   
   .two_change_size{
@@ -348,6 +352,10 @@ body {
     #twitter_stuff{
   text-align: center;
 }
+
+.change_size{
+  text-align: left;
+}
   
   .shrink_text{
     width:100%;
@@ -382,9 +390,21 @@ body {
   #two-left-line:after{
     display: none;
   }
+  
+  #left-line:before {
+    display:none;
+  }
+
+  #left-line:after{
+    display: none;
+  }
+  
   #two-outer { 
   float: none;
   font-size: 35px;
+  }
+    #outer { 
+    margin: 0;
   }
 }
 
