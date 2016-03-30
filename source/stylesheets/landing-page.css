@@ -1,5 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700);
+
+body {
+	font-family: 'Oswald', sans-serif;
+	font-weight: 400;
+}
+
 .white_color{
 	color:white;
+	font-family: 'Oswald', sans-serif !important;
+    font-weight: 700;
 }
 
 #first_hr{
@@ -10,7 +19,8 @@
 #first_h2{
 	color: white;
 	margin-left: 5px;
-	font-family: Dense;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 300;
 }
 
 #second_hr{
@@ -24,12 +34,16 @@
 	color:white;
 	margin-bottom: 0;
 	margin-top: 0;
+	font-family: 'Oswald', sans-serif !important;
+    font-weight: 400;
 }
 
 #second_h2{
 	color:white; 
-	font-family:Dense; 
+	font-family: 'Oswald', sans-serif !important;
+    font-weight: 300;
 	margin-top:0;
+	font-size: 20px !important;
 }
 
 #sqwadUpButton{
@@ -45,24 +59,26 @@
 
 #second_title{
 	color:white;
-	background-color: red;
+	background-color: #FA023C;
 	padding-left:10px;
-	padding-right:10px
+	padding-right:10px;
+	font-family: 'Oswald', sans-serif !important;
+    font-weight: 700;
 }
 
 #bottomhr{
-	border-top:1px solid rgb(255,0,51);
+	border-top:1px solid #FA023C;
 	margin-top:5px
 }
 
 #middlehr{
-	border-top:1px solid rgb(255,0,51);
+	border-top:1px solid #FA023C;
 	margin-bottom:0px;
 	margin-top:0px
 }
 
 #tophr{
-	bborder-top:1px solid rgb(255,0,51);
+	bborder-top:1px solid #FA023C;
 	margin-bottom:5px
 }
 
