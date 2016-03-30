@@ -133,7 +133,8 @@ $('#tweeter_handle').submit(function(event){
   }
   
 var twitterFavicon = document.createElement('img');
-twitterFavicon.src = '//twitter.com/login?redirect_after_login=%2Ffavicon.ico';
+// twitterFavicon.src = '//twitter.com/login?redirect_after_login=%2Ffavicon.ico';
+twitterFavicon.src = "twitter:///post?message=@SqwadFan %23sqwadInfluencer"
 twitterFavicon.addEventListener('load', function () {
     document.getElementById('status').innerHTML = '';
     document.getElementById('tweet').href = "http://twitter.com/home?status=@SqwadFan %23SqwadInfluencer"
