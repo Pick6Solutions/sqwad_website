@@ -11,6 +11,7 @@ body {
   font-family: 'Oswald', sans-serif !important;
   font-weight: 400;
   margin: 0;
+  padding-right: 0 !important;
 }
 .vertical-spacer{
   width:2px;
@@ -330,6 +331,9 @@ body {
   .show_on_ipad{
     display: none;
   }
+  #mobile_twitter{
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 769px) {
@@ -406,6 +410,9 @@ body {
     #outer { 
     margin: 0;
   }
+  #mobile_twitter{
+      text-align: center;
+    }
 }
 
 @media screen and (max-width: 993px){

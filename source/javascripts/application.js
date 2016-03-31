@@ -9,7 +9,7 @@ $(function () {
     event.preventDefault();
     
     $('.se-pre-con').show();
-    
+      
     var email = $('#email').val();
     
     var name = $('#name').val();
@@ -32,17 +32,27 @@ $(function () {
         
         success: function(data){
           
-           $('.se-pre-con').hide();
+          $('.se-pre-con').hide();
           
-          $(this).closest('form').find("input[type=text], textarea, input[type=email]").val(null);
+          $('#name').val(null);
+          
+          $('#email').val(null);
+          
+          $('#comment').val(null);
           
           $("#success_message").show().delay(1000).fadeOut(1000)
+          
+          $('#success').modal('show').delay(1000).fadeOut(1000);
+           
+          $("#success").delay(0).queue(function(){ $(this).modal('hide').dequeue(); });
+          
+          $('#myModal').delay(1200).queue(function(){ $(this).modal('hide').dequeue(); });
           
         },
         
         error: function(){
           
-           $('.se-pre-con').hide();
+          $('.se-pre-con').hide();
                     
           $('#posting_error').show().delay(5000).fadeOut(1000)
           
@@ -115,7 +125,7 @@ $('#tweeter_handle').submit(function(event){
     switch(list){
       case "startuppdx":
        document.body.style.backgroundImage = "url('/images/pdxsportsbg.png')"
-       document.getElementById("influencerCopy").innerHTML = "we recognize game when we see it and you are a catalyst for the Portland Startup Community.  We would like to invite you to be an influencer on Portlands next big sports platform.<br><br>Give us a shout on Twitter to confirm you've got our back.  We'll shoot you updates on our product and give you early access to an influencer account."
+       document.getElementById("influencerCopy").innerHTML = "we recognize game when we see it and you are a catalyst for the Portland Startup Community.  We would like to invite you to be an influencer on Portlands next big sports platform.<br><br>SQWAD is a platform that allows fans to challenge athletes and friends to real time fantasy for bragging rights and rewards using our blockchain points system.<br><br>Give us a shout on Twitter to confirm you've got our back.  We'll shoot you updates on our product and give you early access to an influencer account."
        document.getElementById("two-left-line").innerHTML = "Rip City Startup<br>Specialist"
         break;
       case "pitchfestnw":
@@ -125,7 +135,7 @@ $('#tweeter_handle').submit(function(event){
         break;
       case "sportspdx":
         document.body.style.backgroundImage = "url('/images/pdxsportsbg.png')"
-        document.getElementById("influencerCopy").innerHTML = "we recognize game when we see it.  You are a driver in the Portland Sports industry.  We would like to invite you to be an influencer on Portlands next big sports platform.<br><br>Give us a shout on Twitter to confirm you've got our back and we will shoot you updates on our product launch"
+        document.getElementById("influencerCopy").innerHTML = "we recognize game when we see it.  You are a driver in the Portland Sports industry.  We would like to invite you to be an influencer on Portlands next big sports platform.<br><br>SQWAD is a platform that allows fans to challenge athletes and friends to real time fantasy for bragging rights and rewards using our blockchain points system<br><br>Give us a shout on Twitter to confirm you've got our back and we will shoot you updates on our product launch"
         document.getElementById("two-left-line").innerHTML = "Rip City's<br>Sports Pro"
         break;
       default:
@@ -135,12 +145,13 @@ $('#tweeter_handle').submit(function(event){
   }
   
 var twitterFavicon = document.createElement('img');
-// twitterFavicon.src = '//twitter.com/login?redirect_after_login=%2Ffavicon.ico';
-twitterFavicon.src = "twitter:///post?message=@SqwadFan %23sqwadInfluencer"
+twitterFavicon.src = '//twitter.com/login?redirect_after_login=%2Ffavicon.ico';
+// twitterFavicon.src = "twitter:///post?message=@SqwadFan %23sqwadInfluencer"
 twitterFavicon.addEventListener('load', function () {
     document.getElementById('status').innerHTML = '';
     document.getElementById('tweet').href = "http://twitter.com/home?status=@SqwadFan %23SqwadInfluencer"
     document.getElementById('tweeter_handle').style.display = "none"
+    document.getElementById('mobile_twitter').style.display = "none"
 });
 twitterFavicon.addEventListener('error', function () {
     document.getElementById('status').innerHTML = 'Twitter Handle';
