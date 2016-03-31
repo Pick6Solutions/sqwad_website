@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700);
+
 #long_hr{
 	width:140%; 
 	margin-top:0
@@ -5,14 +7,14 @@
 
 #influencerText{
 	color:white; 
-	font-family:Dense; 
+	font-family:'Oswald', sans-serif !important; 
+	font-weight: 300;
 	margin-top:0;
 	width:100%;
 }
 
 #status{
   color:white;
-  font-family: Dense;
 }
 
 .roundAllEdges{

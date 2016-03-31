@@ -108,7 +108,9 @@ body {
 
 #two-left-line{
   color:white;
-  font-size:50px;
+  font-family: 'Oswald', sans-serif !important; 
+  font-weight: 700;
+  font-size:55px;
   text-align: left;
 }
 
