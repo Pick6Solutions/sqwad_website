@@ -125,28 +125,27 @@ $('#tweeter_handle').submit(function(event){
     switch(list){
       case "startuppdx":
        document.body.style.backgroundImage = "url('/images/pdxsportsbg.png')"
-       document.getElementById("influencerCopy").innerHTML = "we recognize game when we see it and you are a catalyst for the Portland Startup Community.  We would like to invite you to be an influencer on Portlands next big sports platform.<br><br>SQWAD is a platform that allows fans to challenge athletes and friends to real time fantasy for bragging rights and rewards using our blockchain points system.<br><br>Give us a shout on Twitter to confirm you've got our back.  We'll shoot you updates on our product and give you early access to an influencer account."
+       document.getElementById("influencerCopy").innerHTML = "we recognize game when we see it and you are a catalyst for the Portland Startup Community.  We would like to invite you to be an influencer on Portlands next big sports platform.<br><br>SQWAD is a real-time fantasy platform that allows fans to challenge pro athletes and friends powered by our blockchain points system.  With our player market feature fans will be able to buy and sell players simulating real sports free agency.<br><br>Give us a shout on Twitter to confirm you've got our back.  We'll shoot you updates on our product and give you early access to an influencer account."
        document.getElementById("two-left-line").innerHTML = "Rip City Startup<br>Specialist"
         break;
       case "pitchfestnw":
         document.body.style.backgroundImage = "url('/images/pdxsportsbg.png')"
-        document.getElementById("influencerCopy").innerHTML = "we recognize game when we see it.  You are a catalyst in the NW Tech Community.  We would like to invite you to be an influencer on Portlands next big sports platform.<br><br>Give us a shout on Twitter to confirm you've got our back and we will shoot you updates on our product launch"
+        document.getElementById("influencerCopy").innerHTML = "we recognize game when we see it.  You are a catalyst in the NW Tech Community.  We would like to invite you to be an influencer on Portlands next big sports platform.<br><br>SQWAD is a real-time fantasy platform that allows fans to challenge pro athletes and friends powered by our blockchain points system.  With our player market feature fans will be able to buy and sell players simulating real sports free agency.<br><br>Give us a shout on Twitter to confirm you've got our back.  We'll shoot you updates on our product and give you early access to an influencer account."
         document.getElementById("two-left-line").innerHTML = "NW Tech<br>All-Star"
         break;
       case "sportspdx":
         document.body.style.backgroundImage = "url('/images/pdxsportsbg.png')"
-        document.getElementById("influencerCopy").innerHTML = "we recognize game when we see it.  You are a driver in the Portland Sports industry.  We would like to invite you to be an influencer on Portlands next big sports platform.<br><br>SQWAD is a platform that allows fans to challenge athletes and friends to real time fantasy for bragging rights and rewards using our blockchain points system<br><br>Give us a shout on Twitter to confirm you've got our back and we will shoot you updates on our product launch"
+        document.getElementById("influencerCopy").innerHTML = "we recognize game when we see it.  You are a driver in the Portland Sports industry.  We would like to invite you to be an influencer on Portlands next big sports platform.<br><br>SQWAD is a real-time fantasy platform that allows fans to challenge pro athletes and friends powered by our blockchain points system.  With our player market feature fans will be able to buy and sell players simulating real sports free agency.<br><br>Give us a shout on Twitter to confirm you've got our back.  We'll shoot you updates on our product and give you early access to an influencer account."
         document.getElementById("two-left-line").innerHTML = "Rip City's<br>Sports Pro"
         break;
       default:
-        document.getElementById("influencerCopy").innerHTML = "SQWAD is a real-time fantasy platform that allows fans to challenge pro-athletes and friends.<br>Give us a shout on Twitter to confirm you've got our back and we will shoot you updates on our product launch"
+        document.getElementById("influencerCopy").innerHTML = "SQWAD is a real-time fantasy platform that allows fans to challenge pro athletes and friends powered by our blockchain points system.  With our player market feature fans will be able to buy and sell players simulating real sports free agency.<br><br>Give us a shout on Twitter to confirm you've got our back.  We'll shoot you updates on our product and give you early access to an influencer account."
         document.getElementById("two-left-line").innerHTML = "THE BEST<br>PLAY LIVE"
     }
   }
   
 var twitterFavicon = document.createElement('img');
 twitterFavicon.src = '//twitter.com/login?redirect_after_login=%2Ffavicon.ico';
-// twitterFavicon.src = "twitter:///post?message=@SqwadFan %23sqwadInfluencer"
 twitterFavicon.addEventListener('load', function () {
     document.getElementById('status').innerHTML = '';
     document.getElementById('tweet').href = "http://twitter.com/home?status=@SqwadFan %23SqwadInfluencer"
