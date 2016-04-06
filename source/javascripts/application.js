@@ -186,6 +186,8 @@ twitterFavicon.addEventListener('error', function () {
    
    if(window.location.pathname === "/cascadia.html"){
     document.getElementById('top_image').href = "http://sqwadapp.co/cascadia.html"
+   } else if(window.location.pathname === "/schools.html"){
+    document.getElementById('top_image').href = "http://sqwadapp.co/schools.html"
    }
    
   
