@@ -1,0 +1,63 @@
+.cascadia {
+	background: url('../images/mlsbackground.png');
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#cascadia_hr{
+	border-color: white;
+	width:150%; 
+	margin-top:0;
+}
+
+#cascadia-sqwad-btn{
+	background-color: blue;
+}
+
+#cascadia-image{
+	margin-top: -60px;
+}
+
+#left-line-three{
+  color:white;
+  margin:0;
+  font-family: 'Oswald', sans-serif !important; 
+  font-size: 48px;
+  font-weight: 700;
+  text-align: left;
+}
+
+#left-line-three:before {
+  position: absolute;
+    content:'';
+    width: 5px;
+    height: 70%;
+    top: -10px;
+    left: -5px;
+    background-color: white;
+}
+
+#left-line-three:after{
+    position: absolute;
+    content:'';
+    width: 50%;
+    height: 5px;
+    top: -10px;
+    left: -5px;
+    background-color: white;
+}
+
+@media screen and (max-width: 600px) {
+	#left-line-three{
+	display:none;	
+	}
+}
+
+
+@media screen and (max-width: 769px) {
+	#left-line-three{
+	display:none;	
+	}
+}

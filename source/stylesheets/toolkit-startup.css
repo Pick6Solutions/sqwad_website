@@ -355,9 +355,9 @@ body {
     display: block;
   }
   
-    #twitter_stuff{
-  text-align: center;
-}
+  #twitter_stuff{
+    text-align: center;
+  }
 
 .change_size{
   text-align: left;
@@ -415,6 +415,18 @@ body {
   #mobile_twitter{
       text-align: center;
     }
+    
+  #second_h2{
+    text-align: center;
+  }
+  
+  #first_h3{
+    text-align: center;
+  }
+  
+  #first_h2{
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 993px){

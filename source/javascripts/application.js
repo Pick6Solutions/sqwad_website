@@ -184,6 +184,10 @@ twitterFavicon.addEventListener('error', function () {
      document.getElementById("influencerImage").src = query_string.image
    }
    
+   if(window.location.pathname === "/cascadia.html"){
+    document.getElementById('top_image').href = "http://sqwadapp.co/cascadia.html"
+   }
+   
   
 
   var $toc    = $('#markdown-toc')

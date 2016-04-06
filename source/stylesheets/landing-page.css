@@ -53,6 +53,10 @@ body {
 	font-size: 20px;
 }
 
+#demo:hover{
+	color: #FA023C;
+}
+
 #second_hr{
 	border-top:3px solid white;
 	width:40%;
