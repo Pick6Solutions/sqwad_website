@@ -1,0 +1,14 @@
+.schools{
+	background: url('../images/school_background.png') no-repeat center center fixed;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#school_copy{
+	color: white;
+	margin-left: 5px;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 300;
+}

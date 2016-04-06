@@ -1,5 +1,5 @@
 .cascadia {
-	background: url('../images/mlsbackground.png');
+	background: url('../images/mlsbackground.png') no-repeat center center fixed;
 	-webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -13,7 +13,7 @@
 }
 
 #cascadia-sqwad-btn{
-	background-color: blue;
+	color: black;
 }
 
 #cascadia-image{
