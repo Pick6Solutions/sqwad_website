@@ -63,13 +63,20 @@
 			    </div>
 			  </div>
 			</div> -->
+			<div class='message'>
+			    <div style='padding: 5px;'>
+			        <div class='alert alert-danger alert-sqwad' role='alert' id="msg-error">YOU FORGET TO ENTER YOUR TWITTER HANDLE <i class='em em-frowning'></i></div>
+			        <div class='alert alert-danger alert-sqwad' role='alert' id="msg-success">
+			        	Thank you for being a supporter of SQWAD! <br> We will reach out to you shortly. <i class='em em-raised_hands'></i></div>
+			    </div>
+			</div>
 
 			<div class="row">
 				<div class="col-md-10">
-					<div id="twitter_stuff" class-"has-error">
+					<div id="twitter_stuff">
 						<h2 id="status" target="_blank" class="shrink_text"></h2>
 						<a href="" class="btn btn-primary" id="tweet" target="_blank" >Tweet @SQWAD</a>
-						<form class="form-inline">
+						<form class="form-inline" method="post" id="tweeter_handle">
 							<div class="input-group inputGroupContainer">
 								<input type="text" name="handle" value="@" placeholder="Twitter Handle" class="form-control" id="handle" style="width:300px">
 								<span class="input-group-btn">
