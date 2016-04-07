@@ -22,10 +22,9 @@
 
 #left-line-three{
   color:white;
-  margin:0;
   font-family: 'Oswald', sans-serif !important; 
-  font-size: 48px;
   font-weight: 700;
+  font-size:55px;
   text-align: left;
 }
 
@@ -34,7 +33,17 @@
     content:'';
     width: 5px;
     height: 70%;
-    top: -10px;
+    top: 70px;
+    left: -5px;
+    background-color: white;
+}
+
+#left-line-three:before {
+  position: absolute;
+    content:'';
+    width: 5px;
+    height: 70%;
+    top: 10px;
     left: -5px;
     background-color: white;
 }
@@ -44,7 +53,7 @@
     content:'';
     width: 50%;
     height: 5px;
-    top: -10px;
+    top: 10px;
     left: -5px;
     background-color: white;
 }

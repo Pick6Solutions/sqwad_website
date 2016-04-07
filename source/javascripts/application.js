@@ -138,6 +138,27 @@ $('#tweeter_handle').submit(function(event){
         document.getElementById("influencerCopy").innerHTML = "we recognize game when we see it.  You are a driver in the Portland sports industry.  We would like to invite you to be an influencer on Portland's next big sports platform.<br><br>SQWAD is a real-time fantasy platform powered by blockchain technology that allows fans to challenge pro athletes and friends.  With our player market feature fans will be able to buy and sell players simulating real sports free agency.<br><br>Give us a shout on Twitter to confirm you've got our back.  We'll shoot you updates on our product and give you early access to an influencer account."
         document.getElementById("two-left-line").innerHTML = "Rip City's<br>Sports Pro"
         break;
+      case "sounders":
+        document.body.style.backgroundImage = "url('/images/bg_sounders.png')"
+        document.getElementById("influencerCopy").innerHTML = "we recognize game when we see it.  You are an innovator for the Sounder's rich soccer tradition.  We would like to invite you to be an influencer on the NW's next big sports platform.<br><br>SQWAD is a real-time fantasy platform powered by blockchain technology that allows fans to challenge pro athletes and friends.  With our player market feature fans will be able to buy and sell players simulating real sports free agency.<br><br>Give us a shout on Twitter to confirm you've got our back.  We'll shoot you updates on our product and give you early access to an influencer account."
+        document.getElementById("two-left-line").innerHTML = "Seattle's<br>Soccer Elite"
+        document.getElementById("phone_image").src = '/images/cascadia-phone.png'
+        document.getElementById("small_phone").src = '/images/cascadia-phone.png'
+        break;
+      case "whitecaps":
+        document.body.style.backgroundImage = "url('/images/bg_whitecaps.png')"
+        document.getElementById("influencerCopy").innerHTML = "we recognize game when we see it.  You are an innovator for the Whitecaps's rich soccer tradition.  We would like to invite you to be an influencer on the BC's next big sports platform.<br><br>SQWAD is a real-time fantasy platform powered by blockchain technology that allows fans to challenge pro athletes and friends.  With our player market feature fans will be able to buy and sell players simulating real sports free agency.<br><br>Give us a shout on Twitter to confirm you've got our back.  We'll shoot you updates on our product and give you early access to an influencer account."
+        document.getElementById("two-left-line").innerHTML = "Vancouver's<br>Soccer Elite"
+        document.getElementById("phone_image").src = '/images/cascadia-phone.png'
+        document.getElementById("small_phone").src = '/images/cascadia-phone.png'
+        break;
+      case "timbers":
+        document.body.style.backgroundImage = "url('/images/bg_timbers.png')"
+        document.getElementById("influencerCopy").innerHTML = "we recognize game when we see it.  You are an innovator for the Timber's rich soccer tradition.  We would like to invite you to be an influencer on Portland's next big sports platform.<br><br>SQWAD is a real-time fantasy platform powered by blockchain technology that allows fans to challenge pro athletes and friends.  With our player market feature fans will be able to buy and sell players simulating real sports free agency.<br><br>Give us a shout on Twitter to confirm you've got our back.  We'll shoot you updates on our product and give you early access to an influencer account."
+        document.getElementById("two-left-line").innerHTML = "Portland's<br>Soccer Elite"
+        document.getElementById("phone_image").src = '/images/cascadia-phone.png'
+        document.getElementById("small_phone").src = '/images/cascadia-phone.png'
+        break;
       default:
         document.getElementById("influencerCopy").innerHTML = "SQWAD is a real-time fantasy platform powered by blockchain technology that allows fans to challenge pro athletes and friends.  With our player market feature fans will be able to buy and sell players simulating real sports free agency.<br><br>Give us a shout on Twitter to confirm you've got our back.  We'll shoot you updates on our product and give you early access to an influencer account."
         document.getElementById("two-left-line").innerHTML = "THE BEST<br>PLAY LIVE"
