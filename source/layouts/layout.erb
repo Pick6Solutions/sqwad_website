@@ -8,7 +8,7 @@
 
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "Sqwad Fantasy" %></title>
-    <meta property="og:description" content="<%= current_page.data.description %>">
+    <meta content="<%= current_page.data.description %>" property="og:description">
 
     <link rel="shortcut icon" href="../images/sqwadhand.png">
     <link href="../stylesheets/toolkit-startup.css" rel="stylesheet">
