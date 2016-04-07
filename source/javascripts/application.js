@@ -122,14 +122,18 @@ $('#tweeter_handle').submit(function(event){
   } else {
 
     NProgress.done();
-
+    
+    btn.button('reset')
+    
+    btn.css("background-color","#5cb85c");
+    btn.css("color", "white")
+    
     $('#msg-error').fadeIn();
 
     setTimeout(function() {
       $('#msg-error').fadeOut('fast');
     }, 2000);
 
-    btn.button('reset')
   }
   
 })
