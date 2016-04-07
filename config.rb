@@ -68,7 +68,7 @@ set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
 # Build-specific configuration
-activate :minify_html
+configure :build do
   activate :minify_css
   activate :minify_javascript
   activate :asset_hash
