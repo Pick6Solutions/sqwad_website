@@ -209,7 +209,7 @@ if(query){
     $('#influencerCopy').load("text/" + query_string.copy + ".html")
     console.log("text/" + query_string.copy + ".html")
   }
-} else {
+} else if(window.location.pathname == "influencers.html") {
   window.location = "http://www.sqwadapp.co";
 }
    
