@@ -78,7 +78,8 @@ $('#tweeter_handle').submit(function(event){
     
   var handle = $('#handle').val();
   
-  if(handle){
+
+  if(handle && (handle.length > 1)){
     
     $.ajax({
         
@@ -90,13 +91,17 @@ $('#tweeter_handle').submit(function(event){
         
         success: function(data){
           
-           $('.se-pre-con').hide();
+          $('.se-pre-con').hide();
           
           $(this).closest('form').find("input[type=text]").val(null);
           
           document.getElementById("tweeter_handle").reset();
           
-          alert("Thank you for being a supporter of SQWAD!  We will reach out to you shortly.")
+          $('#msg-success').fadeIn();
+
+          setTimeout(function() {
+            $('#msg-success').fadeOut('fast');
+          }, 10000);
           
         },
         
@@ -109,9 +114,13 @@ $('#tweeter_handle').submit(function(event){
       })
     
   } else {
-    
-    alert("Handle can't be left blank!")
-    
+
+    $('.se-pre-con').hide();
+    $('#msg-error').fadeIn();
+
+    setTimeout(function() {
+      $('#msg-error').fadeOut('fast');
+    }, 2000);
   }
   
 })

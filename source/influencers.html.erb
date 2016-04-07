@@ -53,38 +53,81 @@
 				<span id="influencerCopy"></span>
 				
 			</h2>
-			
-			<div id="twitter_stuff">
+
+<!-- 			<div class="col-md-4">
+			    <div class="input-group">
+			      <input type="text" class="form-control" placeholder="Search for...">
+			      <span class="input-group-btn">
+			        <button class="btn btn-default btn-small" type="button">Go!</button>
+			      </span>
+			    </div>
+			  </div>
+			</div> -->
+			<div class='message'>
+			    <div style='padding: 5px;'>
+			        <div class='alert alert-danger alert-sqwad' role='alert' id="msg-error">YOU FORGET TO ENTER YOUR TWITTER HANDLE <i class='em em-frowning'></i></div>
+			        <div class='alert alert-danger alert-sqwad' role='alert' id="msg-success">
+			        	Thank you for being a supporter of SQWAD! <br> We will reach out to you shortly. <i class='em em-raised_hands'></i></div>
+			    </div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-10">
+					<div id="twitter_stuff">
+						<h2 id="status" target="_blank" class="shrink_text"></h2>
+						<a href="" class="btn btn-primary" id="tweet" target="_blank" >Tweet @SQWAD</a>
+						<form class="form-inline" method="post" id="tweeter_handle">
+							<div class="input-group inputGroupContainer">
+								<input type="text" name="handle" value="@" placeholder="Twitter Handle" class="form-control" id="handle" style="width:300px">
+								<span class="input-group-btn">
+									<button type="submit" class="btn btn-success" id="sendTwitterHandle" style="padding-top: 6.8px; padding-bottom: 6.8px;">SEND</button>
+								</span>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+<!-- 			<div id="twitter_stuff">
 							
 				<h2 id="status" target="_blank" class="shrink_text"></h2>
 								
 				<a href="" class="btn btn-primary" id="tweet" target="_blank" >Tweet @SQWAD</a>
+
+
+				<form class="form-inline">
+					<div class="form-group">
+						<input>
+					</div>
+
+				</form>
 				
-				<form class="form-horizontal" method="post" id="tweeter_handle">
+				<form class="form-horizontal " method="post" id="tweeter_handle">
 					
 					<fieldset>
 						
 						<div class="form-group">
 			        
-			        <div class="col-md-4 inputGroupContainer">
-			          
-			          <div class="input-group">
-			          			        
-			            <input type="text" name="handle" value="@" placholder="Twitter Handle" class="form-control" id="handle">
-			            
-			            <button type="submit" class="btn btn-success" id="sendTwitterHandle">SEND</button>
-        
-			          </div>
-			          
-			        </div>
-			        
-			      </div>
+					        <div class="col-md-6 inputGroupContainer">
+					          
+					          <div class="input-group has-error">
+
+					          			        
+					            <input type="text" name="handle" value="@" placeholder="Twitter Handle" class="form-control" id="handle">
+					            <span class="input-group-btn">
+					            	<button type="submit" class="btn btn-success" id="sendTwitterHandle" style="padding-top: 6.8px; padding-bottom: 6.8px;">SEND</button>
+					            </span>
+		        
+					          </div>
+					          
+					        </div>
+				        
+				      </div>
 						
 					</fieldset>
 					
 				</form>
 			
-			</div>
+			</div> -->
 			
 			<div id="mobile_twitter" align="left">
 				
