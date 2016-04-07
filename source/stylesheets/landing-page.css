@@ -3,7 +3,8 @@
 body {
 	font-family: 'Oswald', sans-serif;
 	font-weight: 400;
-    background: black;
+    background-color: black;
+    background: url('../images/pdxsportsbg.png') no-repeat center center fixed;
 }
 
 .btn {
