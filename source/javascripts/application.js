@@ -72,9 +72,8 @@ $(function () {
 
 $('#tweeter_handle').submit(function(event){
 
-  $('#sendTwitterHandle').on('click', function () {
-    btn = $(this).button('loading')
-  })
+  btn = $('#sendTwitterHandle')
+  btn.button('loading')
   
   event.preventDefault();
   
@@ -102,6 +101,7 @@ $('#tweeter_handle').submit(function(event){
           document.getElementById("tweeter_handle").reset();
 
           NProgress.done();
+          btn.button('reset')
           
           $('#msg-success').fadeIn();
 
@@ -128,6 +128,8 @@ $('#tweeter_handle').submit(function(event){
     setTimeout(function() {
       $('#msg-error').fadeOut('fast');
     }, 2000);
+
+    btn.button('reset')
   }
   
 })
