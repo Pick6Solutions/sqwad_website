@@ -78,7 +78,8 @@ $('#tweeter_handle').submit(function(event){
     
   var handle = $('#handle').val();
   
-  if(handle){
+
+  if(handle && (handle.length > 1)){
     
     $.ajax({
         
@@ -90,7 +91,7 @@ $('#tweeter_handle').submit(function(event){
         
         success: function(data){
           
-           $('.se-pre-con').hide();
+          $('.se-pre-con').hide();
           
           $(this).closest('form').find("input[type=text]").val(null);
           
@@ -109,8 +110,10 @@ $('#tweeter_handle').submit(function(event){
       })
     
   } else {
+
+    $('.se-pre-con').hide();
     
-    alert("Handle can't be left blank!")
+    alert("Handle can't be left blank!");
     
   }
   
