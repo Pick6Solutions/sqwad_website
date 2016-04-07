@@ -74,13 +74,14 @@ configure :build do
 
   # Minify Javascript on build
   # activate :minify_javascript
+  activate :asset_hash
+end
 
-  # Enable cache buster
-  # activate :asset_hash
-
-  # Use relative URLs
-  # activate :relative_assets
-
-  # Or use a different image path
-  # set :http_prefix, "/Content/images/"
+activate :s3_sync do |s3_sync|
+  s3_sync.bucket                     = 'sqwadapp.co'
+  s3_sync.region                     = 'us-west-2'
+  s3_sync.delete                     = false
+  s3_sync.after_build                = false
+  s3_sync.prefer_gzip                = true
+  s3_sync.path_style                 = true
 end

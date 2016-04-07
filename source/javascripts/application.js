@@ -72,9 +72,8 @@ $(function () {
 
 $('#tweeter_handle').submit(function(event){
 
-  $('#sendTwitterHandle').on('click', function () {
-    btn = $(this).button('loading')
-  })
+  btn = $('#sendTwitterHandle')
+  btn.button('loading')
   
   event.preventDefault();
   
@@ -102,6 +101,7 @@ $('#tweeter_handle').submit(function(event){
           document.getElementById("tweeter_handle").reset();
 
           NProgress.done();
+          btn.button('reset')
           
           $('#msg-success').fadeIn();
 
@@ -128,6 +128,8 @@ $('#tweeter_handle').submit(function(event){
     setTimeout(function() {
       $('#msg-error').fadeOut('fast');
     }, 2000);
+
+    btn.button('reset')
   }
   
 })
@@ -140,18 +142,15 @@ $('#tweeter_handle').submit(function(event){
     $('.hideIcons').hide();
     switch(list){
       case "startuppdx":
-       document.body.style.backgroundImage = "url('/images/pdxsportsbg.png')"
        document.getElementById("influencerCopy").innerHTML = "we recognize game when we see it and you are a catalyst for the Portland Startup Community.  We would like to invite you to be an influencer on Portland's next big sports platform.<br><br>SQWAD is a real-time fantasy platform powered by blockchain technology that allows fans to challenge pro athletes and friends.  With our player market feature fans will be able to buy and sell players simulating real sports free agency.<br><br>Give us a shout on Twitter to confirm you've got our back.  We'll shoot you updates on our product and give you early access to an influencer account."
        document.getElementById("two-left-line").innerHTML = "Rip City Startup<br>Specialist"
         break;
       case "pitchfestnw":
-        document.body.style.backgroundImage = "url('/images/pdxsportsbg.png')"
-        document.getElementById("influencerCopy").innerHTML = "we recognize game when we see it.  You are a catalyst in the NW Tech Community.  We would like to invite you to be an influencer on Portland's next big sports platform.<br><br>SQWAD is a real-time fantasy platform powered by blockchain technology that allows fans to challenge pro athletes and friends.  With our player market feature fans will be able to buy and sell players simulating real sports free agency.<br><br>Give us a shout on Twitter to confirm you've got our back.  We'll shoot you updates on our product and give you early access to an influencer account."
+         document.getElementById("influencerCopy").innerHTML = "we recognize game when we see it.  You are a catalyst in the NW Tech Community.  We would like to invite you to be an influencer on Portland's next big sports platform.<br><br>SQWAD is a real-time fantasy platform powered by blockchain technology that allows fans to challenge pro athletes and friends.  With our player market feature fans will be able to buy and sell players simulating real sports free agency.<br><br>Give us a shout on Twitter to confirm you've got our back.  We'll shoot you updates on our product and give you early access to an influencer account."
         document.getElementById("two-left-line").innerHTML = "NW Tech<br>All-Star"
         break;
       case "sportspdx":
-        document.body.style.backgroundImage = "url('/images/pdxsportsbg.png')"
-        document.getElementById("influencerCopy").innerHTML = "we recognize game when we see it.  You are a driver in the Portland sports industry.  We would like to invite you to be an influencer on Portland's next big sports platform.<br><br>SQWAD is a real-time fantasy platform powered by blockchain technology that allows fans to challenge pro athletes and friends.  With our player market feature fans will be able to buy and sell players simulating real sports free agency.<br><br>Give us a shout on Twitter to confirm you've got our back.  We'll shoot you updates on our product and give you early access to an influencer account."
+         document.getElementById("influencerCopy").innerHTML = "we recognize game when we see it.  You are a driver in the Portland sports industry.  We would like to invite you to be an influencer on Portland's next big sports platform.<br><br>SQWAD is a real-time fantasy platform powered by blockchain technology that allows fans to challenge pro athletes and friends.  With our player market feature fans will be able to buy and sell players simulating real sports free agency.<br><br>Give us a shout on Twitter to confirm you've got our back.  We'll shoot you updates on our product and give you early access to an influencer account."
         document.getElementById("two-left-line").innerHTML = "Rip City's<br>Sports Pro"
         break;
       case "sounders":
@@ -176,7 +175,7 @@ $('#tweeter_handle').submit(function(event){
         document.getElementById("small_phone").src = '/images/cascadia-phone.png'
         break;
       default:
-        document.getElementById("influencerCopy").innerHTML = "SQWAD is a real-time fantasy platform powered by blockchain technology that allows fans to challenge pro athletes and friends.  With our player market feature fans will be able to buy and sell players simulating real sports free agency.<br><br>Give us a shout on Twitter to confirm you've got our back.  We'll shoot you updates on our product and give you early access to an influencer account."
+         document.getElementById("influencerCopy").innerHTML = "SQWAD is a real-time fantasy platform powered by blockchain technology that allows fans to challenge pro athletes and friends.  With our player market feature fans will be able to buy and sell players simulating real sports free agency.<br><br>Give us a shout on Twitter to confirm you've got our back.  We'll shoot you updates on our product and give you early access to an influencer account."
         document.getElementById("two-left-line").innerHTML = "THE BEST<br>PLAY LIVE"
     }
   }
@@ -195,31 +194,41 @@ twitterFavicon.addEventListener('error', function () {
     document.getElementById('tweeter_handle').style.display = "block"
 });
   
-  var query_string = {};
-  var query = window.location.search.substring(1);
-  if(query){
-    var vars = query.split("&");
-    for (var i=0;i<vars.length;i++) {
-      var pair = vars[i].split("=");
-      if(pair[0] == "list"){
-        findListStyles(pair[1])
-      }
-      
-         // If first entry with this name
-       if (typeof query_string[pair[0]] === "undefined") {
-         query_string[pair[0]] = decodeURIComponent(pair[1]);
-    //       // If second entry with this name
-       } else if (typeof query_string[pair[0]] === "string") {
-         var arr = [ query_string[pair[0]],decodeURIComponent(pair[1]) ];
-         query_string[pair[0]] = arr;
-    //       // If third or later entry with this name
-       } else {
-         query_string[pair[0]].push(decodeURIComponent(pair[1]));
-       }
-     } 
-     document.getElementById("nameInfluencer").innerHTML = query_string.name
-     document.getElementById("influencerImage").src = query_string.image
+var query_string = {};
+var query = window.location.search.substring(1);
+if(query){
+  var vars = query.split("&");
+  for (var i=0;i<vars.length;i++) {
+    var pair = vars[i].split("=");
+    if(pair[0] == "list"){
+      findListStyles(pair[1])
+    }
+    
+       // If first entry with this name
+     if (typeof query_string[pair[0]] === "undefined") {
+       query_string[pair[0]] = decodeURIComponent(pair[1]);
+  //       // If second entry with this name
+     } else if (typeof query_string[pair[0]] === "string") {
+       var arr = [ query_string[pair[0]],decodeURIComponent(pair[1]) ];
+       query_string[pair[0]] = arr;
+  //       // If third or later entry with this name
+     } else {
+       query_string[pair[0]].push(decodeURIComponent(pair[1]));
+     }
    }
+
+  document.getElementById("nameInfluencer").innerHTML = query_string.name
+  document.getElementById("influencerImage").src = query_string.image
+  if(query_string.headline !== undefined) {
+    document.getElementById("two-left-line").innerHTML = query_string.headline
+  }
+  if(query_string.copy !== undefined) {
+    $('#influencerCopy').load("text/" + query_string.copy + ".html")
+    console.log("text/" + query_string.copy + ".html")
+  }
+} else if(window.location.pathname == "influencers.html") {
+  window.location = "http://www.sqwadapp.co";
+}
    
    if(window.location.pathname === "/cascadia.html"){
     document.getElementById('top_image').href = "http://sqwadapp.co/cascadia.html"
