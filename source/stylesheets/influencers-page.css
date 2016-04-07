@@ -43,11 +43,11 @@
 	background: #02ea9e;
 	border: solid 2px #009C69;
 	display: none;
+	text-transform: uppercase;
 }
 
 .alert-sqwad {
 	color: black;
-	opacity: 0.8;
 	font-weight: 700px;
 	font-size: 24px;
 }
