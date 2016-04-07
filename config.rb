@@ -68,19 +68,17 @@ set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
 # Build-specific configuration
-configure :build do
-  # For example, change the Compass output style for deployment
-  # activate :minify_css
+activate :minify_html
+  activate :minify_css
+  activate :minify_javascript
+  activate :asset_hash
+end
 
-  # Minify Javascript on build
-  # activate :minify_javascript
-
-  # Enable cache buster
-  # activate :asset_hash
-
-  # Use relative URLs
-  # activate :relative_assets
-
-  # Or use a different image path
-  # set :http_prefix, "/Content/images/"
+activate :s3_sync do |s3_sync|
+  s3_sync.bucket                     = 'sqwadapp.co'
+  s3_sync.region                     = 'us-west-2'
+  s3_sync.delete                     = false
+  s3_sync.after_build                = false
+  s3_sync.prefer_gzip                = true
+  s3_sync.path_style                 = true
 end
