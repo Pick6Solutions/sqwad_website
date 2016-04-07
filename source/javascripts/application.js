@@ -71,10 +71,14 @@ $(function () {
   })
 
 $('#tweeter_handle').submit(function(event){
+
+  $('#sendTwitterHandle').on('click', function () {
+    btn = $(this).button('loading')
+  })
   
   event.preventDefault();
   
-  $('.se-pre-con').show();
+  NProgress.start();
     
   var handle = $('#handle').val();
   
@@ -91,11 +95,13 @@ $('#tweeter_handle').submit(function(event){
         
         success: function(data){
           
-          $('.se-pre-con').hide();
+          // $('.se-pre-con').hide();
           
           $(this).closest('form').find("input[type=text]").val(null);
           
           document.getElementById("tweeter_handle").reset();
+
+          NProgress.done();
           
           $('#msg-success').fadeIn();
 
@@ -115,7 +121,8 @@ $('#tweeter_handle').submit(function(event){
     
   } else {
 
-    $('.se-pre-con').hide();
+    NProgress.done();
+
     $('#msg-error').fadeIn();
 
     setTimeout(function() {
