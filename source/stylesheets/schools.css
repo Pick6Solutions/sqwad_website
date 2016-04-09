@@ -44,16 +44,26 @@
 }
 
 @media screen and (max-width: 600px) {
-	#left-line-four{
+  #left-line-four{
+    font-size: 40px;
+  }
+	#left-line-four:after{
 	display:none;	
 	}
+  #left-line-four:before{
+  display:none; 
+  }
 }
 
 
 @media screen and (max-width: 769px) {
-	#left-line-four{
+	#left-line-four:after{
 	display:none;	
 	}
+  
+   #left-line-four:before{
+  display:none; 
+  }
 	
 	#school_copy{
 		text-align: center;
