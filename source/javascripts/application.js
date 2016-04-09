@@ -297,6 +297,8 @@ if(query){
           top: 0
         })
       }
+      
+      
 
       updateCache()
 
