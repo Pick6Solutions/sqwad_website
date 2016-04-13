@@ -126,12 +126,17 @@ body {
 			text-align: left
 		}
 		
+#firstPart{
+	border-right: solid 5px white;
+}
+		
 @media screen and (max-width: 769px) {
-	
-	
 	#sqwad_button{
-			text-align: center
+			text-align: center;
 		}
+	#firstPart{
+		border-right: none;
+	}
 }
 
 @media screen and (max-width: 600px) {
