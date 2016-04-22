@@ -1,5 +1,5 @@
 .fc{
-	background: black url('../images/mlsbackground.png') no-repeat center center fixed;
+	background: black url('../images/fcbackground.png') no-repeat center center fixed;
 	-webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -19,7 +19,7 @@
     content:'';
     width: 5px;
     height: 70%;
-    top: 90px;
+    top: 15px;
     left: -5px;
     background-color: white;
 }
@@ -29,9 +29,13 @@
     content:'';
     width: 50%;
     height: 5px;
-    top: 90px;
+    top: 15px;
     left: -5px;
     background-color: white;
+}
+
+.image_up{
+  top: -20px;
 }
 
 @media screen and (max-width: 600px) {
@@ -58,4 +62,9 @@
 	#left-line-five:before{
 	display:none;	
 	}
+    .image_up{
+  width: 100%;
+  height:auto;
+  top: -20px;
+  }
 }

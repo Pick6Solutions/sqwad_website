@@ -107,15 +107,24 @@ body {
 }
 
 .center_lis{
-	width:10%;
-	margin-left: 32%;
+	width:3%;
 	margin-right: auto;
+	font-size: 20px;
+	font-weight: 300;
 }
 
 #wild_li{
-	margin-right: 30%;
+	margin-right: 35%;
 	margin-left: 0;
 	float:right;
+}
+
+.first_lis{
+	margin-left: 35%;
+}
+
+.second_lis{
+	margin-left: 40.5%;
 }
 
 
@@ -153,6 +162,19 @@ body {
 #sqwad_button{
 			text-align: left
 		}
+.grey-title{
+	font-size: 28px;
+	font-weight: 400;
+}
+
+.adjust_padding{
+	padding-left:0; 
+	padding-right:125px;
+}
+
+.adjust_padding2{
+	padding-left:4%; 
+}
 		
 /*#firstPart:after{
 	position: absolute;
@@ -170,6 +192,9 @@ body {
 	#firstPart:after{
 		display: none;
 	}
+	.adjust_padding{
+		padding-right: 0;
+	}
 	#wild_li{
 		float: none;
 		margin-right: auto;
@@ -183,6 +208,9 @@ body {
 	.center_lis{
 		margin-right: auto;
 		margin-left: auto;
+	}
+	.adjust_padding2{
+		padding-left: 0; 
 	}
 }
 
