@@ -1,0 +1,141 @@
+.new_site{
+	background: white;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.navbar-brand {
+  float: none;
+  }
+
+.navbar-center
+{
+  transform: translateX(-50%);
+  left: 50%;
+  position: absolute;
+  top: -20px;
+}
+
+#sqwad_header_button{
+	color:white;
+	font-size:20px;
+	background-color:#FA023C;
+	margin-top:10px;
+	font-weight:700;
+	border-radius: 30px;
+}
+
+#left-line-new-site{
+  color:black;
+  margin:0;
+  font-family: 'Oswald', sans-serif !important; 
+  font-size: 80px;
+  font-weight: 700;
+  text-align: left;
+}
+
+#left-line-new-site:before {
+  position: absolute;
+    content:'';
+    width: 5px;
+    height: 70%;
+    top: 150px;
+    left: -5px;
+    background-color: #FA023C;
+}
+
+#left-line-new-site:after{
+    position: absolute;
+    content:'';
+    width: 50%;
+    height: 5px;
+    top: 150px;
+    left: -5px;
+    background-color: #FA023C;
+}
+
+#phone_new_site{
+	top: -20px;
+	right: 60px;
+	z-index: 100;
+}
+
+#sqwad_new_button{
+	color:white;
+	font-size:70px;
+	background-color:#FA023C;
+	margin-top:10px;
+	font-weight:700;
+  text-transform: capitalize;
+	border-radius: 100px;
+}
+
+.background-shrink{
+	background-image:url(../images/new_site_top_bg.png); 
+	padding-top:0; 
+	padding-bottom:0px;
+}
+
+.block-kinda-fill-height{
+	height:730px;
+}
+
+#realTimeFantasy{
+  font-family: 'Oswald', sans-serif !important; 
+  font-size: 30px;
+}
+
+
+#sqwad_2nd_button{
+  color:white;
+  font-size:50px;
+  background-color:#FA023C;
+  font-weight:500;
+  text-transform: capitalize;
+}
+
+.site_font{
+  font-family: 'Oswald', sans-serif !important; 
+}
+
+#new_first_hr{
+    width:120%; 
+  margin-top:0;
+}
+
+.three_titles{
+  font-weight: 700;
+}
+
+.vertical-line {
+    border-left: thick solid black;
+}
+
+#playGamesHR{
+  border-color: white;
+  width:50%;
+}
+
+#playMoreGamesText{
+  font-weight: 700;
+  font-style: italic;
+  color:white;
+  font-size: 80px;
+  text-align: left;
+}
+
+#playeMoreGamesMiniText{
+  margin-top: 0;
+  text-align: left;
+  color: white;
+  font-weight: 100;
+}
+
+#sportsText{
+  text-align: left;
+  color:white;
+  font-weight: 200;
+  font-size: 40px;
+}
