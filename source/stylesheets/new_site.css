@@ -27,11 +27,14 @@
 	border-radius: 30px;
 }
 
+.new_sizes{
+  font-size: 80px;
+}
+
 #left-line-new-site{
   color:black;
   margin:0;
   font-family: 'Oswald', sans-serif !important; 
-  font-size: 80px;
   font-weight: 700;
   text-align: left;
 }
@@ -41,7 +44,7 @@
     content:'';
     width: 5px;
     height: 70%;
-    top: 150px;
+    top: 110px;
     left: -5px;
     background-color: #FA023C;
 }
@@ -51,14 +54,14 @@
     content:'';
     width: 50%;
     height: 5px;
-    top: 150px;
+    top: 110px;
     left: -5px;
     background-color: #FA023C;
 }
 
 #phone_new_site{
 	top: -20px;
-	right: 60px;
+  padding-left: 0;
 	z-index: 100;
 }
 
@@ -79,7 +82,7 @@
 }
 
 .block-kinda-fill-height{
-	height:730px;
+	height:700px;
 }
 
 #realTimeFantasy{
@@ -90,10 +93,12 @@
 
 #sqwad_2nd_button{
   color:white;
-  font-size:50px;
+  font-size:40px;
   background-color:#FA023C;
   font-weight:500;
   text-transform: capitalize;
+  float: right;
+  border-radius: 0;
 }
 
 .site_font{
@@ -111,6 +116,7 @@
 
 .vertical-line {
     border-left: thick solid black;
+    border-right: thick solid black;
 }
 
 #playGamesHR{
@@ -138,4 +144,189 @@
   color:white;
   font-weight: 200;
   font-size: 40px;
+}
+
+#againstBestHR{
+  border-color: black;
+  width: 70%;
+  margin: auto 0 auto auto;
+  border-width: 2px;
+}
+
+#againstTheBest{
+  font-weight: 700;
+  font-style: italic;
+  color: #FA023C; 
+  font-size: 80px;
+  text-align: right;
+}
+
+#againstTheBestLittleText{
+  font-size: 35px;
+  text-align: right;
+  font-weight: 100;
+  width:80%;
+  margin: auto 0 auto auto;
+}
+
+#winPrizesTitle{
+  font-size: 100px;
+  color: white;
+/*  font-style: italic;
+*/  text-align: left;
+  font-weight: 700;
+  margin-left: 22%;
+}
+
+#winPrizesMiniText{
+  color:white;
+  font-weight: 100;
+  font-size: 35px;
+  text-align: left;
+  padding-left: 0;
+}
+
+#loveShit{
+  font-weight: 100;
+  font-size: 50px
+}
+
+#finalContactButton{
+  color: #FA023C;
+  border-color: #FA023C;
+  border: solid 2px;
+  font-size: 30px;
+  font-weight: 100;
+}
+
+#sportsBallsImage{
+  left:100px;
+}
+
+@media screen and (max-width: 600px) {
+  #left-line-new-site{
+    font-size: 30px;
+    padding-left: 0px;
+    text-align: center;
+  }
+  
+  #left-line-new-site:before {
+    display:none;
+  }
+  #left-line-new-site:after{
+    display: none;
+  }
+  
+  #sqwad_new_button{
+    font-size: 30px;
+  }
+  
+  .vertical-line {
+    border-left: none;
+    border-right: none;
+  }
+  #playMoreGamesText{
+    text-align: center;
+    font-size: 60px;
+  }
+  #playGamesHR{
+    margin:auto;
+  }
+  #playeMoreGamesMiniText{
+    text-align: center;
+  }
+  #againstTheBest{
+    text-align: center;
+    font-size: 50px;
+  }
+  #againstBestHR{
+    margin: auto;
+  }
+  #againstTheBestLittleText{
+    text-align: center;
+    margin: auto;
+  }
+  #sqwad_2nd_button{
+    float:none;
+  }
+  #winPrizesTitle{
+    text-align: center;
+    margin: auto;
+  }
+  #winPrizesMiniText{
+    text-align: center;
+  }
+  .block-kinda-fill-height{
+    height: auto;
+  }
+  #loveShit{
+  font-weight: 100;
+  font-size: 40px
+  }
+  .row{
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .row{
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .new_sizes{
+    font-size: 50px;
+    text-align: left;
+    padding-left: 10px;
+  }
+  
+  #left-line-new-site:before {
+    display:none;
+  }
+  #left-line-new-site:after{
+    display: none;
+  }
+  #realTimeFantasy{
+    text-align: left;
+    padding-left: 10px;
+  }
+  #sqwad_new_button{
+    font-size: 40px;
+    margin: auto;
+  }
+  .vertical-line {
+    border-left: none;
+    border-right: none;
+  }
+  #againstTheBest{
+    text-align: center;
+  }
+  #againstBestHR{
+    margin: auto;
+  }
+  #againstTheBestLittleText{
+    text-align: center;
+    margin: auto;
+  }
+  #sqwad_2nd_button{
+    float:none;
+  }
+  #winPrizesMiniText{
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 960px) {
+    #left-line-new-site:before {
+    display:none;
+  }
+  #left-line-new-site:after{
+    display: none;
+  }
+  .new_sizes{
+    font-size: 60px;
+  }
+  .block-kinda-fill-height{
+    height: auto;
+  }
 }

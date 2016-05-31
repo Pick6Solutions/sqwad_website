@@ -196,6 +196,16 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+  .vertical-spacer-lg{
+    width:2px;
+    height:30px;
+  }
+  
+  .vertical-spacer{
+    width:2px;
+    height:6px;
+  }
+  
   #add_bracket:before {
     display:none;
   }
@@ -336,6 +346,16 @@ body {
 }
 
 @media screen and (max-width: 769px) {
+  .vertical-spacer-lg{
+    width:2px;
+    height:30px;
+  }
+  
+  .vertical-spacer{
+    width:2px;
+    height:6px;
+  }
+  
   #top_image{
     position: absolute;
     margin-left: auto;
