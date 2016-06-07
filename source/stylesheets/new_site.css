@@ -32,6 +32,8 @@
 }
 
 #left-line-new-site{
+  font-size: 7vw;
+  font-size: 11vh;
   color:black;
   margin:0;
   font-family: 'Oswald', sans-serif !important; 
@@ -60,14 +62,23 @@
 }
 
 #phone_new_site{
-	top: -20px;
+  height: 95vh;
+  max-width:330px;
   padding-left: 0;
 	z-index: 100;
 }
 
+#keepImageSizedCorrectly{
+  max-width: 90%;
+  max-height:90%;
+  height: auto;
+  width: auto\9;
+}
+
 #sqwad_new_button{
 	color:white;
-	font-size:70px;
+	font-size:5vw;
+  font-size:5vh;
 	background-color:#FA023C;
 	margin-top:10px;
 	font-weight:700;
@@ -78,16 +89,13 @@
 .background-shrink{
 	background-image:url(../images/new_site_top_bg.png); 
 	padding-top:0; 
-	padding-bottom:0px;
-}
-
-.block-kinda-fill-height{
-	height:700px;
+  padding-bottom:0;
+  height:95vh;
 }
 
 #realTimeFantasy{
   font-family: 'Oswald', sans-serif !important; 
-  font-size: 30px;
+  font-size: 5vh;
 }
 
 
@@ -106,7 +114,7 @@
 }
 
 #new_first_hr{
-    width:120%; 
+    width:130%; 
   margin-top:0;
 }
 
@@ -203,7 +211,7 @@
   left:100px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width:320px) and (max-width: 767px) {
   #left-line-new-site{
     font-size: 30px;
     padding-left: 0px;
@@ -269,23 +277,26 @@
   }
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (min-width: 768px) and (max-width: 1080px) {
   .row{
     margin-left: 0;
     margin-right: 0;
   }
   .new_sizes{
-    font-size: 50px;
-    text-align: left;
+    font-size: 55px;
+    text-align: center;
     padding-left: 10px;
   }
+  #left-line-new-site{
+    font-size: 55px;
+  }
   
-  #left-line-new-site:before {
+/*  #left-line-new-site:before {
     display:none;
   }
   #left-line-new-site:after{
     display: none;
-  }
+  }*/
   #realTimeFantasy{
     text-align: left;
     padding-left: 10px;
@@ -316,17 +327,8 @@
   }
 }
 
-@media screen and (max-width: 960px) {
-    #left-line-new-site:before {
-    display:none;
-  }
-  #left-line-new-site:after{
-    display: none;
-  }
-  .new_sizes{
-    font-size: 60px;
-  }
-  .block-kinda-fill-height{
-    height: auto;
+@media screen and (min-width:1081px) and (max-width: 1100px) {
+    #left-line-new-site{
+    font-size: 65px;
   }
 }
