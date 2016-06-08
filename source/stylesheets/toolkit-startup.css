@@ -13,6 +13,7 @@ body {
   margin: 0;
   padding-right: 0 !important;
 }
+
 .vertical-spacer{
   width:2px;
   height:10px;
@@ -312,10 +313,6 @@ body {
     color:white;
   }
   
-  .remove_on_phone{
-    display:none;
-  }
-  
   #hidden{
     display:block;
     width:200px;
@@ -388,10 +385,7 @@ body {
   .real_shrink_text{
     width:100%;
   }
-  
-  .remove_on_ipad{
-    display: none;
-  }
+
   #influencerImage{
     float:none;
     width: 150px;
@@ -6544,6 +6538,12 @@ body {
 @font-face{
   font-family: "Ironstrike-Black";
   src: url('../fonts/Ironstrike_Black.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face{
+  font-family: "IronstrikeStencil-Black";
+  src: url('../fonts/IronstrikeStencil_Black.otf');
   font-weight: normal;
   font-style: normal;
 }
