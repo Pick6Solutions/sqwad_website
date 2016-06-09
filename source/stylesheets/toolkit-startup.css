@@ -14,6 +14,10 @@ body {
   padding-right: 0 !important;
 }
 
+#my-menu:not( .mm-menu ) {
+   display: none;
+}
+
 .vertical-spacer{
   width:2px;
   height:10px;

@@ -2,6 +2,7 @@
 // back to top button - docs
 $(function () {
   
+  $("#my-menu").mmenu();
   // jQuery("#left-line").fitText();
   
   $('#contact_form').submit(function(event){
@@ -137,6 +138,7 @@ $('#tweeter_handle').submit(function(event){
   }
   
 })
+
 
   function capitalizeFirstLetter(string) {
       return string.charAt(0).toUpperCase() + string.slice(1);
