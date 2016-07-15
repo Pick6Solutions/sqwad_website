@@ -74,7 +74,11 @@ configure :build do
 
   # Minify Javascript on build
   # activate :minify_javascript
+  activate :relative_assets
+  
   activate :asset_hash
+  
+  activate :directory_indexes
 end
 
 activate :s3_sync do |s3_sync|

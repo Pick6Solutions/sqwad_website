@@ -20,8 +20,10 @@
     
     <div class="navbar-center navbar-brand">
         
-        <a class="navbar-brand" href="javascript:window.location.href=window.location.href"><img src="images/sqwadhand.png" width="100" style="margin-bottom:10px"></a>   
-        
+        <a class="navbar-brand" href="javascript:window.location.href=window.location.href"><%= image_tag '/images/sqwadhand.png', width: '100', style: 'margin-bottom: 10px' %></a> 
+          
+<!--  <img src="images/sqwadhand.png" width="100" style="margin-bottom:10px"></a>   
+ -->        
         <span class="site-font otherHeaderStuff"><span id="headerText">S</span>QWAD</span>
     </div>
       
@@ -37,14 +39,16 @@
       
         <li>
           
-          <a class="hide-icons" target="_blank" href="https://twitter.com/SqwadFan" style="padding-right:0"><img src="images/twitter.png" height="40px" width="40px"></a>
+          <a class="hide-icons" target="_blank" href="https://twitter.com/SqwadFan" style="padding-right:0"><%= image_tag '/images/twitter.png', height: '40px', width: '40px' %></a>
+            <!-- <img src="images/twitter.png" height="40px" width="40px"></a> -->
           
         </li>
         
         <li>
           
-          <a class="hide-icons" target="_blank" href="https://www.facebook.com/Sqwadfan/?fref=ts"><img src="images/facebook.png" height="40px" width="40px"></a>
-          
+          <a class="hide-icons" target="_blank" href="https://www.facebook.com/Sqwadfan/?fref=ts"><%= image_tag '/images/facebook.png', height: '40px', width: '40px' %></a>
+<!--             <img src="images/facebook.png" height="40px" width="40px"></a>
+ -->          
         </li>
         
       </ul>
