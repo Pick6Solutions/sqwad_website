@@ -20,3 +20,4 @@ gem 'rake'
 
 gem 'middleman-imageoptim'
 gem 'middleman-s3_sync'
+gem 'middleman-blog'

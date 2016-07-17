@@ -61,6 +61,11 @@ end
 #   end
 # end
 
+activate :blog do |articles|
+  articles.prefix = "articles"
+  articles.permalink = "articles/{league}/{title}.html"
+end
+
 set :css_dir, 'stylesheets'
 
 set :js_dir, 'javascripts'

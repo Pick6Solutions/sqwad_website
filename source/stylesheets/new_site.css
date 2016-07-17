@@ -133,6 +133,13 @@
   padding-bottom:0;
 }
 
+.background-shrink-1{
+  background-image:url(../images/white_background.png); 
+  padding-top:0; 
+  padding-bottom:0;
+}
+
+
 #realTimeFantasy{
   font-family: 'Oswald', sans-serif !important; 
 }

@@ -190,7 +190,8 @@ var twitterFavicon = document.createElement('img');
 twitterFavicon.src = '//twitter.com/login?redirect_after_login=%2Ffavicon.ico';
 twitterFavicon.addEventListener('load', function () {
     document.getElementById('status').innerHTML = '';
-    document.getElementById('tweet').href = "http://twitter.com/home?status=@SqwadFan %23SqwadInfluencer"
+    // document.getElementById('tweet').href = "http://twitter.com/home?status=@SqwadFan %23SqwadInfluencer"
+    document.getElementById('tweet').href = "http://twitter.com/home?status=Top 20 MLS Player Jerseys http://sqwadapp.co/article/"
     document.getElementById('tweeter_handle').style.display = "none"
     document.getElementById('mobile_twitter').style.display = "none"
 });
