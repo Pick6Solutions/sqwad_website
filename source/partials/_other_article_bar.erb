@@ -1,10 +1,12 @@
-<div class="row">
-	<div class="vertical-spacer-lg show_on_ipad"></div>
-	<a href="http://sqwadapp.co/"><button class="button btn-success btnRow">WNBA</button></a>
-	<a href="http://sqwadapp.co/fc.html"><button class="button btn-warning btnRow" href="http://sqwadapp.co/fc.html">MLS</button></a>
-	<a href="#" data-toggle="modal" data-target="#anotherModal"><button class="button btn-danger btnRow">EPL</button></a>
-	<a href="#" data-toggle="modal" data-target="#anotherModal"><button class="button btn-warning btnRow">NBA</button></a>
-	<a href="#" data-toggle="modal" data-target="#anotherModal"><button class="button btn-success btnRow"> NFL</button></a>
-	<a href="#" data-toggle="modal" data-target="#anotherModal"><button class="button btn-danger btnRow">MLB</button></a>
+<div class="row" style="background-color:#FA023C; margin:0">
+	<% blog.tags.each do |tag| %>
+			<% link_to '/tags/'+ tag[0].downcase + '.html', :relative => true do %>
+				<span class="btn btnRow border"><%= tag[0] %></span>
+			<% end %>
+	<% end %>
+	<a href="#" data-toggle="modal" data-target="#anotherModal"><span class="btn btnRow border">EPL</span></a>
+	<a href="#" data-toggle="modal" data-target="#anotherModal"><span class="btn btnRow border">NBA</span></a>
+	<a href="#" data-toggle="modal" data-target="#anotherModal"><span class="btn btnRow border">NFL</span></a>
+	<a href="#" data-toggle="modal" data-target="#anotherModal"><span class="btn btnRow border">MLB</span></a>
+	<a href="#" data-toggle="modal" data-target="#anotherModal"><span class="btn btnRow border">MARKET</span></a>
 </div>
-

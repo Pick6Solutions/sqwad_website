@@ -161,15 +161,14 @@
 
 #headerText{
   font-family: "IronstrikeStencil-Black";
-  color:black;
-  font-size: 25px;
+  color:white;
+  font-size: 20px;
 }
 
 .otherHeaderStuff{
   font-family: "Ironstrike-Black";
-  color:black;
-  font-size: 25px;
-  margin-left: -10px; 
+  color:white;
+  font-size: 20px;
 }
 
 #new_first_hr{

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" style="background-color:black; margin:0">
   
   <div class="container-fluid">
     
@@ -17,24 +17,19 @@
       </a>
       
     </div>
+    <div class="navbar-left">
+      <a class="navbar-brand" href="/fc.html"><%= image_tag '/images/sqwadhand.png', width: '60', style: 'margin-left:15px; padding-top:0; margin-top:0' %></a>
     
-    <div class="navbar-center navbar-brand">
-        
-        <a class="navbar-brand" href="/fc.html"><%= image_tag '/images/sqwadhand.png', width: '100', style: 'margin-bottom: 10px' %></a>
-        
-        <span class="site-font otherHeaderStuff"><span id="headerText">S</span>QWAD</span>
+      <span class="site-font otherHeaderStuff"><span id="headerText">S</span>QWAD</span>
     </div>
-      
+    <div class="navbar-left">
+      <div class="vertical-spacer"></div>
+      <div class="vertical-spacer"></div>
+      <div class="vertical-spacer"></div>
+      <span class="site-font lowDownText" style="margin-left:10px">LOW-DOWN</span>
+    </div>
     <div class="navbar-collapse collapse">
-      
-      <ul class="nav navbar-nav navbar-right">
-        
-        <li>
-          
-          <a class="hide-icons" target="_blank" href="https://medium.com/@SqwadFan" id="sqwad_header_button">SQWAD NEWS</a>
-          
-        </li>
-      
+      <ul class="nav navbar-nav navbar-right" style="padding-top:20px">
         <li>
           
           <a class="hide-icons" target="_blank" href="https://twitter.com/Sqwadfc" style="padding-right:0"><%= image_tag '/images/twitter.png', height: '40px', width: '40px' %></a>
@@ -44,6 +39,12 @@
         <li>
           
           <a class="hide-icons" target="_blank" href="https://www.facebook.com/Sqwadfan/?fref=ts"><%= image_tag '/images/facebook.png', height: '40px', width: '40px' %></a>
+          
+        </li>
+        
+        <li>
+          
+          <a class="hide-icons" target="_blank" href="#waitlisted" id="sqwad_header_button">JOIN TODAY</a>
           
         </li>
         
@@ -61,7 +62,7 @@
     
     <li>
           
-      <a href="https://medium.com/@SqwadFan" class="site_font" target="_blank">SQWAD NEWS</a>
+      <a href="#waitlisted" class="site_font">JOIN TODAY</a>
       
     </li>
     
