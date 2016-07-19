@@ -1,9 +1,7 @@
 <div class="row" style="background-color:#FA023C; margin:0">
-	<% blog.tags.each do |tag| %>
-			<% link_to '/tags/'+ tag[0].downcase + '.html', :relative => true do %>
-				<span class="btn btnRow border"><%= tag[0] %></span>
-			<% end %>
-	<% end %>
+ <%= link_to 'All', '/article.html', :class => 'btn btnRow border' %>
+ <%= link_to 'WNBA', '/wnba.html', :class => 'btn btnRow border' %>
+ <%= link_to 'MLS', '/mls.html', :class => 'btn btnRow border' %>
 	<a href="#" data-toggle="modal" data-target="#anotherModal"><span class="btn btnRow border">EPL</span></a>
 	<a href="#" data-toggle="modal" data-target="#anotherModal"><span class="btn btnRow border">NBA</span></a>
 	<a href="#" data-toggle="modal" data-target="#anotherModal"><span class="btn btnRow border">NFL</span></a>

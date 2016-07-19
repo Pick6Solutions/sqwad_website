@@ -328,5 +328,5 @@ if(query){
    $window.scroll(function() {
         $stickyEl.toggleClass('sticky', $window.scrollTop() > elTop);
     });
-  
+
 })

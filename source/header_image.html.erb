@@ -1,0 +1,38 @@
+<div class="container-fluid" style="padding:0">
+  <div class = "block block-fill-height article-background" style="padding-left:100px; padding-top:0; padding-right:100px">
+    <%= partial "/partials/article_header" %>
+  
+    <div class="vertical-spacer-lg"></div>
+    <div class="vertical-spacer-lg"></div>
+  
+    <h1>'<%= tagname %>' Articles</h1>
+
+    <% if paginate && num_pages > 1 %>
+      <p>Page <%= page_number %> of <%= num_pages %></p>
+
+      <% if prev_page %>
+        <p><%= link_to 'Previous page', prev_page %></p>
+      <% end %>
+    <% end %>
+    
+    <div>
+    <ol>
+      <% page_articles.each_with_index do |article, i| %>
+        <li class="list-articles">
+          <%= link_to article.title.tr('-',' ').titleize, article %><br>
+          Published: 
+          <span><%= article.date.strftime('%b %e') %>
+        </span></li>
+      <% end %>
+    </ol>
+    </div> 
+
+    <% if paginate %>
+      <% if next_page %>
+        <p><%= link_to 'Next page', next_page %></p>
+      <% end %>
+    <% end %>
+     <div class="vertical-spacer-lg"></div>
+    <div class="vertical-spacer-lg"></div>
+  </div>
+</div>

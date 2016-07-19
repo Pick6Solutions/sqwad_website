@@ -1,8 +1,4 @@
----
-title: Sqwad Fantasy
-description: SQWAD is a real time fantasy sports platform that allows fans to challenge pros and friends for bragging rights and brand rewards.  Sign up for our beta today!
----
-
+<% wrap_layout :layout do %>
 <div class="se-pre-con" id="loader" style="display:none"></div>
 
 <div class="container-fluid" style="padding:0">
@@ -18,31 +14,29 @@ description: SQWAD is a real time fantasy sports platform that allows fans to ch
 		</div>
 		
 		<div class="row" style="margin:0; padding:0">
-						
+							  	
 			<div class="col-sm-9" style="margin:0; padding:10px">
-				<h1 align="left" style="font-style:italic">THE NEW-NEW</h1>
-				<% blog.articles.each do |article| %>
-				<hr style="border:solid 1px black" class="<%= article.tags[0] %>">
+
 				<div class="container" align="left">
-						<div class="col-sm-9 col-sm-offset-1">
-							<article class='<%= article.tags[0] %>'>
-								<div class="col-sm-6">
-									<div class="vertical-spacer-lg"></div>
-									<%= image_tag article.metadata[:page]['image_header'] , width: '250px' %>
-								</div>
-								<div class="col-sm-6">
-							    <h3>
-							      <a href="<%= article.url %>"><%= article.title.tr('-',' ').titleize %></a>
-							    </h3>
-							    <%= article.summary %>
-							    <%= link_to 'Read more…', article %>
-<!-- 						    <a href="<%= article.url %>">Read more</a> -->
-						    </div>
-						  </article>
-						</div>
-					</div>
-				<% end %>
-				</div>
+					<div class="col-sm-9 col-sm-offset-1">
+					  <article>
+					  	<h3><%= current_article.metadata[:page]['title'].tr('-',' ').titleize %></h3>
+					  	 <% if current_article.metadata[:page]['author'] === 'Nick Lawson' %>
+					  	 		By <%= link_to current_article.metadata[:page]['author'], 'https://twitter.com/nlawsonMBA', :target => '_blank' %>
+					  	 <% elsif current_article.metadata[:page]['author'] === 'Nic Bodiford' %>
+					  	 		By <%= link_to current_article.metadata[:page]['author'], 'https://twitter.com/Nic_Bodiford', :target => '_blank' %>
+					  	 <% else %>
+					  	 	  By <%= current_article.metadata[:page]['author'] %>
+					  	 <% end %>
+					  	 	<div class="vertical-spacer-lg"></div>
+					  	<%= image_tag current_article.metadata[:page]['image_header'] %>
+					  	<div class="vertical-spacer-lg"></div>
+	    				<%= yield %>
+	    				<div class="vertical-spacer-lg"></div>
+	  				</article>
+	  			</div>
+	  		</div>
+			</div>
 				
 				<div class="col-sm-3" id ="the-sticky-div" style="padding:0">
 				
@@ -411,3 +405,4 @@ description: SQWAD is a real time fantasy sports platform that allows fans to ch
 	</div>
 	
 </div>
+<% end %>

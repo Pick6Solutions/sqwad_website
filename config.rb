@@ -24,7 +24,7 @@
 #   page "/admin/*"
 # end
 # nameArray = ["nick_lawson", "manuel_pineryo", "lee_jorgensen"]
-
+  
   
 # data['influencers']['people'].each do |person|
   
@@ -55,35 +55,52 @@ configure :development do
 end
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def findAuthors
+    "Helping"
+  end
+end
 
-activate :blog do |articles|
+activate :blog do |blog|
     # This will add a prefix to all links, template references and source paths
-  articles.sources = "articles/{title}.html"
-  articles.permalink = "articles/{title}.html"
+  blog.sources = "articles/{title}.html"
+  blog.permalink = "articles/{title}.html"
   # Matcher for blog source files
   # blog.sources = "{year}-{month}-{day}-{title}.html"
   # blog.taglink = "tags/{tag}.html"
-  # blog.layout = "layout"
-  # blog.summary_separator = /(READMORE)/
-  # blog.summary_length = 250
+  blog.layout = "article_layout"
+  blog.summary_separator = /READMORE/
+  # blog.summary_length = 50
   # blog.year_link = "{year}.html"
   # blog.month_link = "{year}/{month}.html"
   # blog.day_link = "{year}/{month}/{day}.html"
   # blog.default_extension = ".markdown"
-
-  articles.tag_template = "tag.html"
+  blog.tag_template = "tag.html"
   # blog.calendar_template = "calendar.html"
 
   # Enable pagination
   # blog.paginate = true
   # blog.per_page = 10
   # blog.page_link = "page/{num}"
+  
+  blog.custom_collections = {
+    image_header: {
+      link: '/headers/image_header.html',
+      template: '/image_header.html'
+    },
+    featured: {
+      link: 'features/featured.html',
+      template: '/featured.html'
+    },
+    author: {
+      link: '/authors/author.html',
+      template: '/author.html'
+    }
+  }
 end
+
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true, :smartypants => true
 
 set :css_dir, 'stylesheets'
 
