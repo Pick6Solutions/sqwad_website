@@ -55,11 +55,11 @@ configure :development do
 end
 
 # Methods defined in the helpers block are available in templates
-helpers do
-  def findAuthors
-    "Helping"
-  end
-end
+# helpers do
+#   def findAuthors
+#     "Helping"
+#   end
+# end
 
 activate :blog do |blog|
     # This will add a prefix to all links, template references and source paths
@@ -70,7 +70,7 @@ activate :blog do |blog|
   # blog.taglink = "tags/{tag}.html"
   blog.layout = "article_layout"
   blog.summary_separator = /READMORE/
-  # blog.summary_length = 50
+  blog.summary_length = 150
   # blog.year_link = "{year}.html"
   # blog.month_link = "{year}/{month}.html"
   # blog.day_link = "{year}/{month}/{day}.html"
@@ -79,28 +79,28 @@ activate :blog do |blog|
   # blog.calendar_template = "calendar.html"
 
   # Enable pagination
-  # blog.paginate = true
-  # blog.per_page = 10
-  # blog.page_link = "page/{num}"
+  blog.paginate = true
+  blog.per_page = 10
+  blog.page_link = "page/{num}"
   
   blog.custom_collections = {
     image_header: {
-      link: '/headers/image_header.html',
+      link: '/headers/:image_header.html',
       template: '/image_header.html'
     },
     featured: {
-      link: 'features/featured.html',
+      link: 'features/:featured.html',
       template: '/featured.html'
     },
     author: {
-      link: '/authors/author.html',
+      link: 'authors/:author.html',
       template: '/author.html'
     }
   }
 end
 
-set :markdown_engine, :redcarpet
-set :markdown, :fenced_code_blocks => true, :smartypants => true
+# set :markdown_engine, :redcarpet
+# set :markdown, :fenced_code_blocks => true, :smartypants => true
 
 set :css_dir, 'stylesheets'
 
