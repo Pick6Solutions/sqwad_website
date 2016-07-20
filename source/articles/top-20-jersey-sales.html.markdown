@@ -9,8 +9,6 @@ author: Nic Bodiford
 
 We’re halfway through the 2016 MLS season and we know what’s on your mind: Jersey sales.
 
-READMORE
-
 [Back-to-back Jersey Sales](http://www.espnfc.us/major-league-soccer/story/2676490/clint-dempsey-first-major-league-soccer-jersey-sales-top-20) Champion Clint Dempsey has been dethroned by New York City FC’s Andrea Pirlo. Dempsey jersey sales skyrocketed after the 2014 World Cup but Pirlo’s playmaking ability has proven too tough for fans to ignore. Couple that with NYCFC holding 1st place in the Eastern Conference while Seattle blundered its way to the 4th worst record overall, one can easily understand the changing of the guard.  
 
 Some of Andrea Pirlo's best work can be found [here](https://www.youtube.com/watch?v=S4LwNXb3q5I).

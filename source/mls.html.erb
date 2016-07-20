@@ -19,24 +19,29 @@ description: SQWAD is a real time fantasy sports platform that allows fans to ch
 		
 		<div class="row" style="margin:0; padding:0">
 						
-			<div class="col-sm-9" style="margin:0; padding:10px">
+			<div class="col-md-9 col-sm-12" style="margin:0; padding:10px">
 				<h1 align="left" style="font-style:italic">THE NEW-NEW</h1>
 				<% blog.articles.each do |article| %>
 				<div class="container" align="left">
-						<div class="col-sm-9 col-sm-offset-1">
+						<div class="col-md-10 col-sm-12">
 							<% if article.tags[0] === "MLS" %>
 							<hr style="border:solid 1px black" class="<%= article.tags[0] %>">
 							<article class='<%= article.tags[0] %>'>
 									<div class="col-sm-6">
 										<div class="vertical-spacer-lg"></div>
-										<%= image_tag article.metadata[:page]['image_header'] , width: '250px' %>
+										<%= image_tag article.metadata[:page]['image_header'] , width: '400px' %>
 									</div>
-									<div class="col-sm-6">
+									<div class="col-sm-5 col-sm-offset-1">
+										<div class="vertical-spacer"></div>
+										<div class="vertical-spacer"></div>
 								    <h3>
 								      <a href="<%= article.url %>"><%= article.title.tr('-',' ').titleize %></a>
 								    </h3>
 								    <%= article.summary %>
 								    <%= link_to 'Read more…', article %>
+								    <div class="vertical-spacer-lg"></div>
+									<div class="vertical-spacer-lg"></div>
+									<div class="vertical-spacer"></div>
 							    </div>
 						  </article>
 						  <% end %>
@@ -54,8 +59,6 @@ description: SQWAD is a real time fantasy sports platform that allows fans to ch
 					</div>
 				
 			</div>
-				
-				<div class="vertical-spacer-lg"></div>
 				
 				<div class="articleFooter">
 						

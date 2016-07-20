@@ -11,8 +11,6 @@ Thanks to everyone who tuned in on Periscope to follow our WNBA Player Rankings 
 
 With SQWAD fans have the ability to buy players for the season, 5 games, or 3 games in our free agency feature. Just like in real sports free agency you will want to buy players that can help you win at the lowest price/best value.
 
-READMORE
-
 Our rankings were based on the 2015 per game stats in points, assists, rebounds, steals, and blocks. We won’t tell you our secret formula but we weigh those stats to get our SQWAD Score.
 
 SQWAD score is what we use to price those players, and the SQWAD score is based on stats from game-to-game. The numbers will change dynamically throughout the season. If a player starts to slump mid-season, their SQWAD score and price will drop. If they go on a hot streak the rank and price goes up.

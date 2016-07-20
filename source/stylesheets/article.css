@@ -20,6 +20,9 @@
 
 .btnRow{
   color:white;
+  background-color: #FA023C;
+  width:10%;
+  min-width: 70px;
 }
 
 .link-color{
@@ -92,6 +95,11 @@
     bottom:0px; /*Change this to increase/decrease distance*/
     border-bottom: 5px solid #000;  
 }
+ .phoneImage{
+  height: 70px;
+  line-height: 70px;
+  font-size: 30px;
+  }
 
 .number-styles{
   margin-left: 10px;
@@ -122,7 +130,27 @@
   text-align: left;
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
+.show_on_phone{
+  display: none;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .toTheRight{
+    display: none;
+  }
+    .articleFooter{
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 70px;
+  }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .article_header{
     text-align: center;
   }
@@ -136,10 +164,11 @@
   }
   
   .navBar{
-  text-align: center;
+    display: none;
+/*  text-align: center;*/
 }
   .toTheRight{
- display: none;
+    display: none;
   }
   .articleFooter{
     display: block;
@@ -149,23 +178,46 @@
     right: 0;
     width: 100%;
     height: 70px;
-    background-color: #FA023C;
+  }
+  .show_on_phone{
+  display: block;
   }
 }
 
 .secondPart{
-  background-color: grey;
+  background-color: rgba(48,48,48,0.8); ;
   height: 70px;
   line-height: 70px;
-  font-size: 40px
+  font-size: 20px
 }
 
 @media screen and (max-width: 600px) {
   .remove_on_tinyphone{
     display: none;
   }
+  
   .center{
     margin:auto;
     width: 100%;
+  }
+  .secondPart{
+  background-color: rgba(48,48,48,0.8); ;
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px
+}
+  .phoneImage{
+  height: 50px;
+  line-height: 50px;
+  font-size: 30px;
+  }
+  .articleFooter{
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 50px;
   }
 }
