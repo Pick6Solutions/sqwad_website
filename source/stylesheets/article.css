@@ -1,11 +1,7 @@
 .article{
-	background: white;
-	-webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  padding:0;
+  margin:0;
 }
-
 .font-body{
   font-family: 'Oswald', sans-serif;
   font-weight: 400;
@@ -16,6 +12,11 @@
   font-size: 45px;
   font-style: italic;
   color:white;
+}
+
+#sqwad_header_button{
+  background-color: #FA023C;
+  border-radius: 22.5px;
 }
 
 .btnRow{
