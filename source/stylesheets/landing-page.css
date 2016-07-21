@@ -90,6 +90,13 @@ video#bgvid {
 	margin-top:0;
 }
 
+#sqwadContactUsHeader{
+	color:white;
+	font-size:20px;
+	margin-top:10px;
+	font-weight:700;
+	font-family: 'Oswald-Demi', sans-serif;
+}
 
 #sqwad_header_button{
 	color:white;
