@@ -55,11 +55,17 @@ configure :development do
 end
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def findAuthors
-#     "Helping"
-#   end
-# end
+
+helpers do
+  def findAuthors(name)
+   authors = [["Nick Lawson", 'https://twitter.com/nlawsonMBA'], ["Nic Bodiford", 'https://twitter.com/Nic_Bodiford'], ['Frankie Chakeris', 'https://twitter.com/sqwadfc']]
+    authors.each do |author|
+      if(author[0] === name)
+        return author[1]
+      end
+    end
+  end
+end
 
 activate :blog do |blog|
     # This will add a prefix to all links, template references and source paths

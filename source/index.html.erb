@@ -3,17 +3,18 @@ title: Sqwad Fantasy
 description: SQWAD is a real time fantasy sports platform that allows fans to challenge pros and friends for bragging rights and brand rewards.  Sign up for our beta today!
 ---
     
-   <video id="bgvid" poster="/images/curry_bg.png" preload="auto" autoplay="true">
+   <video id="bgvid" preload="auto" autoplay="true">
+   	<source src="/images/background_video.webm" type="video/webm">
     <source src="/images/background_video.mp4" type="video/mp4">
   </video>
   
   <script type="text/javascript">
-var video= $('#bgvid')[0]; 
-var videoJ= $('#bgvid');        
-videoJ.on('ended',function(){
-    video.load();     
-});
-</script>
+		var video= $('#bgvid')[0]; 
+		var videoJ= $('#bgvid');        
+		videoJ.on('ended',function(){
+		    video.load();     
+		});
+	</script>
 
 
 <div class="se-pre-con" id="loader" style="display:none"></div>
@@ -76,7 +77,7 @@ videoJ.on('ended',function(){
 				
 				<div class="vertical-spacer"></div>
 				
-			<a href="/article"><button class="btn mybutton" target="_blank">NEWS</button></a>
+				<%= link_to 'NEWS', "/article.html", :class => "btn mybutton", :target => "_blank" %>
 				 <script>
 			    document.addEventListener("DOMContentLoaded", function(event) {
 			      window.waitlisted.start({domain: "sqwad.app.waitlisted.co"})

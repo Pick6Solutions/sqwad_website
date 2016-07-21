@@ -22,13 +22,7 @@
 					<div class="col-sm-9 col-sm-offset-1">
 					  <article>
 					  	<h3><%= current_article.metadata[:page]['title'].tr('-',' ').titleize %></h3>
-					  	 <% if current_article.metadata[:page]['author'] === 'Nick Lawson' %>
-					  	 		By <%= link_to current_article.metadata[:page]['author'], 'https://twitter.com/nlawsonMBA', :target => '_blank' %>
-					  	 <% elsif current_article.metadata[:page]['author'] === 'Nic Bodiford' %>
-					  	 		By <%= link_to current_article.metadata[:page]['author'], 'https://twitter.com/Nic_Bodiford', :target => '_blank' %>
-					  	 <% else %>
-					  	 	  By <%= current_article.metadata[:page]['author'] %>
-					  	 <% end %>
+					  	 By <%= link_to current_article.metadata[:page]['author'], findAuthors(current_article.metadata[:page]['author']), target: '_blank' %>
 					  	 	<div class="vertical-spacer-lg"></div>
 					  	<%= image_tag current_article.metadata[:page]['image_header'] %>
 					  	<div class="vertical-spacer-lg"></div>

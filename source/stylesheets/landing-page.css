@@ -5,6 +5,7 @@ body {
 	font-weight: 400;
 	text-align: center;
 	margin: 0;
+	
 }
 
 video#bgvid { 
@@ -20,7 +21,7 @@ video#bgvid {
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-    background: url(/images/curry_bg.png) no-repeat;
+    background: black no-repeat;
     background-size: cover; 
 }
 
@@ -226,7 +227,7 @@ video#bgvid {
 	border: 2px white solid;
 	color:white;
 	background-color: rgba(0,0,0,0);
-	font-size: 55px;
+	font-size: 40px;
 	padding-top: 0;
 	padding-bottom: 0;
 	padding-right: 5%;
