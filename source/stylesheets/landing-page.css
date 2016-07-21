@@ -3,8 +3,24 @@
 body {
 	font-family: 'Oswald', sans-serif;
 	font-weight: 400;
-/*    background: black url('../images/pdxsportsbg.png') no-repeat center center fixed;
-*/}
+}
+
+video#bgvid { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(/images/curry_bg.png) no-repeat;
+    background-size: cover; 
+}
 
 .btn {
     padding: 14px 24px;
@@ -14,6 +30,35 @@ body {
     text-transform: uppercase;
 }
 
+.titleFont{
+	font-family: 'Oswald-Demi', sans-serif;
+	color: white;
+	font-size: 70px;
+}
+
+.secondaryTitle{
+	font-family: 'Oswald', sans-serif;
+	color: white;
+	font-size: 30px;
+}
+
+.iconImage{
+	width:60px;
+	height:auto;
+	
+}
+
+.image_text{
+	color: white;
+	font-size: 15px;
+	font-family: 'Oswald-Demi', sans-serif;
+}
+
+.spaceIsLimited{
+	color:white;
+	font-weight: 300;
+	font-size: 20px;
+}
 .btn-danger {
     background: #FA023C;
     color: #ffffff;
@@ -43,6 +88,15 @@ body {
 	margin-top:0;
 }
 
+
+#sqwad_header_button{
+	color:white;
+	font-size:20px;
+	margin-top:10px;
+	font-weight:700;
+	font-family: 'Oswald-Demi', sans-serif;
+}
+
 #first_h2{
 	color: white;
 	margin-left: 5px;
@@ -59,10 +113,10 @@ body {
 }
 
 #second_hr{
-	border-top:3px solid white;
-	width:40%;
-	margin-left:0px;
-	margin-bottom:5px
+	border-top:5px solid #FA023C;
+	margin-left: 25%;
+	margin-right: 25%;
+	margin-top: 0;
 }
 
 #first_h3{
@@ -156,12 +210,29 @@ body {
 
 #link{
 	font-size:30px;
-	font-family:Dense
+	font-family:Dense;
 }
 
-#sqwad_button{
-			text-align: left
-		}
+.mybutton{
+	border: 2px white solid;
+	color:white;
+	background-color: rgba(0,0,0,0);
+	font-size: 55px;
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-right: 5%;
+	padding-left: 5%;
+	margin: 0;
+	font-family: 'Oswald-Demi', sans-serif;
+}
+
+.customJoinButton{
+	font-size: 50px;
+	background-color: #FA023C;
+	color: white;
+	text-transform: capitalize;
+}
+
 .grey-title{
 	font-size: 28px;
 	font-weight: 400;
@@ -186,6 +257,19 @@ body {
 }*/
 		
 @media screen and (max-width: 769px) {
+	html{
+		background: url(/images/curry_bg.png) #000 no-repeat center center fixed;
+	}
+	#bgvid {
+        display: none;
+    }
+.titleFont{
+	font-size: 40px;
+}
+
+.secondaryTitle{
+	font-size: 20px;
+}
 	#sqwad_button{
 			text-align: center;
 		}
@@ -215,6 +299,21 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+.titleFont{
+	font-size: 20px;
+}
+
+.mybutton{
+	font-size: 30px;
+}
+
+.customJoinButton{
+	font-size: 30px;
+}
+
+.secondaryTitle{
+	font-size: 10px;
+}
 		#sqwad_button{
 			text-align: center;
 		}

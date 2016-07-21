@@ -1,19 +1,6 @@
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700);
 
-body {
-  background: url(../images/background.png) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  text-align: center;
-  font-family: 'Oswald', sans-serif !important;
-  font-weight: 400;
-  margin: 0;
-  padding-right: 0 !important;
-}
-
 #my-menu:not( .mm-menu ) {
    display: none;
 }
@@ -6556,6 +6543,12 @@ body {
   src: url('../fonts/Dense-Regular.otf');
   font-weight: normal;
   font-style: normal;
+}
+@font-face{
+  font-family: "Oswald-Demi";
+  src: url('../fonts/Oswald-Demi-BoldItalic.ttf');
+  font-weight: normal;
+  font-style: italic;
 }
 .icon:before {
   position: relative;
