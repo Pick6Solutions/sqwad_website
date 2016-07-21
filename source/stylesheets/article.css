@@ -182,6 +182,9 @@
   .show_on_phone{
   display: block;
   }
+  .remove_on_phone{
+    display: none;
+  }
 }
 
 .secondPart{
