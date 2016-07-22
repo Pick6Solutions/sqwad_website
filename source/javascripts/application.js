@@ -1,6 +1,11 @@
-
-// back to top button - docs
 $(function () {
+       // swipe opens waitlisted
+var myElement  = document.getElementById('swiper')
+var hammertime = new Hammer(myElement);
+hammertime.on('swiperight', function(ev){
+  document.getElementById('idToClickForWaitlisted').click();
+})
+
   
   $("#my-menu").mmenu();
   // jQuery("#left-line").fitText();
@@ -328,5 +333,5 @@ if(query){
    $window.scroll(function() {
         $stickyEl.toggleClass('sticky', $window.scrollTop() > elTop);
     });
-
+   
 })

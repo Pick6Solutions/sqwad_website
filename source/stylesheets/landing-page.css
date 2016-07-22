@@ -8,6 +8,10 @@ body {
 	
 }
 
+/*.ui-loader{
+	display: none;
+}*/
+
 video#bgvid { 
     position: fixed;
     top: 50%;
@@ -34,9 +38,16 @@ video#bgvid {
 }
 
 .titleFont{
-	font-family: 'Oswald-Demi', sans-serif;
+	display: block;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 700;
+	font-style: italic;
 	color: white;
 	font-size: 70px;
+}
+
+.smallTitleFont{
+	display:none;
 }
 
 .secondaryTitle{
@@ -54,7 +65,8 @@ video#bgvid {
 .image_text{
 	color: white;
 	font-size: 15px;
-	font-family: 'Oswald-Demi', sans-serif;
+	font-family: 'Oswald', sans-serif;
+	font-style: italic;
 }
 
 .spaceIsLimited{
@@ -83,7 +95,8 @@ video#bgvid {
 .white_color{
 	color:white;
 	font-family: 'Oswald', sans-serif !important;
-    font-weight: 700;
+  font-weight: 700;
+  font-style: italic;
 }
 
 #first_hr{
@@ -96,7 +109,8 @@ video#bgvid {
 	font-size:20px;
 	margin-top:10px;
 	font-weight:700;
-	font-family: 'Oswald-Demi', sans-serif;
+	font-family: 'Oswald', sans-serif;
+	font-style: italic;
 }
 
 #sqwad_header_button{
@@ -104,13 +118,15 @@ video#bgvid {
 	font-size:20px;
 	margin-top:10px;
 	font-weight:700;
-	font-family: 'Oswald-Demi', sans-serif;
+	font-family: 'Oswald', sans-serif;
+	font-style: italic;
 }
 
 #first_h2{
 	color: white;
 	margin-left: 5px;
 	font-family: 'Oswald', sans-serif;
+	font-style: italic;
 	font-weight: 300;
 }
 
@@ -162,7 +178,8 @@ video#bgvid {
 	padding-left:10px;
 	padding-right:10px;
 	font-family: 'Oswald', sans-serif !important;
-    font-weight: 700;
+  font-weight: 700;
+  font-style: italic;
 }
 
 .image_description{
@@ -233,7 +250,9 @@ video#bgvid {
 	padding-right: 5%;
 	padding-left: 5%;
 	margin: 0;
-	font-family: 'Oswald-Demi', sans-serif;
+	font-family: 'Oswald', sans-serif;
+	font-style: italic;
+	display: inline-block;
 }
 
 .customJoinButton{
@@ -241,6 +260,7 @@ video#bgvid {
 	background-color: #FA023C;
 	color: white;
 	text-transform: capitalize;
+	display: inline-block;
 }
 
 .grey-title{
@@ -256,6 +276,13 @@ video#bgvid {
 .adjust_padding2{
 	padding-left:4%; 
 }
+.landing_footer{
+	display: none;
+}
+
+	.swipe-icon{
+		display: none;
+	}
 		
 /*#firstPart:after{
 	position: absolute;
@@ -266,19 +293,33 @@ video#bgvid {
   background-color: white;
 }*/
 		
-@media screen and (max-width: 769px) {
-	html{
-		background: url(/images/curry_bg.png) #000 no-repeat center center fixed;
+@media screen and (max-width: 1080px)  {
+		.titleFont{
+		text-align: center;
+		font-size: 60px;
 	}
+	.landing_footer{
+		display: none;
+	}
+	.swipe-icon{
+		display: none;
+	}
+}		
+
+@media screen and (max-width: 768px) {
+	html{
+		background: url(/images/mobile_background.png) #000 no-repeat center center fixed;
+/*		background: black;
+*/	}
 	#bgvid {
         display: none;
     }
 .titleFont{
-	font-size: 40px;
+	font-size: 50px;
 }
 
 .secondaryTitle{
-	font-size: 20px;
+	font-size: 30px;
 }
 	#sqwad_button{
 			text-align: center;
@@ -306,12 +347,74 @@ video#bgvid {
 	.adjust_padding2{
 		padding-left: 0; 
 	}
+	.landing_footer{
+		display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 70px;
+	}
+	.swipe-icon{
+		display: none;
+	}
 }
 
 @media screen and (max-width: 600px) {
-.titleFont{
-	font-size: 20px;
+.spaceIsLimited{
+	display: none;
 }
+.landing_footer{
+	display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(to right,#FA023C, black);
+	color: white;
+	line-height:70px
+}
+.swipeText{
+	line-height: 70px;
+	font-size: 30px;
+	font-family: 'Oswald', sans-serif;
+	font-style: italic;
+	font-weight: 400;
+}
+
+.iconImage{
+	width:60px;
+	height:auto;
+}
+
+.swipe-icon{
+	display: inline-block;
+}
+
+.mybutton{
+	display: none;
+}
+
+.customJoinButton{
+	display: none;
+}
+
+.titleFont{
+	display:none;
+}
+
+.smallTitleFont{
+	display: block;
+	font-size:40px;
+	font-family: 'Oswald', sans-serif;
+	font-style: italic;
+	font-weight: 700; 
+}
+
+
 
 .mybutton{
 	font-size: 30px;
@@ -320,9 +423,12 @@ video#bgvid {
 .customJoinButton{
 	font-size: 30px;
 }
-
-.secondaryTitle{
-	font-size: 10px;
+.secondaryTitle span{
+	display: none;
+}
+.secondaryTitle:after{
+	content: "In-Game Fantasy Sports Real Cash and Rewards";
+	font-size: 30px;
 }
 		#sqwad_button{
 			text-align: center;
@@ -332,6 +438,12 @@ video#bgvid {
   		text-align: center;
 		}
 	}
+	
+@media screen and (max-width: 400px) {
+		.smallTitleFont{
+		font-size:30px;
+	}
+}
 
 /*@media screen and (max-width: 600px) {
 		.change_size{

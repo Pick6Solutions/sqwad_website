@@ -6544,12 +6544,7 @@ body {
   font-weight: normal;
   font-style: normal;
 }
-@font-face{
-  font-family: "Oswald-Demi";
-  src: url('../fonts/Oswald-Demi-BoldItalic.ttf');
-  font-weight: normal;
-  font-style: italic;
-}
+
 .icon:before {
   position: relative;
   top: 2px;
