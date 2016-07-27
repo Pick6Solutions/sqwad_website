@@ -1,0 +1,34 @@
+---
+title: Sqwad Fantasy
+description: SQWAD is a real time fantasy sports platform that allows fans to challenge pros and friends for bragging rights and brand rewards.  Sign up for our beta today!
+---
+
+<% wrap_layout :sports_layout do %>
+				
+	<% getProperArticles(current_page.path.split("/")[1]).reverse_each do |article| %>
+	<hr style="border:solid 1px black">
+	<div class="container" align="left">
+			<div class="col-md-10 col-sm-12">
+				<article>
+					<div class="col-sm-6">
+						<div class="vertical-spacer-lg"></div>
+						<%= image_tag article[1]['image'], width: '400px' %>
+					</div>
+					<div class="col-sm-5 col-sm-offset-1">
+						<div class="vertical-spacer"></div>
+						<div class="vertical-spacer"></div>
+				    <h3>
+				      <%= link_to article[1]['title'], getLink(article) %>
+				    </h3>
+				    <%= article[1]['summary'] %>
+				    <%= link_to 'Read more…', getLink(article) %>
+				    <div class="vertical-spacer-lg"></div>
+						<div class="vertical-spacer-lg"></div>
+						<div class="vertical-spacer"></div>
+			    </div>
+			  </article>
+			</div>
+		</div>
+	<% end %>
+
+<% end %> 

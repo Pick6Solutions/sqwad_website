@@ -1,0 +1,36 @@
+<div class="container">
+	<h1>SUBMITTED ARTICLES</h1>
+	<% if showArticles().length === 0 %>
+	
+	<h1>No new articles</h1>
+	
+	<% end %>
+	<% showArticles().each do |article| %>
+	
+		<%= article[1]['title'] %><br>
+		<%= article[1]['author'] %><br>
+		<%= article[1]['date'] %><br>
+		<%= article[1]['tags'] %><br>
+		<h5>Header Image</h5>
+		<%= image_tag article[1]['image'] %><br>
+		<h5>Mobile Image</h5>
+		<%= image_tag article[1]['mobileImage'] %><br>
+		
+		<% article[1]['body'].each do |paragraph| %>
+		<% if paragraph.split(' ').length === 1 && paragraph.split('').length > 100%>
+		<%= image_tag paragraph, width: '200px' %><br>
+		<% elsif paragraph.split(' ').length > 1 %>
+		<%= paragraph %><br>
+		<% else %>
+		<%= paragraph %>
+		<% end %>
+		
+		<% end %>
+	<button class="btn btn-danger articleDanger" data-id="<%= article[0] %>">Reject</button>
+	<button class="btn btn-success articleSuccess" data-id="<%= article[0] %>">Success</button>
+	<hr style="border: 2px black solid">
+	<% end %>
+	
+	<%= link_to "Make Routes Work", '/reloadConfig.html', :class => 'btn btn-primary' %>
+	
+</div>

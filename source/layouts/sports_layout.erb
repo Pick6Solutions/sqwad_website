@@ -1,3 +1,8 @@
+---
+title: Sqwad Fantasy
+description: SQWAD is a real time fantasy sports platform that allows fans to challenge pros and friends for bragging rights and brand rewards.  Sign up for our beta today!
+---
+
 <div class="se-pre-con" id="loader" style="display:none"></div>
 
 <div class="container-fluid" style="padding:0">
@@ -6,17 +11,18 @@
 		
 		<%= partial "/partials/article_header" %>
 		
-		<div class="navBar">
+<!-- 		<div class="navBar"> -->
 		
 			<%= partial "/partials/other_article_bar" %>
 				
-		</div>
+<!-- 		</div> -->
 		
 		<div class="row" style="margin:0; padding:0">
-							  	
-			<div class="col-sm-9" style="margin:0; padding:10px">
-
+						
+			<div class="col-md-9 col-sm-12 remove_padding_phone">
+				<h1 align="left" class="remove_on_phone" style="font-style:italic">THE NEW-NEW</h1>
 				<%= yield %>
+				</div>
 				
 				<div class="col-sm-3" id ="the-sticky-div" style="padding:0">
 				
@@ -26,7 +32,7 @@
 							
 					</div>
 				
-				</div>
+			</div>
 				
 				<div class="articleFooter">
 						
@@ -35,13 +41,7 @@
 						<%= partial "/partials/footer_side_bar" %>
 						
 				</div>
-			
-			</div>
-			
-		</div>
-		
-		<%= partial "/partials/sign_up" %>
-		
-	</div>
+				
+	<%= partial "/partials/contact_us" %>
 	
-</div>
+	<%= partial "/partials/sign_up" %>

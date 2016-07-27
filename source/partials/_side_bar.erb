@@ -5,21 +5,16 @@
 	<div class ="row" style="background-color:grey; margin:0; padding:0">
 		<h4>JOIN THE MOVEMENT TODAY</h4>
 		<h5 align="center">Over <span style="color:white">1000</span> Have Signed Up</h5>
-		<a class="btn" href="#waitlisted" id="sqwad_side_button">JOIN TODAY</a>
+		<a class="btn" data-toggle="modal" data-target="#anotherModal" href="#" id="sqwad_side_button">JOIN TODAY</a>
 		<div class="vertical-spacer"></div>
 	</div>
 
 	<div class="row" style="background-color:#A9A9A9; margin:0; padding:0" >
 		<h4 style="color:white">Hot Picks</h4>
-		<ol align="left">
-		<% blog.articles.each do |article| %>
-			<% if article.metadata[:page]['featured'] %>
-				<li class='number-styles'><%= link_to article.title.tr('-', ' ').titleize, article, class: 'link-color' %> <br>
-				<span class="author-text">By <%= article.metadata[:page]['author'] %></span></li>
-<!-- 				<p align="left"><span class="number-styles">01. </span><a href="https://medium.com/@SqwadFan/sqwad-mls-player-efficiency-rankings-70678a00bfed#.lu9taj2pm" target="_blank" class="link-color">The MLS way to early player efficiency ratings</a><span class="author-text"> By Nic Bodiford</span></p>
-				<p align="left"><span class="number-styles">02. </span><a href="https://medium.com/@SqwadFan/the-copa-américa-centario-a-breakdown-of-the-usmnt-roster-761991c21a21#.feigxe5uo" target="_blank" class="link-color">Copa América USMNT roster breakdown</a><span class="author-text"> By Nick Bodiford</span></p>
-				<p align="left"><span class="number-styles">03. </span><a href="https://medium.com/@SqwadFan/quarterfinals-power-rankings-2be0bd782fc2#.ay48tjr4e" target="_blank" class="link-color">Copa América quarter-final power rankings</a><span class="author-text"> By Nic Bodiford</span></p> -->
-			<% end %>	
+		<ol align="left" class="featuredList">
+		<% featuredArticles().each do |article| %>
+			<li class='number-styles'><span class="inlineSpan1"><%= link_to article[1]['title'], getLink(article), :class => "site-font" %></span><br>
+			<span class="inlineSpan2">By <%= link_to article[1]['author'].tr('_',' ').titleize, findAuthors(article[1]['author']), :target => '_blank', :class => 'author-text' %></span></li>
 		<% end %>	
 		</ol>
 	</div>

@@ -5,7 +5,6 @@ body {
 	font-weight: 400;
 	text-align: center;
 	margin: 0;
-	
 }
 
 /*.ui-loader{
@@ -283,18 +282,22 @@ video#bgvid {
 	.swipe-icon{
 		display: none;
 	}
-		
-/*#firstPart:after{
-	position: absolute;
-  content:'';
-  width: 5px;
-  top: 20px;
-  bottom: 20px;
-  background-color: white;
-}*/
-		
-@media screen and (max-width: 1080px)  {
-		.titleFont{
+	.swipeText{
+		display: none;
+	}
+
+@media screen and (min-width: 768px) and (max-width: 1024px)  {
+.index{
+		background: url(../images/out18.png) #000 no-repeat center center fixed;
+		-webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	}		
+		#bgvid {
+        display: none;
+    }
+	.titleFont{
 		text-align: center;
 		font-size: 60px;
 	}
@@ -304,18 +307,28 @@ video#bgvid {
 	.swipe-icon{
 		display: none;
 	}
+	.swipeText{
+		display: none;
+	}
 }		
 
-@media screen and (max-width: 768px) {
-	html{
-		background: url(/images/mobile_background.png) #000 no-repeat center center fixed;
-/*		background: black;
-*/	}
-	#bgvid {
+@media screen and (min-width: 320px) and (max-width: 767px) {
+	.index{
+		background: url(../images/out18.png) #000 no-repeat center center fixed;
+		-webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	}
+			#bgvid {
         display: none;
     }
+.swipeText{
+	display: none;
+}
 .titleFont{
 	font-size: 50px;
+	text-align: center;
 }
 
 .secondaryTitle{
@@ -362,6 +375,16 @@ video#bgvid {
 }
 
 @media screen and (max-width: 600px) {
+	.index{
+		background: url(../images/out18.png) #000 no-repeat center center fixed;
+		-webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	}
+	#bgvid {
+    display: none;
+   }
 .spaceIsLimited{
 	display: none;
 }
@@ -378,6 +401,7 @@ video#bgvid {
 	line-height:70px
 }
 .swipeText{
+	display: inline-block;
 	line-height: 70px;
 	font-size: 30px;
 	font-family: 'Oswald', sans-serif;
@@ -444,9 +468,3 @@ video#bgvid {
 		font-size:30px;
 	}
 }
-
-/*@media screen and (max-width: 600px) {
-		.change_size{
-  		text-align: center;
-		}
-	}*/

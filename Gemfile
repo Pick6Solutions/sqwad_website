@@ -17,7 +17,7 @@ gem "rack-contrib"
 gem "puma"
 
 gem 'rake'
+gem 'firebase'
 
 gem 'middleman-imageoptim'
 gem 'middleman-s3_sync'
-gem 'middleman-blog'

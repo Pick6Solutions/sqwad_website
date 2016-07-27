@@ -1,0 +1,30 @@
+<% wrap_layout :article_layout do %>
+
+<div class="container" align="left">
+	<span class="shareArticleTwitter">
+		<h2 id="status" target="_blank" class="shrink_text"></h2>
+		<a href="" class="btn btn-primary" id="tweet" target="_blank">Tweet it!</a>
+	</span>
+					<div class="col-sm-9 col-sm-offset-1">
+					  <article>
+					  	<% article = getCurrentArticle() %>
+					  	<h3><%= article['title'] %></h3>
+					  	 By <%= link_to article['author'].tr('_',' ').titleize, findAuthors(article['author']), :target => '_blank'  %>
+					  	 	<div class="vertical-spacer-lg"></div>
+					  	<%= image_tag article['image'] %>
+					  	<div class="vertical-spacer-lg"></div>
+	    				<% article['body'].each do |paragraph| %>
+	    					<% if paragraph.split(' ').length === 1 && paragraph.split('').length > 100%>
+								<%= image_tag paragraph, width: '200px' %><br>
+								<% elsif paragraph.split(' ').length > 1 %>
+								<%= paragraph %><br>
+								<% else %>
+								<%= paragraph %>
+								<% end %>
+	    				<% end %>
+	  				</article>
+	  			</div>
+	  		</div>
+			</div>
+
+<% end %>

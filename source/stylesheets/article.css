@@ -2,13 +2,39 @@
   padding:0;
   margin:0;
 }
+
+.navbarMobile{
+  background-color: black;
+}
+
+
+
+.image-container {
+  position: relative;
+}
+
+.featuredList{
+  list-style-type: decimal-leading-zero;
+}
+
+.image-container .afterTitle {
+display: none;
+}
+
+.image-container .afterTag {
+  display: none;
+}
+
 .font-body{
   font-family: 'Oswald', sans-serif;
   font-weight: 400;
 }
 
+  .overFlowWidth {
+    text-align: left;
+  }
+
 .lowDownText{
-  
   font-size: 45px;
   font-style: italic;
   color:white;
@@ -21,7 +47,6 @@
 
 .btnRow{
   color:white;
-  background-color: #FA023C;
   width:10%;
   min-width: 70px;
 }
@@ -35,6 +60,7 @@
 }
 
 .author-text{
+  font-size: 16px;
   color:black;
 }
 
@@ -101,14 +127,60 @@
   line-height: 70px;
   font-size: 30px;
   }
-
-.number-styles{
-  margin-left: 10px;
+  
+.site-font{
+  color:white;
   font-size: 20px;
-  font-style: italic;
-  color: white;
 }
 
+.number-styles{
+  margin-left: 15px;
+  font-size: 40px;
+  font-style: italic;
+  color: white;
+  height: 70px;
+}
+
+.inlineSpan1{
+  display             : -moz-inline-box;   /*FF2 or lower */
+  display             : inline-block;     /* FF3, Opera, Safari */
+  line-height         : 40px;
+  vertical-align      : top;
+  width: 100%;
+}
+
+.inlineSpan1 a{
+    min-width: 180px;
+    display:block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+.inlineSpan2{
+  margin-top: -10px;
+   display             : -moz-inline-box;
+   display             : inline-block;  
+   line-height         : 0;
+   vertical-align      : top;  
+    font-size: 16px;
+}
+
+/*li {
+    width           : 200px;
+    line-height     : 100px;
+    height          : 100px;
+    border          : 1px blue solid;        
+}*/
+/*li span {
+    display             : -moz-inline-box;
+    display             : inline-block;  
+    line-height         : normal;
+    vertical-align      : top;    
+}*/
+
+/*li span     { *display  : inline;}*/
 
 .sqwad_join_button{
   width:100%;
@@ -134,12 +206,31 @@
 .show_on_phone{
   display: none;
 }
+  .overFlowWidth{
+    background-color: #FA023C;
+  }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
+  .overflow {
+    overflow-x: none; /* 1 */
+  /*  -webkit-overflow-scrolling: touch; /* 2 */
+  }
+
+  .overFlowWidth {
+    background-color: #FA023C;
+    text-align: left;
+  }
+
+  .overFlowWidth:after { /* 5 */
+    content: '';
+    display: inline-block;
+    width: 100%;
+  }
+
   .toTheRight{
     display: none;
   }
-    .articleFooter{
+/*    .articleFooter{
     display: block;
     position: fixed;
     bottom: 0;
@@ -147,13 +238,102 @@
     right: 0;
     width: 100%;
     height: 70px;
+  }*/
+.articleFooter{
+    display: block;
+    bottom: 0;
+    position: relative;
+    width: 100%;
+    height: 50px;
   }
+  #fantasySportsText{
+    color: #FA023C;
+    font-size: 24px;
+  }
+  .show_on_phone{
+  display: none;
+}
 
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
+  .navbarMobile{
+    background: black; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, #FA023C , black); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #FA023C, black); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #FA023C, black); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #FA023C , black); /* Standard syntax */
+  }
+  
+  .image-container .after {
+    background-color: rgba(0,0,0,0.4);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.image-container .afterTitle {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    right: 0;
+    width: 80%;
+    height: 35%;
+    color: white;
+    padding-right: 5px;
+    font-size: 36px;
+    font-style: italic;
+    text-align: right;
+}
+
+.image-container .afterTag {
+    background-color: rgb(255,0,51);
+    display: block;
+    position: absolute;
+    bottom: 40%;
+    right: 0;
+    text-align: right;
+    color: white;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 30px;
+    font-style: italic;
+}
+
+  .overflow {
+    overflow-x: scroll; /* 1 */
+  /*  -webkit-overflow-scrolling: touch; /* 2 */
+  }
+
+  .overFlowWidth {
+    background-color: black;
+    text-align: justify; /* 3 */
+    width: 40em; /* 4 */
+  }
+
+  .overFlowWidth:after { /* 5 */
+    content: '';
+    display: inline-block;
+    width: 100%;
+  }
+
+  .moveThemTogether {
+    display: inline-block; /* 6 */
+  }
   .article_header{
     text-align: center;
+  }
+  
+  #fantasySportsText{
+    color: #FA023C;
+    font-size: 24px;
+  }
+  
+  .remove_padding_phone{
+    padding: 0;
+    margin: 0;
   }
   
   #tweet{
@@ -164,24 +344,34 @@
     padding: 0;
   }
   
-  .navBar{
-    display: none;
-/*  text-align: center;*/
-}
   .toTheRight{
     display: none;
   }
-  .articleFooter{
+/*  .articleFooter{
     display: block;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     width: 100%;
     height: 70px;
+  }*/
+  .articleFooter{
+    display: block;
+    bottom: 0;
+    position: relative;
+    width: 100%;
+    height: 50px;
+  }
+
+  .footer {
+    background: none repeat scroll 0 0 blue;
+    height: 100px;
+    margin: auto;
+    width: 400px;
   }
   .show_on_phone{
-  display: block;
+    display: block;
   }
   .remove_on_phone{
     display: none;
@@ -189,23 +379,27 @@
 }
 
 .secondPart{
-  background-color: rgba(48,48,48,0.8); ;
+  background-color: rgba(48,48,48,0.8);
   height: 70px;
   line-height: 70px;
   font-size: 20px
 }
 
 @media screen and (max-width: 600px) {
+  .lowDownText:hover{
+    color:white;
+  }
+  
   .remove_on_tinyphone{
     display: none;
   }
-  
+
   .center{
     margin:auto;
     width: 100%;
   }
   .secondPart{
-  background-color: rgba(48,48,48,0.8); ;
+  background-color: rgba(48,48,48,0.8);
   height: 50px;
   line-height: 50px;
   font-size: 20px
@@ -217,11 +411,13 @@
   }
   .articleFooter{
     display: block;
-    position: fixed;
     bottom: 0;
-    left: 0;
-    right: 0;
+    position: relative;
     width: 100%;
     height: 50px;
+  }
+  #fantasySportsText{
+    color: #FA023C;
+    font-size: 24px;
   }
 }

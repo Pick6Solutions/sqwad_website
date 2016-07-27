@@ -1,9 +1,11 @@
-<div class="row" style="background-color:#FA023C; margin:0">
- <%= link_to 'All', '/article.html', :class => 'btn btnRow border' %>
- <%= link_to 'WNBA', '/wnba.html', :class => 'btn btnRow border' %>
- <%= link_to 'MLS', '/mls.html', :class => 'btn btnRow border' %>
-	<a href="#" data-toggle="modal" data-target="#anotherModal"><span class="btn btnRow border">EPL</span></a>
-	<a href="#" data-toggle="modal" data-target="#anotherModal"><span class="btn btnRow border">NBA</span></a>
-	<a href="#" data-toggle="modal" data-target="#anotherModal"><span class="btn btnRow border">NFL</span></a>
-	<a href="#" data-toggle="modal" data-target="#anotherModal"><span class="btn btnRow border">MLB</span></a>
-</div>
+<nav role="navigation" class='overflow'>
+	<div class="overFlowWidth" style="margin:0">
+	 <%= link_to 'All', '/article.html', :class => 'btn btnRow border moveThemTogether' %>
+	 <%= link_to 'MLS', '/articles/mls', :class => 'btn btnRow border moveThemTogether' %>
+	 <%= link_to 'NBA', '/articles/nba', :class => 'btn btnRow border moveThemTogether' %>
+		<a href="#" class="moveThemTogether" data-toggle="modal" data-target="#anotherModal"><span class="btn btnRow border">EPL</span></a>
+		<a href="#" class="moveThemTogether" data-toggle="modal" data-target="#anotherModal"><span class="btn btnRow border">NFL</span></a>
+		<a href="#" class="moveThemTogether" data-toggle="modal" data-target="#anotherModal"><span class="btn btnRow border">MLB</span></a>
+		<%= link_to 'WNBA', '/articles/wnba', :class => 'btn btnRow border moveThemTogether' %>
+	</div>
+</nav>

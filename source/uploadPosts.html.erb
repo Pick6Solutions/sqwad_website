@@ -1,0 +1,31 @@
+<div class="se-pre-con" id="loader" style="display:none"></div>
+
+<div class="container">
+	<h1 id="dynamicAuthor"></h1>
+	<p>Please follow promps on page to make sure your article comes out correctly!<br>The system automatically adds the date of submission as the article date and
+		associates the article with you. If you would like the author to be someone else contact Lee.</p>
+	<h4>Enter the sport/sports this article covers with a space between each one i.e. mls nba wnba nfl mlb nhl</h4>
+	<div class="editable sitefont" id="tags">
+	</div>
+	<h4>Enter your article title below</h4>
+	<div class="editable sitefont" id="title">
+	</div>
+	<h4>Enter Your Less than 100 word summary.</h4>
+	<p>Can just be your first 100 words of your article</p>
+	<div class="editable sitefont" id="summary"></div>
+	<h4>Insert your header image by clicking the white circle on the left</h4>
+	<div class="editable sitefont" id="headerImage">
+	</div>
+	<h4>Your body text goes here</h4>
+	<div class="editable sitefont" id="body"></div>
+	<canvas id="myCanvas" width="600" height="300"></canvas>
+	<script>
+	var editor = new MediumEditor('.editable', {
+		toolbar: {
+			targetBlank: true
+		}
+	})
+	</script>
+		
+	<button class="btn btn-success" id="submitArticle">Submit Your Article!</button>
+</div>

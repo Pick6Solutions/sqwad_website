@@ -34,6 +34,21 @@
   
 # end
 
+base_uri = "https://sqwadmediumblog.firebaseio.com"
+firebase = Firebase::Client.new(base_uri)
+response = firebase.get("acceptedArticles")
+responseRaw = response.raw_body
+responseJson = JSON.parse(responseRaw)
+responseJson.each do |article|
+  articleTitle =  article[1]['title'].gsub(/\s+/, "").downcase
+  proxy "/articles/#{article[0]}/#{articleTitle}/index.html", "/articles/template.html", :locals => {:title => articleTitle}, :ignore => true
+end
+
+sportName = ['wnba', 'mls', 'nba', 'nfl', 'mlb', 'epl']
+sportName.each do |sport|
+  proxy "/articles/#{sport}/index.html", "/articles/sports.html", :locals => {:title => sport}, :ignore => true
+end
+
 # nameArray.each do |name|
 #   proxy "/#{name}.html", "/template.html", :locals => { :person_name => name }, :ignore => true
 # end
@@ -58,52 +73,128 @@ end
 
 helpers do
   def findAuthors(name)
-   authors = [["Nick Lawson", 'https://twitter.com/nlawsonMBA'], ["Nic Bodiford", 'https://twitter.com/Nic_Bodiford'], ['Frankie Chakeris', 'https://twitter.com/sqwadfc']]
+   authors = [["nick_lawson", 'https://twitter.com/nlawsonMBA'], ["nic_bodiford", 'https://twitter.com/Nic_Bodiford'], ['frankie_chakeris', 'https://twitter.com/sqwadfc'], ['kent_paisley', 'https://twitter.com/kpaisley93']]
     authors.each do |author|
       if(author[0] === name)
         return author[1]
       end
     end
   end
-end
-
-activate :blog do |blog|
-    # This will add a prefix to all links, template references and source paths
-  blog.sources = "articles/{title}.html"
-  blog.permalink = "articles/{title}.html"
-  # Matcher for blog source files
-  # blog.sources = "{year}-{month}-{day}-{title}.html"
-  # blog.taglink = "tags/{tag}.html"
-  blog.layout = "article_layout"
-  blog.summary_separator = /READMORE/
-  blog.summary_length = 150
-  # blog.year_link = "{year}.html"
-  # blog.month_link = "{year}/{month}.html"
-  # blog.day_link = "{year}/{month}/{day}.html"
-  # blog.default_extension = ".markdown"
-  blog.tag_template = "tag.html"
-  # blog.calendar_template = "calendar.html"
-
-  # Enable pagination
-  blog.paginate = true
-  blog.per_page = 10
-  blog.page_link = "page/{num}"
   
-  blog.custom_collections = {
-    image_header: {
-      link: '/headers/:image_header.html',
-      template: '/image_header.html'
-    },
-    featured: {
-      link: 'features/:featured.html',
-      template: '/featured.html'
-    },
-    author: {
-      link: 'authors/:author.html',
-      template: '/author.html'
-    }
-  }
+  def showArticles()
+    base_uri = "https://sqwadmediumblog.firebaseio.com"
+    firebase = Firebase::Client.new(base_uri)
+    response = firebase.get("submittedArticles")
+    articlesRaw = response.raw_body
+    if(articlesRaw === 'null')
+      return []
+    end
+    responseJson = JSON.parse(articlesRaw)
+    return responseJson
+  end
+  
+  def getCurrentArticle()
+    base_uri = "https://sqwadmediumblog.firebaseio.com"
+    firebase = Firebase::Client.new(base_uri)
+    articleId = current_page.path.split('/')[1]
+    getArticle = firebase.get('acceptedArticles/' + articleId)
+    return JSON.parse(getArticle.raw_body)
+  end
+  
+  def featuredArticles()
+    articles = []
+    base_uri = "https://sqwadmediumblog.firebaseio.com"
+    firebase = Firebase::Client.new(base_uri)
+    response = firebase.get("acceptedArticles")
+    articlesRaw = response.raw_body
+    responseJson = JSON.parse(articlesRaw)
+    responseJson.reverse_each do |article|
+      if(article[1]['featured'])
+        articles.push(article)
+      end
+    end
+    return articles
+  end
+  
+  def getLink(article)
+    articleId = article[0]
+    lowerCaseTitle = article[1]['title'].gsub(/\s+/, "").downcase
+    return '/articles/' + articleId + '/' + lowerCaseTitle
+  end
+  
+  def getProperArticles(league)
+    articles = []
+    base_uri = "https://sqwadmediumblog.firebaseio.com"
+    firebase = Firebase::Client.new(base_uri)
+    response = firebase.get("acceptedArticles")
+    articlesRaw = response.raw_body
+    responseJson = JSON.parse(articlesRaw)  
+    if(!league)
+      return responseJson
+    end
+    responseJson.each do |article|
+      article[1]['tags'].each do |tag|
+        if(tag === league)
+          articles.push(article)
+        end
+        if(articles.length() ===3)
+          break
+        end
+      end
+    end
+    return articles
+  end
+  
+  def refreshConfig()
+    base_uri = "https://sqwadmediumblog.firebaseio.com"
+    firebase = Firebase::Client.new(base_uri)
+    response = firebase.get("acceptedArticles")
+    responseRaw = response.raw_body
+    responseJson = JSON.parse(responseRaw)
+    responseJson.each do |article|
+      articleTitle =  article[1]['title'].gsub(/\s+/, "").downcase
+      proxy "/articles/#{article[0]}/#{articleTitle}/index.html", "/articles/template.html", :locals => {:title => articleTitle}, :ignore => true
+    end
+  end
 end
+
+# activate :blog do |blog|
+  #   # This will add a prefix to all links, template references and source paths
+  # blog.sources = "articles/{title}.html"
+  # blog.permalink = "articles/{title}.html"
+  # # Matcher for blog source files
+  # # blog.sources = "{year}-{month}-{day}-{title}.html"
+  # # blog.taglink = "tags/{tag}.html"
+  # blog.layout = "article_layout"
+  # blog.summary_separator = /READMORE/
+  # blog.summary_length = 150
+  # # blog.year_link = "{year}.html"
+  # # blog.month_link = "{year}/{month}.html"
+  # # blog.day_link = "{year}/{month}/{day}.html"
+  # # blog.default_extension = ".markdown"
+  # blog.tag_template = "tag.html"
+  # # blog.calendar_template = "calendar.html"
+
+  # # Enable pagination
+  # blog.paginate = true
+  # blog.per_page = 10
+  # blog.page_link = "page/{num}"
+  
+  # blog.custom_collections = {
+  #   image_header: {
+  #     link: '/headers/:image_header.html',
+  #     template: '/image_header.html'
+  #   },
+  #   featured: {
+  #     link: 'features/:featured.html',
+  #     template: '/featured.html'
+  #   },
+  #   author: {
+  #     link: 'authors/:author.html',
+  #     template: '/author.html'
+  #   }
+  # }
+# end
 
 # set :markdown_engine, :redcarpet
 # set :markdown, :fenced_code_blocks => true, :smartypants => true
@@ -120,7 +211,7 @@ configure :build do
   activate :minify_css
 
   # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_javascript
   activate :relative_assets
   
   activate :asset_hash
