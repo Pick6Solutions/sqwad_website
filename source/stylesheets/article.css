@@ -155,7 +155,7 @@ display: none;
   text-align: right;
   margin-left: 20px;
   margin-right: 13%;
-  color: white;
+  color: #e53366;
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 0;
@@ -276,11 +276,11 @@ li:after {
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .navbarMobile{
-    background: black; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(left, #FA023C , black); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(right, #FA023C, black); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(right, #FA023C, black); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to right, #FA023C , black); /* Standard syntax */
+    background: black;
+    background: -webkit-linear-gradient(60deg, #fb103a, #ce2444 50%, #54101d 70%,#3a010d 70%, #200006 80%,black 80%, black);
+    background: -o-linear-gradient(60deg, #fb103a, #ce2444 50%, #54101d 70%,#3a010d 70%, #200006 80%,black 80%, black);
+    background: -moz-linear-gradient(60deg, #fb103a, #ce2444 50%, #54101d 70%,#3a010d 70%, #200006 80%,black 80%, black);
+    background: linear-gradient(60deg, #fb103a, #ce2444 50%, #54101d 70%,#3a010d 70%, #200006 80%,black 80%, black);
   }
   
   .image-container .after {

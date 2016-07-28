@@ -156,10 +156,22 @@
   font-size: 20px;
 }
 
+#headerTextPhone{
+  font-family: "IronstrikeStencil-Black";
+  color:white;
+  font-size: 10px;
+}
+
 .otherHeaderStuff{
   font-family: "Ironstrike-Black";
   color:white;
   font-size: 20px;
+}
+
+.otherHeaderStuffPhone{
+  font-family: "Ironstrike-Black";
+  color:white;
+  font-size: 10px;
 }
 
 #new_first_hr{
