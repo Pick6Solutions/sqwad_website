@@ -2,19 +2,21 @@
 	<div class="row" style="margin:0; padding:0">
 	<%= image_tag '/images/makePicksDuringMatch.png', style: 'margin:0' %>
 	</div>
-	<div class ="row" style="background-color:grey; margin:0; padding:0">
-		<h4>JOIN THE MOVEMENT TODAY</h4>
-		<h5 align="center">Over <span style="color:white">1000</span> Have Signed Up</h5>
+	<div class ="row" style="background-color:rgb(42,54,59); margin:0; padding:0">
+		<p class="movementText">JOIN THE MOVEMENT TODAY</p>
+		<p align="center">OVER <span class="signUpNumber">1000</span><br>HAVE SIGNED UP</p>
 		<a class="btn" data-toggle="modal" data-target="#anotherModal" href="#" id="sqwad_side_button">JOIN TODAY</a>
 		<div class="vertical-spacer"></div>
 	</div>
 
-	<div class="row" style="background-color:#A9A9A9; margin:0; padding:0" >
-		<h4 style="color:white">Hot Picks</h4>
+	<div class="row" style="background-color:rgb(35,46,51); margin:0; padding:0" >
+		<h4 class="hotPicksStyle">Hot Picks</h4>
+		<hr style="border: 1px grey solid; margin-left:14%; margin-right:14%; margin-top:0; margin-bottom:0">
 		<ol align="left" class="featuredList">
 		<% featuredArticles().each do |article| %>
-			<li class='number-styles'><span class="inlineSpan1"><%= link_to article[1]['title'], getLink(article), :class => "site-font" %></span><br>
+			<li class='number-styles'><span class="inlineSpan1"><%= link_to article[1]['title'], getLink(article), :class => "articleText" %></span>
 			<span class="inlineSpan2">By <%= link_to article[1]['author'].tr('_',' ').titleize, findAuthors(article[1]['author']), :target => '_blank', :class => 'author-text' %></span></li>
+			<hr style="border: 1px grey solid; width:85%; margin:0">
 		<% end %>	
 		</ol>
 	</div>

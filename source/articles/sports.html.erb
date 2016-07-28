@@ -6,15 +6,20 @@ description: SQWAD is a real time fantasy sports platform that allows fans to ch
 <% wrap_layout :sports_layout do %>
 				
 	<% getProperArticles(current_page.path.split("/")[1]).reverse_each do |article| %>
-	<hr style="border:solid 1px black">
-	<div class="container" align="left">
-			<div class="col-md-10 col-sm-12">
+	<hr style="border:solid 1px black" class="remove_padding_phone">
+	<div class="container remove_padding_phone" align="left">
+			<div class="col-md-10 col-sm-12 remove_padding_phone">
 				<article>
-					<div class="col-sm-6">
-						<div class="vertical-spacer-lg"></div>
-						<%= image_tag article[1]['image'], width: '400px' %>
+					<div class="col-sm-6 remove_padding_phone">
+						<div class="vertical-spacer-lg remove_on_phone"></div>
+						<div class="image-container">
+							<%= image_tag article[1]['image'], width: '450px' %>
+							<%= link_to '', getLink(article), :class=>"after" %>
+							<%= link_to article[1]['title'], getLink(article), :class=> "afterTitle" %>
+							<%= link_to article[1]['tags'][0].upcase, getLink(article), :class=>"afterTag"  %>
+						</div>
 					</div>
-					<div class="col-sm-5 col-sm-offset-1">
+					<div class="col-sm-5 col-sm-offset-1 remove_on_phone">
 						<div class="vertical-spacer"></div>
 						<div class="vertical-spacer"></div>
 				    <h3>

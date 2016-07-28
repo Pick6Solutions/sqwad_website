@@ -78,7 +78,6 @@ $(function () {
   });
 });
 
-
 // $(function () {
 //   $('#headerImage').click('load', function(event){
 //     var elementNodes = document.getElementById( "headerImage" ).childNodes;
