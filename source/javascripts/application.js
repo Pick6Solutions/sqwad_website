@@ -458,15 +458,18 @@ if(myElement){
     //     document.getElementById("two-left-line").innerHTML = "THE BEST<br>PLAY LIVE"
     // }
   }
-if(document.getElementById('tweet')){
+  var tweetElement = document.getElementById('tweet')
+if(tweetElement){
   var location = window.location
   var id = location.pathname.split('/')[2]
   var newFirebaseAcceptedArticles = new Firebase("https://sqwadmediumblog.firebaseio.com/acceptedArticles/" + id)
   newFirebaseAcceptedArticles.once('value', function(dataSnapshot){
     var title = dataSnapshot.val().title;
-    document.getElementById('tweet').href = "http://twitter.com/home?status= " + title + ' is a great read.  Check it out '+ location.href
+    tweetElement.href = "http://twitter.com/home?status= " + title + ' is a great read.  Check it out '+ location.href
+    document.getElementById('fbshare').href = "https://www.facebook.com/sharer/sharer.php?u=" + location.href
   })
 }
+
 // var twitterFavicon = document.createElement('img');
 // twitterFavicon.src = '//twitter.com/login?redirect_after_login=%2Ffavicon.ico';
 // twitterFavicon.addEventListener('load', function () {

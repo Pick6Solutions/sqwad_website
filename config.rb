@@ -41,12 +41,12 @@ responseRaw = response.raw_body
 responseJson = JSON.parse(responseRaw)
 responseJson.each do |article|
   articleTitle =  article[1]['title'].gsub(/\s+/, "").downcase
-  proxy "/articles/#{article[0]}/#{articleTitle}/index.html", "/articles/template.html", :locals => {:title => articleTitle}, :ignore => true
+  proxy "lowdown/articles/#{article[0]}/#{articleTitle}/index.html", "/articles/template.html", :locals => {:title => articleTitle}, :ignore => true
 end
 
 sportName = ['wnba', 'mls', 'nba', 'nfl', 'mlb', 'epl']
 sportName.each do |sport|
-  proxy "/articles/#{sport}/index.html", "/articles/sports.html", :locals => {:title => sport}, :ignore => true
+  proxy "/lowdown/articles/#{sport}/index.html", "/articles/sports.html", :locals => {:title => sport}, :ignore => true
 end
 
 # nameArray.each do |name|
@@ -96,7 +96,7 @@ helpers do
   def getCurrentArticle()
     base_uri = "https://sqwadmediumblog.firebaseio.com"
     firebase = Firebase::Client.new(base_uri)
-    articleId = current_page.path.split('/')[1]
+    articleId = current_page.path.split('/')[2]
     getArticle = firebase.get('acceptedArticles/' + articleId)
     return JSON.parse(getArticle.raw_body)
   end
@@ -119,10 +119,11 @@ helpers do
   def getLink(article)
     articleId = article[0]
     lowerCaseTitle = article[1]['title'].gsub(/\s+/, "").downcase
-    return '/articles/' + articleId + '/' + lowerCaseTitle
+    return '/lowdown/articles/' + articleId + '/' + lowerCaseTitle
   end
   
   def getProperArticles(league)
+    puts league
     articles = []
     base_uri = "https://sqwadmediumblog.firebaseio.com"
     firebase = Firebase::Client.new(base_uri)
@@ -153,7 +154,7 @@ helpers do
     responseJson = JSON.parse(responseRaw)
     responseJson.each do |article|
       articleTitle =  article[1]['title'].gsub(/\s+/, "").downcase
-      proxy "/articles/#{article[0]}/#{articleTitle}/index.html", "/articles/template.html", :locals => {:title => articleTitle}, :ignore => true
+      proxy "/lowdown/articles/#{article[0]}/#{articleTitle}/index.html", "/articles/template.html", :locals => {:title => articleTitle}, :ignore => true
     end
   end
 end

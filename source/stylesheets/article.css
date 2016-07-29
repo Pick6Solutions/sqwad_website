@@ -7,6 +7,14 @@
   background-color: black;
 }
 
+#fbshare{
+  padding-left: 6px;
+}
+
+#redditPost{
+  padding-left: 5px;
+}
+
 .movementText{
   color: white;
   font-weight: 300;
@@ -159,9 +167,9 @@ display: none;
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 0;
-  padding-bottom: 0;
+  padding-bottom: 5px;
 }
-li:after { 
+.number-styles:after { 
   content: "0" counter(item) "  "; 
   counter-increment: item; 
 }
@@ -292,6 +300,30 @@ li:after {
     height: 100%;
 }
 
+.image-container .wnba{
+  background-color: rgba(231,83,0, 0.4);
+}
+
+.image-container .mls{
+  background-color: rgba(41,146,138, 0.6);
+}
+
+.image-container .nba{
+  background-color: rgba(173,255,47,0.4);
+}
+
+.image-container .nfl{
+  background-color: rgba(0,0,0,0.4);
+}
+
+.image-container .epl{
+  background-color: rgba(255,255,0,0.4);
+}
+
+.image-container .mlb{
+  background-color: rgba(255,105,180,0.4);
+}
+
 .image-container .afterTitle {
     position: absolute;
     display: block;
@@ -300,6 +332,7 @@ li:after {
     right: 0;
     height: 130px;
     color: white;
+    text-shadow: 0.1em 0.1em 0.2em black;
     padding-right: 5px;
     font-size: 30px;
     font-style: italic;
@@ -331,9 +364,11 @@ li:after {
   }
 
   .overFlowWidth {
+    height:45px;
+    overflow-y: hidden;
     background-color: black;
     text-align: justify; /* 3 */
-    width: 40em; /* 4 */
+    width: 50em; /* 4 */    
   }
 
   .overFlowWidth:after { /* 5 */
@@ -357,10 +392,6 @@ li:after {
   .remove_padding_phone{
     padding: 0;
     margin: 0;
-  }
-  
-  #tweet{
-    display: none;
   }
   
   .addPadding{
@@ -450,5 +481,5 @@ li:after {
   .navBar{
   color:black;
   text-align: left;
-}
+  }
 }

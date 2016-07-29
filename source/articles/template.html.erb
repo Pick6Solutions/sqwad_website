@@ -1,15 +1,25 @@
 <% wrap_layout :article_layout do %>
 
 <div class="container" align="left">
-	<span class="shareArticleTwitter">
-		<h2 id="status" target="_blank" class="shrink_text"></h2>
-		<a href="" class="btn btn-primary" id="tweet" target="_blank">Tweet it!</a>
+	<span class="shareArticleTwitter remove_on_phone">
+		<a href="#" id="tweet" target="_blank"><%= image_tag '/images/twitter.png', height: '40px', width: '40px' %></a><br>
+		<div class="vertical-spacer"></div>
+		<a href="#" id="fbshare" target="_blank"><%= image_tag '/images/facebook.png', height: '40px', width: '40px' %></a><br>
+		<div class="vertical-spacer"></div>
+		<a href="//www.reddit.com/submit" id='redditPost' target="_blank" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent(window.location); return false"> <img src="https://image.freepik.com/free-icon/reddit-alien-head-logo_318-50341.jpg" alt="submit to reddit" border="0" width="40px" /> </a>
 	</span>
 					<div class="col-sm-9 col-sm-offset-1">
 					  <article>
 					  	<% article = getCurrentArticle() %>
 					  	<h3><%= article['title'] %></h3>
-					  	 By <%= link_to article['author'].tr('_',' ').titleize, findAuthors(article['author']), :target => '_blank'  %>
+					  	 By <%= link_to article['author'].tr('_',' ').titleize, findAuthors(article['author']), :target => '_blank'  %><br>
+					  	 <div class="show_on_phone">
+					  	 	<div class="vertical-spacer"></div>
+					  	 	<div class="vertical-spacer"></div>
+						  	 <a href="#" id="tweet" target="_blank" style="padding:0"><%= image_tag '/images/twitter.png', height: '40px', width: '40px' %></a>
+						  	 <a href="#" id="fbshare" target="_blank"><%= image_tag '/images/facebook.png', height: '40px', width: '40px' %></a>
+						  	 <a href="//www.reddit.com/submit" id='redditPost' target="_blank" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent(window.location); return false"> <img src="https://image.freepik.com/free-icon/reddit-alien-head-logo_318-50341.jpg" alt="submit to reddit" border="0" width="40px" /> </a>
+						   </div>
 					  	 	<div class="vertical-spacer-lg"></div>
 					  	<%= image_tag article['image'] %>
 					  	<div class="vertical-spacer-lg"></div>
