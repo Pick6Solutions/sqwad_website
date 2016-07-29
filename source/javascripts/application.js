@@ -16,6 +16,12 @@ $("img", ".image-container").each(function() {
     });
 });
 
+$(function () {
+  var words = location.search.split('?')
+  if(words[1] === "refer"){
+    document.getElementById('idToClickForWaitlisted').click();
+  }
+});
 
 // $(function () {
 //   var element = document.getElementsByClassName('overflow');

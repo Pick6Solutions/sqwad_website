@@ -11,6 +11,11 @@ body {
 	display: none;
 }*/
 
+.signUpButton{
+	width:20px;
+	color:white;
+}
+
 video#bgvid { 
     position: fixed;
     top: 50%;
@@ -26,6 +31,17 @@ video#bgvid {
     transform: translateX(-50%) translateY(-50%);
     background: black no-repeat;
     background-size: cover; 
+}
+
+#idToClickForWaitlisted:focus{
+	color:white;
+}
+
+.signUpTextFont{
+	color:black;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 700;
+	font-style: italic;
 }
 
 .btn {

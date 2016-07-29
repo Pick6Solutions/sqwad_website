@@ -327,14 +327,15 @@ display: none;
 .image-container .afterTitle {
     position: absolute;
     display: block;
-    width: 100%;
+    width: 90%;
     bottom: 0;
     right: 0;
-    height: 130px;
+    height: 100px;
     color: white;
     text-shadow: 0.1em 0.1em 0.2em black;
     padding-right: 5px;
-    font-size: 30px;
+    font-size: 35px;
+    font-weight: 700;
     font-style: italic;
     text-align: right;
     display: -webkit-box;
@@ -348,7 +349,7 @@ display: none;
     background-color: rgb(255,0,51);
     display: block;
     position: absolute;
-    bottom: 130px;
+    bottom: 110px;
     right: 0;
     text-align: right;
     color: white;
@@ -367,8 +368,8 @@ display: none;
     height:45px;
     overflow-y: hidden;
     background-color: black;
-    text-align: justify; /* 3 */
-    width: 50em; /* 4 */    
+/*    text-align: justify; /* 3 */
+/*    width: 50em; /* 4 */  
   }
 
   .overFlowWidth:after { /* 5 */
