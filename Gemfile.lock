@@ -39,7 +39,7 @@ GEM
     eventmachine (1.2.0.1)
     excon (0.51.0)
     execjs (2.7.0)
-    exifr (1.2.4)
+    exifr (1.2.5)
     ffi (1.9.14)
     firebase (0.2.6)
       httpclient
@@ -150,7 +150,7 @@ GEM
       activesupport (>= 3.1)
     parallel (1.9.0)
     pkg-config (1.1.7)
-    progress (3.1.1)
+    progress (3.2.2)
     puma (3.6.0)
     rack (1.6.4)
     rack-contrib (1.4.0)

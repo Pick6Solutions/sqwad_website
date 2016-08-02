@@ -448,13 +448,11 @@ video#bgvid {
 
 .smallTitleFont{
 	display: block;
-	font-size:40px;
+	font-size:25px;
 	font-family: 'Oswald', sans-serif;
 	font-style: italic;
 	font-weight: 700; 
 }
-
-
 
 .mybutton{
 	font-size: 30px;
@@ -467,8 +465,8 @@ video#bgvid {
 	display: none;
 }
 .secondaryTitle:after{
-	content: "In-Game Fantasy Sports Real Cash and Rewards";
-	font-size: 30px;
+	content: "Sub Players Live During The Game, Win Cash And Rewards";
+	font-size: 25px;
 }
 		#sqwad_button{
 			text-align: center;
@@ -481,6 +479,6 @@ video#bgvid {
 	
 @media screen and (max-width: 400px) {
 		.smallTitleFont{
-		font-size:30px;
+		font-size:25px;
 	}
 }

@@ -13,12 +13,10 @@
 		<%= article[1]['tags'] %><br>
 		<h5>Header Image</h5>
 		<%= image_tag article[1]['image'] %><br>
-		<h5>Mobile Image</h5>
-		<%= image_tag article[1]['mobileImage'] %><br>
 		
 		<% article[1]['body'].each do |paragraph| %>
 		<% if paragraph.split(' ').length === 1 && paragraph.split('').length > 100%>
-		<%= image_tag paragraph, width: '200px' %><br>
+		<%= image_tag paragraph %><br>
 		<% elsif paragraph.split(' ').length > 1 %>
 		<%= paragraph %><br>
 		<% else %>

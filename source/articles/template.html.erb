@@ -21,7 +21,7 @@
 						  	 <a href="//www.reddit.com/submit" id='redditPost' target="_blank" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent(window.location); return false"> <img src="https://image.freepik.com/free-icon/reddit-alien-head-logo_318-50341.jpg" alt="submit to reddit" border="0" width="40px" /> </a>
 						   </div>
 					  	 	<div class="vertical-spacer-lg"></div>
-					  	<%= image_tag article['image'] %>
+					  	<%= image_tag article['image'], :class=>"articleImages" %>
 					  	<div class="vertical-spacer-lg"></div>
 	    				<% article['body'].each do |paragraph| %>
 	    					<% if paragraph.split(' ').length === 1 && paragraph.split('').length > 100%>

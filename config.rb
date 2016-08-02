@@ -41,7 +41,7 @@ responseRaw = response.raw_body
 responseJson = JSON.parse(responseRaw)
 responseJson.each do |article|
   articleTitle =  article[1]['title'].gsub(/\s+/, "").downcase
-  proxy "lowdown/articles/#{article[0]}/#{articleTitle}/index.html", "/articles/template.html", :locals => {:title => articleTitle}, :ignore => true
+  proxy "/lowdown/articles/#{article[0]}/#{articleTitle}/index.html", "/articles/template.html", :locals => {:title => articleTitle}, :ignore => true
 end
 
 sportName = ['wnba', 'mls', 'nba', 'nfl', 'mlb', 'epl']
@@ -123,7 +123,6 @@ helpers do
   end
   
   def getProperArticles(league)
-    puts league
     articles = []
     base_uri = "https://sqwadmediumblog.firebaseio.com"
     firebase = Firebase::Client.new(base_uri)
@@ -146,56 +145,7 @@ helpers do
     return articles
   end
   
-  def refreshConfig()
-    base_uri = "https://sqwadmediumblog.firebaseio.com"
-    firebase = Firebase::Client.new(base_uri)
-    response = firebase.get("acceptedArticles")
-    responseRaw = response.raw_body
-    responseJson = JSON.parse(responseRaw)
-    responseJson.each do |article|
-      articleTitle =  article[1]['title'].gsub(/\s+/, "").downcase
-      proxy "/lowdown/articles/#{article[0]}/#{articleTitle}/index.html", "/articles/template.html", :locals => {:title => articleTitle}, :ignore => true
-    end
-  end
 end
-
-# activate :blog do |blog|
-  #   # This will add a prefix to all links, template references and source paths
-  # blog.sources = "articles/{title}.html"
-  # blog.permalink = "articles/{title}.html"
-  # # Matcher for blog source files
-  # # blog.sources = "{year}-{month}-{day}-{title}.html"
-  # # blog.taglink = "tags/{tag}.html"
-  # blog.layout = "article_layout"
-  # blog.summary_separator = /READMORE/
-  # blog.summary_length = 150
-  # # blog.year_link = "{year}.html"
-  # # blog.month_link = "{year}/{month}.html"
-  # # blog.day_link = "{year}/{month}/{day}.html"
-  # # blog.default_extension = ".markdown"
-  # blog.tag_template = "tag.html"
-  # # blog.calendar_template = "calendar.html"
-
-  # # Enable pagination
-  # blog.paginate = true
-  # blog.per_page = 10
-  # blog.page_link = "page/{num}"
-  
-  # blog.custom_collections = {
-  #   image_header: {
-  #     link: '/headers/:image_header.html',
-  #     template: '/image_header.html'
-  #   },
-  #   featured: {
-  #     link: 'features/:featured.html',
-  #     template: '/featured.html'
-  #   },
-  #   author: {
-  #     link: 'authors/:author.html',
-  #     template: '/author.html'
-  #   }
-  # }
-# end
 
 # set :markdown_engine, :redcarpet
 # set :markdown, :fenced_code_blocks => true, :smartypants => true
@@ -212,7 +162,7 @@ configure :build do
   activate :minify_css
 
   # Minify Javascript on build
-  activate :minify_javascript
+  # activate :minify_javascript
   activate :relative_assets
   
   activate :asset_hash

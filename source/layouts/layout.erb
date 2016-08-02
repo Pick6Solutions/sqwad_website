@@ -8,11 +8,10 @@
 
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "Sqwad Fantasy" %></title>
-    <meta content="<%= current_page.data.description || 'SQWAD is a real time fantasy sports platform that allows fans to challenge pros and friends for bragging rights and brand rewards.  Sign up for our beta today!'%>" property="og:description">
-
+    <meta content="<%= current_page.data.description || 'SQWAD is a real time fantasy sports platform that allows fans to challenge pros and friends for bragging rights and brand rewards.  Sign up for our beta today!' %>" property="og:description">
     <link rel="shortcut icon" href="../images/sqwadhand.png">
     <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
     <%= stylesheet_link_tag "toolkit-startup.css" %>
     <%= stylesheet_link_tag "application-startup.css" %>
     <%= stylesheet_link_tag "landing-page.css" %>
