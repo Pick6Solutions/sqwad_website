@@ -448,7 +448,7 @@ video#bgvid {
 
 .smallTitleFont{
 	display: block;
-	font-size:30px;
+	font-size:37px;
 	font-family: 'Oswald', sans-serif;
 	font-style: italic;
 	font-weight: 700; 
@@ -466,7 +466,7 @@ video#bgvid {
 }
 .secondaryTitle:after{
 	content: "Sub Players Live During The Game, Win Cash And Rewards";
-	font-size: 25px;
+	font-size: 20px;
 }
 		#sqwad_button{
 			text-align: center;
@@ -479,6 +479,6 @@ video#bgvid {
 	
 @media screen and (max-width: 400px) {
 		.smallTitleFont{
-		font-size:23px;
+		font-size:28px;
 	}
 }

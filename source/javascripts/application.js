@@ -161,7 +161,7 @@ $(function(){
       alert("Not a recognized author reference the original URL Lee sent you or reach out for help")
       return;
     }
-      
+      myFirebaseRef.child('submittedArticles').push({author: author, date: makePrettyDate(), tags: tagArray, summary: summary, title:  titleText, image: headerImageSource, body: bodyArray}, onComplete)      
     })
 });
 
@@ -249,17 +249,34 @@ $(function () {
   function findListStyles(list) {
     $('.hideIcons').hide();
   }
-  var tweetElement = document.getElementById('tweet')
+  
+  var tweetElement1 = document.getElementById('tweet')
+  if(tweetElement1){
+    var location = window.location
+    var id = location.pathname.split('/')[3]
+    var newFirebaseAcceptedArticles = new Firebase("https://sqwadmediumblog.firebaseio.com/acceptedArticles/" + id)
+    newFirebaseAcceptedArticles.once('value', function(dataSnapshot){
+      var article = dataSnapshot.val();
+      var title = article.title;
+      tweetElement1.href = "http://twitter.com/home?status= " + title + ' is a great read.  Check it out '+ location.href + "&p[title]=" + title + "&p[images][0]=" + article.image
+      document.getElementById('fbshare').href = "https://www.facebook.com/sharer/sharer.php?u=" + location.href
+      document.getElementById('redditPost').href = "//www.reddit.com/submit?url=" + encodeURIComponent(window.location);
+    })
+  }
+
+  var tweetElement = document.getElementById('tweet1')
   if(tweetElement){
     var location = window.location
     var id = location.pathname.split('/')[3]
     var newFirebaseAcceptedArticles = new Firebase("https://sqwadmediumblog.firebaseio.com/acceptedArticles/" + id)
     newFirebaseAcceptedArticles.once('value', function(dataSnapshot){
       var title = dataSnapshot.val().title;
-      tweetElement.href = "http://twitter.com/home?status= " + title + ' is a great read.  Check it out '+ location.href
-      document.getElementById('fbshare').href = "https://www.facebook.com/sharer/sharer.php?u=" + location.href
+      tweetElement.href = "twitter://post?message=" + title + " is a great read.  Check it out "+ location.href
+      document.getElementById('fbshare1').href = "https://www.facebook.com/sharer/sharer.php?u=" + location.href
+      document.getElementById('redditPost1').href = "//www.reddit.com/submit?url=" + encodeURIComponent(window.location);
     })
   }
+    
   var $toc    = $('#markdown-toc')
   var $window = $(window)
 
