@@ -5,11 +5,76 @@ body {
 	font-weight: 400;
 	text-align: center;
 	margin: 0;
+	background-color: black;
 }
 
 /*.ui-loader{
 	display: none;
 }*/
+
+.football{
+	background: url(/images/nfl_background.jpg);
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.football1{
+	background: url(/images/nfl_background.jpg);
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.football2{
+	background: url(/images/nfl_background.jpg);
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.basketball{
+	background: url(/images/basketball_bg.png);
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.basketball1{
+	background: url(/images/basketball_bg.png);
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.basketball2{
+	background: url(/images/basketball_bg.png);
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.home{
+	background: url(/images/nfl_background.jpg);
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.home1{
+	background: url(/images/nfl_background.jpg);
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 .signUpButton{
 	width:20px;
@@ -225,9 +290,7 @@ video#bgvid {
 
 
 .center {
-	
 	text-align: center;
-	
 }
 
 .future_sport_rows{
@@ -462,12 +525,12 @@ video#bgvid {
 	font-size: 30px;
 }
 .secondaryTitle span{
-	display: none;
-}
-.secondaryTitle:after{
-	content: "Sub Players Live During The Game, Win Cash And Rewards";
 	font-size: 20px;
 }
+/*.secondaryTitle:after{
+	content: "Sub Players Live During The Game, Win Cash And Rewards";
+	font-size: 20px;
+}*/
 		#sqwad_button{
 			text-align: center;
 		}
