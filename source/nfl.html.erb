@@ -1,0 +1,105 @@
+---
+title: Sqwad Fantasy
+description: SQWAD is a real time fantasy sports platform that allows fans to challenge pros and friends for bragging rights and brand rewards.  Sign up for our beta today!
+---
+    
+   <video id="bgvid" preload="auto" autoplay="true">
+   	<source src="/images/background_video.webm" type="video/webm">
+    <source src="/images/background_video.mp4" type="video/mp4">
+  </video>
+  
+  <script type="text/javascript">
+		var video= $('#bgvid')[0]; 
+		var videoJ= $('#bgvid');        
+		videoJ.on('ended',function(){
+		    video.load();     
+		});
+	</script>
+
+
+<div class="se-pre-con" id="loader" style="display:none"></div>
+
+<div class="container-fluid">
+	
+	<%= partial "/partials/new_header" %>
+	
+	<div class="vertical-spacer"></div>
+	<div class="vertical-spacer"></div>
+	
+	<div class="row">
+		
+		<div class="col-sm-12" align="center">
+			
+			<div class="vertical-spacer-lg"></div>
+						
+			<h1 class="trim-text change_size titleFont" style="margin-bottom:0">MANAGE YOUR FANTASY TEAM<br>LIKE A COACH, NOT A GM</h1>
+			<h1 class="trim-text change_size smallTitleFont" style="margin-bottom:0">MANAGE YOUR<br>FANTASY TEAM<br>LIKE A COACH, NOT A GM</h1>
+		
+			<hr id="second_hr" style="margin-top:0; margin-bottom:10px">
+			
+			<!-- on small screens this text changes in the css-->
+			<h3 class="secondaryTitle" style="margin-top:0"><span>Sub Players Live During The Game, Win Cash And Rewards</span></h3>
+			
+			<div class="vertical-spacer"></div>
+
+			<div class="row">
+				
+				<div class="col-sm-2 col-sm-offset-3 col-xs-4">
+					
+						<img src="images/new-file.png" alt="" class="iconImage"><br>
+						<span align="center" class="image_text">SIGN<br>UP</span>
+					
+				</div>
+				
+				<div class='col-sm-2 col-xs-4'>
+					
+					<img src="images/basketball-shirt.png" alt="" class="iconImage"><br>
+					<span align="center" class="image_text">REFER<br>FRIENDS</span>
+					
+				</div>
+				
+				<div class='col-sm-2 col-xs-4'>
+					
+					<img src="images/podium.png" alt="" class="iconImage"><br>
+					<span align="center" class="image_text">GAIN EARLY<br>ACCESS</span>
+					
+				</div>				
+			
+			</div>
+			
+			<div class="vertical-spacer"></div>
+			
+				<a href="#" data-toggle="modal" data-target="#anotherModal" class="btn customJoinButton" style="padding-top:0;padding-bottom:0;" id="idToClickForWaitlisted">Join The Beta</a>
+				<div class="vertical-spacer"></div>
+				
+				<p class="spaceIsLimited">Space Is Limited</p>
+				
+				<div class="vertical-spacer"></div>
+				
+				<%# link_to 'NEWS', "/lowdown.html", :class => "btn mybutton", :target => "_blank" %>
+				
+			</div>
+			
+		</div>
+		
+	<div class="landing_footer" id="swiper">
+		<div class="row">
+			<div class="col-xs-2 col-xs-offset-1" style="padding:0">
+					<img src="/images/swipe_right.png" alt="" width="60px" class="swipe-icon">
+			</div>
+			<div class="col-xs-9" align="left">
+				<span class="swipeText">SWIPE RIGHT TO JOIN</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<%= partial "/partials/contact_us" %>
+	
+	<%= partial "/partials/sign_up" %>
+		
+	<div class="vertical-spacer-lg"></div>
+	
+	<div class="vertical-spacer-lg"></div>
+	
+</div>

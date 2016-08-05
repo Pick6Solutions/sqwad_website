@@ -94,9 +94,12 @@ helpers do
   end
   
   def getCurrentArticle()
+    articleId = current_page.path.split('/')[2]
+    if(!articleId || articleId.length < 10)
+      return false
+    end
     base_uri = "https://sqwadmediumblog.firebaseio.com"
     firebase = Firebase::Client.new(base_uri)
-    articleId = current_page.path.split('/')[2]
     getArticle = firebase.get('acceptedArticles/' + articleId)
     return JSON.parse(getArticle.raw_body)
   end

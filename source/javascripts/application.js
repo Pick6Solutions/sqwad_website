@@ -249,7 +249,6 @@ $(function () {
   function findListStyles(list) {
     $('.hideIcons').hide();
   }
-  
   var tweetElement1 = document.getElementById('tweet')
   if(tweetElement1){
     var location = window.location
@@ -258,7 +257,7 @@ $(function () {
     newFirebaseAcceptedArticles.once('value', function(dataSnapshot){
       var article = dataSnapshot.val();
       var title = article.title;
-      tweetElement1.href = "http://twitter.com/home?status= " + title + ' is a great read.  Check it out '+ location.href + "&p[title]=" + title + "&p[images][0]=" + article.image
+      tweetElement1.href = "http://twitter.com/home?status=" + title + ' is a great read. Check it out '+ location.href
       document.getElementById('fbshare').href = "https://www.facebook.com/sharer/sharer.php?u=" + location.href
       document.getElementById('redditPost').href = "//www.reddit.com/submit?url=" + encodeURIComponent(window.location);
     })
