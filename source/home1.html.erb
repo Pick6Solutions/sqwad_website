@@ -2,7 +2,20 @@
 title: Sqwad Fantasy
 description: SQWAD is a real time fantasy sports platform that allows fans to challenge pros and friends for bragging rights and brand rewards.  Sign up for our beta today!
 ---
-    
+
+ <video id="bgvid" preload="auto" autoplay="true">
+ 	<source src="/images/background_video.webm" type="video/webm">
+  <source src="/images/background_video.mp4" type="video/mp4">
+</video>
+
+<script type="text/javascript">
+	var video= $('#bgvid')[0]; 
+	var videoJ= $('#bgvid');        
+	videoJ.on('ended',function(){
+	    video.load();     
+	});
+</script>
+
 <div class="se-pre-con" id="loader" style="display:none"></div>
 
 <div class="container-fluid">
@@ -18,7 +31,7 @@ description: SQWAD is a real time fantasy sports platform that allows fans to ch
 			
 			<div class="vertical-spacer-lg"></div>
 						
-			<h1 class="trim-text change_size titleFont" style="margin-bottom:0">EXCITEMENT OF<br>REAL-TIME, SAFETY OF<br>NO SHARKS</h1>
+			<h1 class="trim-text change_size titleFont" style="margin-bottom:0">EXCITEMENT OF REAL-TIME,<br>SAFETY OF NO SHARKS</h1>
 			<h1 class="trim-text change_size smallTitleFont" style="margin-bottom:0">EXCITEMENT OF<br>REAL-TIME, SAFETY OF<br>NO SHARKS</h1>
 		
 			<hr id="second_hr" style="margin-top:0; margin-bottom:10px">
@@ -31,23 +44,25 @@ description: SQWAD is a real time fantasy sports platform that allows fans to ch
 			<div class="row">
 				
 				<div class="col-sm-2 col-sm-offset-3 col-xs-4">
-					
-						<img src="images/new-file.png" alt="" class="iconImage"><br>
-						<span align="center" class="image_text">SIGN<br>UP</span>
-					
-				</div>
-				
-				<div class='col-sm-2 col-xs-4'>
-					
-					<img src="images/basketball-shirt.png" alt="" class="iconImage"><br>
-					<span align="center" class="image_text">REFER<br>FRIENDS</span>
+						
+						<%= image_tag 'images/new-file.png', :class => 'iconImage' %><br>
+<!-- 						<img src="images/new-file.png" alt="" class="iconImage"><br>
+ -->						<span align="center" class="image_text">SIGN<br>UP</span>
 					
 				</div>
 				
 				<div class='col-sm-2 col-xs-4'>
 					
-					<img src="images/podium.png" alt="" class="iconImage"><br>
-					<span align="center" class="image_text">GAIN EARLY<br>ACCESS</span>
+					<%= image_tag 'images/basketball-shirt.png', :class => 'iconImage' %><br>
+<!-- 					<img src="images/basketball-shirt.png" alt="" class="iconImage"><br>
+ -->					<span align="center" class="image_text">REFER<br>FRIENDS</span>
+					
+				</div>
+				
+				<div class='col-sm-2 col-xs-4'>
+					<%= image_tag 'images/podium.png', :class => 'iconImage' %><br>
+<!-- 					<img src="images/podium.png" alt="" class="iconImage"><br>
+ -->					<span align="center" class="image_text">GAIN EARLY<br>ACCESS</span>
 					
 				</div>				
 			
