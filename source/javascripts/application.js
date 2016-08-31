@@ -88,22 +88,27 @@ var onComplete = function(error) {
   }
 };
 
+var getMillisecondDate = function(){
+  var today = new Date();
+  return today.getTime();
+}
+
 var makePrettyDate = function(){
     var today = new Date();
 
-    // var dd = today.getDate();
-    // console.log(today)
-    // var mm = today.getMonth()+1; //January is 0!
+    var dd = today.getDate();
+    console.log(today)
+    var mm = today.getMonth()+1; //January is 0!
 
-    // var yyyy = today.getFullYear();
-    // if(dd<10){
-    //     dd='0'+dd
-    // } 
-    // if(mm<10){
-    //     mm='0'+mm
-    // } 
-    // var today = mm+'/'+dd+'/'+yyyy;
-    return today.getTime();
+    var yyyy = today.getFullYear();
+    if(dd<10){
+        dd='0'+dd
+    } 
+    if(mm<10){
+        mm='0'+mm
+    } 
+    var today = mm+'/'+dd+'/'+yyyy;
+    return today;
 };
 
 $(function(){
@@ -163,7 +168,7 @@ $(function(){
       alert("Not a recognized author reference the original URL Lee sent you or reach out for help")
       return;
     }
-      myFirebaseRef.child('submittedArticles').push({author: author, date: makePrettyDate(), tags: tagArray, summary: summary, title:  titleText, image: headerImageSource, body: bodyArray}, onComplete)      
+      myFirebaseRef.child('submittedArticles').push({author: author, date: makePrettyDate(), milliDate: getMillisecondDate(), tags: tagArray, summary: summary, title:  titleText, image: headerImageSource, body: bodyArray}, onComplete)      
     })
 });
 
