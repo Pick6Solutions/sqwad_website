@@ -131,7 +131,13 @@ helpers do
     firebase = Firebase::Client.new(base_uri)
     response = firebase.get("acceptedArticles")
     articlesRaw = response.raw_body
-    responseJson = JSON.parse(articlesRaw)  
+    responseJson = JSON.parse(articlesRaw)    
+    responseJson.each do |article|
+      articles.push(article)
+    end
+    # sortedArticles = articles.sort_by{|obj| obj['date']}
+    # puts sortedArticles
+    
     if(!league)
       return responseJson
     end
