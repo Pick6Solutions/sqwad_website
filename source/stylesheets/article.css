@@ -5,6 +5,19 @@
   margin:0;
 }
 
+.date_styles{
+  color:black;
+  font-family: 'Oswald', sans-serif;
+}
+
+.acceptposts{
+    background-color: white;
+}
+
+.uploadposts{
+  background-color: white;
+}
+
 .articleImages{
   width: 100%;
   margin-left: auto;
@@ -124,9 +137,9 @@ display: none;
   font-size: 15px;
 }
 
-.articleFooter{
+/*.articleFooter{
   display: none;
-}
+}*/
 .remove_on_tinyphone{
   display: block;
 }

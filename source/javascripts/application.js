@@ -165,6 +165,28 @@ $(function(){
     })
 });
 
+$(function(){
+  $('#newEmailForm').submit(function(event){
+    event.preventDefault();
+    $('.se-pre-con').show();
+    var emailNew = $('#getANewEmail').val();
+    var confirmNewEmail = $("#confirmNewEmail").val();
+    console.log(confirmNewEmail)
+    console.log(emailNew)
+    if(emailNew === confirmNewEmail){
+      myFirebaseRef.child("newsLetter").push(emailNew)
+    } else {
+      alert("Emails didnt match!")
+    }
+    $('#successModal').modal('show').delay(2000).fadeOut(1000);
+     
+    $("#successModal").delay(0).queue(function(){ $(this).modal('hide').dequeue(); });
+          
+    $('#emailModal').delay(1200).queue(function(){ $(this).modal('hide').dequeue(); });
+    $('.se-pre-con').hide();
+  })
+})
+
 
 
 $(function () {
