@@ -127,23 +127,24 @@ helpers do
   
   def getProperArticles(league)
     articles = []
+    prearticles = []
     base_uri = "https://sqwadmediumblog.firebaseio.com"
     firebase = Firebase::Client.new(base_uri)
     response = firebase.get("acceptedArticles")
     articlesRaw = response.raw_body
     responseJson = JSON.parse(articlesRaw)    
     responseJson.each do |article|
-      articles.push(article)
+      prearticles.push(article)
     end
-    # sortedArticles = articles.sort_by{|obj| obj['date']}
-    # puts sortedArticles
-    
+    sortedArticles = prearticles.sort_by{|obj| obj[1]['milliDate'] }
     if(!league)
-      return responseJson
+      #returns all articles for the homepage
+      return sortedArticles
     end
-    responseJson.each do |article|
+    sortedArticles.each do |article|
       article[1]['tags'].each do |tag|
         if(tag === league)
+          #returns all articles in certain league
           articles.push(article)
         end
         if(articles.length() ===3)
