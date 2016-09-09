@@ -1,4 +1,5 @@
 var myFirebaseRef = new Firebase("https://sqwadmediumblog.firebaseio.com/");
+anotherFirebaseRef = new Firebase("https://wnba-test.firebaseio.com/")
 
 var onCompleteSuccess = function(error) {
   if (error) {
@@ -178,8 +179,6 @@ $(function(){
     $('.se-pre-con').show();
     var emailNew = $('#getANewEmail').val();
     var confirmNewEmail = $("#confirmNewEmail").val();
-    console.log(confirmNewEmail)
-    console.log(emailNew)
     if(emailNew === confirmNewEmail){
       myFirebaseRef.child("newsLetter").push(emailNew)
     } else {
@@ -192,6 +191,16 @@ $(function(){
     $('#emailModal').delay(1200).queue(function(){ $(this).modal('hide').dequeue(); });
     $('.se-pre-con').hide();
   })
+})
+
+$(function(){
+  var pathname = location.pathname
+  if(pathname === "/rankings.html" || pathname === "/rankings"){
+     var currentGameRef = anotherFirebaseRef.child('currentGameUserPoints')
+     currentGameRef.once('value', function(snapshot){
+      console.log(snapshot.val())
+     })
+  }
 })
 
 
