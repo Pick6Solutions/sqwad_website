@@ -197,6 +197,7 @@ $(function(){
   var pathname = location.pathname
   if(pathname === "/rankings.html" || pathname === "/rankings/"){
     var startOfCurrentGameList = document.getElementById('playersCurrentRanked');
+    checkForUsers = false
     startOfAllTimeRankList = document.getElementById('playersAllTimeRanked');
     allTimeUserPointsRef = anotherFirebaseRef.child('userLevel');
     currentGameRef = anotherFirebaseRef.child('currentGameUserPoints');
@@ -204,6 +205,7 @@ $(function(){
     .once('value', function(snapshot){
       snapshot.forEach(function(data){
         if(data.val() > 0){
+          checkForUsers = true
           var user = {}
           user.points = data.val()
           user.uid = data.key()
@@ -222,6 +224,11 @@ $(function(){
       }
     })
    })
+   if(!checkForUsers){
+      var noDataMessage = document.createElement("div");
+      noDataMessage.innerHTML = "<h2>No Data</h2>"
+      startOfCurrentGameList.appendChild(noDataMessage);
+   }
   }
 })
 
@@ -232,6 +239,7 @@ function getUserNamesFromId(user, startOfCurrentGameList){
  userNames.once('value', function(snapshot){
   snapshot.forEach(function(data){
     if(user.uid.toString() === data.key().toString()){
+      checkForUsers = true
       user.userName = data.val().userName
       var userRanked = document.createElement("li");
       completeName = "Username: " + user.userName.toString() + "<br> Points: " + user.points.toString()
