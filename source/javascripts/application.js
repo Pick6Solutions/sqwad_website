@@ -195,35 +195,74 @@ $(function(){
 
 $(function(){
   var pathname = location.pathname
-  if(pathname === "/rankings.html" || pathname === "/rankings"){
-    var startOfList = document.getElementById('playersRanked');
-     currentGameRef = anotherFirebaseRef.child('currentGameUserPoints')
-     currentGameRef.orderByValue()
-     .once('value', function(snapshot){
+  if(pathname === "/rankings.html" || pathname === "/rankings/"){
+    var startOfCurrentGameList = document.getElementById('playersCurrentRanked');
+    startOfAllTimeRankList = document.getElementById('playersAllTimeRanked');
+    allTimeUserPointsRef = anotherFirebaseRef.child('userLevel');
+    currentGameRef = anotherFirebaseRef.child('currentGameUserPoints');
+    currentGameRef.orderByValue()
+    .once('value', function(snapshot){
       snapshot.forEach(function(data){
         if(data.val() > 0){
-          getUserNamesFromId(data, startOfList)
+          var user = {}
+          user.points = data.val()
+          user.uid = data.key()
+          getUserNamesFromId(user, startOfCurrentGameList)
         }
       })
-     })
+    })
+   allTimeUserPointsRef.orderByChild("totalPoints")
+   .once('value', function(snapshot){
+    snapshot.forEach(function(data){
+      if(data.val().totalPoints){
+         var user = {};
+         user.points = data.val().totalPoints
+         user.uid = data.key()
+         getUserNamesFromId(user, startOfAllTimeRankList)
+      }
+    })
+   })
   }
 })
 
-function getUserNamesFromId(user, startOfList){
+
+
+function getUserNamesFromId(user, startOfCurrentGameList){
  userNames = anotherFirebaseRef.child("uidToUsername")
  userNames.once('value', function(snapshot){
   snapshot.forEach(function(data){
-    if(user.key().toString() === data.key().toString()){
+    if(user.uid.toString() === data.key().toString()){
       user.userName = data.val().userName
       var userRanked = document.createElement("li");
-      completeName = "Username: " + user.userName.toString() + "<br> Points: " + user.val().toString()
+      completeName = "Username: " + user.userName.toString() + "<br> Points: " + user.points.toString()
       userRanked.innerHTML= completeName;
       userRanked.className = 'playerClass'
-      startOfList.appendChild(userRanked)
+      startOfCurrentGameList.appendChild(userRanked)
     }
   })
  })
 }
+
+$(function () {
+   $("#currentGameRanks").click(function(event){
+      event.preventDefault();
+      $("#playersNightlyRanked").hide()
+      $("#playersAllTimeRanked").hide()
+      $("#playersCurrentRanked").show()
+   });
+   $("#nightLeaderRanks").click(function(event){
+      event.preventDefault();
+      $("#playersCurrentRanked").hide()
+      $("#playersAllTimeRanked").hide()
+      $("#playersNightlyRanked").show()
+   });
+   $("#allTimeRanks").click(function(event){
+      event.preventDefault();
+      $("#playersNightlyRanked").hide()
+      $("#playersCurrentRanked").hide()
+      $("#playersAllTimeRanked").show()
+   });
+});
 
 
 
