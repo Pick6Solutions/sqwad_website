@@ -197,38 +197,39 @@ $(function(){
   var pathname = location.pathname
   if(pathname === "/rankings.html" || pathname === "/rankings/"){
     var startOfCurrentGameList = document.getElementById('playersCurrentRanked');
-    checkForUsers = false
     startOfAllTimeRankList = document.getElementById('playersAllTimeRanked');
     allTimeUserPointsRef = anotherFirebaseRef.child('userLevel');
     currentGameRef = anotherFirebaseRef.child('currentGameUserPoints');
     currentGameRef.orderByValue()
+    .startAt(1)
     .once('value', function(snapshot){
-      snapshot.forEach(function(data){
-        if(data.val() > 0){
-          checkForUsers = true
+      if(snapshot.val()){
+        console.log(snapshot.val())
+        snapshot.forEach(function(data){
           var user = {}
           user.points = data.val()
           user.uid = data.key()
           getUserNamesFromId(user, startOfCurrentGameList)
-        }
-      })
+        })
+      } else {
+        
+        var noDataMessage = document.createElement("h3")
+        noDataMessage.innerHTML = "No Data"
+        startOfCurrentGameList.appendChild(noDataMessage);
+      }
     })
    allTimeUserPointsRef.orderByChild("totalPoints")
    .once('value', function(snapshot){
     snapshot.forEach(function(data){
-      if(data.val().totalPoints){
+      var pointTotal = data.val().totalPoints
+      if(pointTotal){
          var user = {};
-         user.points = data.val().totalPoints
+         user.points = pointTotal
          user.uid = data.key()
          getUserNamesFromId(user, startOfAllTimeRankList)
       }
     })
    })
-   if(!checkForUsers){
-      var noDataMessage = document.createElement("div");
-      noDataMessage.innerHTML = "<h2>No Data</h2>"
-      startOfCurrentGameList.appendChild(noDataMessage);
-   }
   }
 })
 
@@ -239,7 +240,6 @@ function getUserNamesFromId(user, startOfCurrentGameList){
  userNames.once('value', function(snapshot){
   snapshot.forEach(function(data){
     if(user.uid.toString() === data.key().toString()){
-      checkForUsers = true
       user.userName = data.val().userName
       var userRanked = document.createElement("li");
       completeName = "Username: " + user.userName.toString() + "<br> Points: " + user.points.toString()
