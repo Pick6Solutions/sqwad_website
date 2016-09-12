@@ -196,12 +196,36 @@ $(function(){
 $(function(){
   var pathname = location.pathname
   if(pathname === "/rankings.html" || pathname === "/rankings"){
-     var currentGameRef = anotherFirebaseRef.child('currentGameUserPoints')
-     currentGameRef.once('value', function(snapshot){
-      console.log(snapshot.val())
+    var startOfList = document.getElementById('playersRanked');
+     currentGameRef = anotherFirebaseRef.child('currentGameUserPoints')
+     currentGameRef.orderByValue()
+     .once('value', function(snapshot){
+      snapshot.forEach(function(data){
+        if(data.val() > 0){
+          getUserNamesFromId(data, startOfList)
+        }
+      })
      })
   }
 })
+
+function getUserNamesFromId(user, startOfList){
+ userNames = anotherFirebaseRef.child("uidToUsername")
+ userNames.once('value', function(snapshot){
+  snapshot.forEach(function(data){
+    if(user.key().toString() === data.key().toString()){
+      user.userName = data.val().userName
+      var userRanked = document.createElement("li");
+      completeName = "Username: " + user.userName.toString() + "<br> Points: " + user.val().toString()
+      userRanked.innerHTML= completeName;
+      userRanked.className = 'playerClass'
+      startOfList.appendChild(userRanked)
+    }
+  })
+ })
+}
+
+
 
 
 

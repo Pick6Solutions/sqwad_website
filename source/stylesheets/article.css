@@ -26,6 +26,11 @@
   background-color: white;
 }
 
+.playerClass{
+  font-size: 40px;
+  background-color: red;
+}
+
 .articleImages{
   width: 100%;
   margin-left: auto;
