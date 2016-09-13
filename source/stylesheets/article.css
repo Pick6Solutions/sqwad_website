@@ -26,9 +26,19 @@
   background-color: white;
 }
 
+li.playerClass{
+  background-color: white;
+}
+
+li:nth-child(odd).playerClass{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .playerClass{
   font-size: 40px;
 }
+
+
 
 .articleImages{
   width: 100%;

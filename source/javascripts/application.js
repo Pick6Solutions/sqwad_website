@@ -198,13 +198,14 @@ $(function(){
   if(pathname === "/rankings.html" || pathname === "/rankings/"){
     var startOfCurrentGameList = document.getElementById('playersCurrentRanked');
     startOfAllTimeRankList = document.getElementById('playersAllTimeRanked');
+    startOfNightLeaderRanks = document.getElementById('playersNightlyRanked');
     allTimeUserPointsRef = anotherFirebaseRef.child('userLevel');
+    nightlyPointsRef = anotherFirebaseRef.child('todaysPoints')
     currentGameRef = anotherFirebaseRef.child('currentGameUserPoints');
     currentGameRef.orderByValue()
     .startAt(1)
     .once('value', function(snapshot){
-      if(snapshot.val()){
-        console.log(snapshot.val())
+      if(snapshot.exists()){
         snapshot.forEach(function(data){
           var user = {}
           user.points = data.val()
@@ -216,6 +217,21 @@ $(function(){
         var noDataMessage = document.createElement("h3")
         noDataMessage.innerHTML = "No Data"
         startOfCurrentGameList.appendChild(noDataMessage);
+      }
+    })
+    nightlyPointsRef.orderByValue()
+    .once('value', function(snapshot){
+      if(snapshot.exists()){
+        snapshot.forEach(function(data){
+          var user = {}
+          user.points = data.val()
+          user.uid = data.key()
+          getUserNamesFromId(user, startOfNightLeaderRanks)
+        })
+      } else {
+        var noDataMessage = document.createElement('h3')
+        noDataMessage.innerHTML = "No Data"
+        startOfNightLeaderRanks.appendChild(noDataMessage)
       }
     })
    allTimeUserPointsRef.orderByChild("totalPoints")
