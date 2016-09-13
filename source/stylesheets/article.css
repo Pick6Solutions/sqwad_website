@@ -22,23 +22,49 @@
   background-color: white;
 }
 
+.userNameList{
+  display: inline-block;
+  width: 50%;
+  margin-left: 10%;
+  text-align: center;
+}
+
+.buttonOnLeaderboard{
+  margin:0;
+  padding:0;
+  width:33%;
+}
+
+.pointsInList{
+  display: inline-block;
+  text-align: center;
+  width:30%;
+}
+
 .rankings{
   background-color: white;
 }
 
 li.playerClass{
+  list-style-position: inside;
   background-color: white;
+  text-align: center;
+}
+
+.listColors{
+   margin:0;
+  padding:0;
 }
 
 li:nth-child(odd).playerClass{
+  text-align: center;
+  list-style-position: inside;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
 .playerClass{
-  font-size: 40px;
+  font-size: 3vh;
 }
-
-
 
 .articleImages{
   width: 100%;

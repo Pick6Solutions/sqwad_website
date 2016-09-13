@@ -258,7 +258,7 @@ function getUserNamesFromId(user, startOfCurrentGameList){
     if(user.uid.toString() === data.key().toString()){
       user.userName = data.val().userName
       var userRanked = document.createElement("li");
-      completeName = "Username: " + user.userName.toString() + "<br> Points: " + user.points.toString()
+      completeName = "<span class='userNameList'>" + user.userName.toString() + "</span>" + "<span class='pointsInList'>" + user.points.toString() + "</span>"
       userRanked.innerHTML= completeName;
       userRanked.className = 'playerClass'
       startOfCurrentGameList.appendChild(userRanked)
