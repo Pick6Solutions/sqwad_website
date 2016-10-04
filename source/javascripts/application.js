@@ -214,8 +214,8 @@ $(function(){
         })
       } else {
         
-        var noDataMessage = document.createElement("h3")
-        noDataMessage.innerHTML = "No Data"
+        var noDataMessage = document.createElement("p")
+        noDataMessage.innerHTML = "<span style='font-size:24px'>Game Not Started</span>"
         startOfCurrentGameList.appendChild(noDataMessage);
       }
     })
@@ -229,8 +229,8 @@ $(function(){
           getUserNamesFromId(user, startOfNightLeaderRanks)
         })
       } else {
-        var noDataMessage = document.createElement('h3')
-        noDataMessage.innerHTML = "No Data"
+        var noDataMessage = document.createElement('p')
+        noDataMessage.innerHTML = "<span style='font-size:24px'>Game Not Started</span>"
         startOfNightLeaderRanks.appendChild(noDataMessage)
       }
     })
@@ -273,18 +273,27 @@ $(function () {
       $("#playersNightlyRanked").hide()
       $("#playersAllTimeRanked").hide()
       $("#playersCurrentRanked").show()
+      $("#currentGameRanks").addClass('active')
+      $('#nightLeaderRanks').removeClass('active')
+      $('#allTimeRanks').removeClass('active')
    });
    $("#nightLeaderRanks").click(function(event){
       event.preventDefault();
       $("#playersCurrentRanked").hide()
       $("#playersAllTimeRanked").hide()
       $("#playersNightlyRanked").show()
+      $("#currentGameRanks").removeClass('active')
+      $('#allTimeRanks').removeClass('active')
+      $('#nightLeaderRanks').addClass('active')
    });
    $("#allTimeRanks").click(function(event){
       event.preventDefault();
       $("#playersNightlyRanked").hide()
       $("#playersCurrentRanked").hide()
       $("#playersAllTimeRanked").show()
+      $("#currentGameRanks").removeClass('active')
+      $('#nightLeaderRanks').removeClass('active')
+      $('#allTimeRanks').addClass('active')
    });
 });
 
