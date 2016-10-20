@@ -1,0 +1,230 @@
+.primetime {
+	background: url(/images/primetime_background.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.addPaddingBottomForFooter{
+  padding-bottom: 40px
+}
+
+.partOfGameText{
+  float:right;
+	color: white;
+	font-size: 5vw;
+}
+
+.imagePrimeTimeBallClass{
+  padding: 0;
+  margin: 0;
+}
+
+.firstLeft{
+  float: right;
+}
+
+.bigGameText{
+  float: right;
+	color: white;
+	font-size: 10vw;
+	line-height: 80%;
+}
+
+.timeBballWhere{
+  width: 10vw;
+  height: auto;
+}
+
+.alignAllTextToTheRight{
+  float: right;
+}
+
+.phoneClassThing{
+  float: left;
+  width: 22vw;
+  height: auto;
+}
+
+.subPlayersLive{
+	padding-right: 10px;
+	padding-left: 10px;
+	color: white;
+	font-size: 4vw;
+	border: 1px solid;
+	display: inline;
+  float:right;
+}
+
+.playInGameFantasyBasketball{
+  float: right;
+	color: white;
+	font-size: 3vw;
+  text-align: right;
+}
+
+.addBottomPadding{
+  margin-bottom: 100px;
+}
+
+.primeDefaultFooter {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    bottom : 0;
+    background-color: #FA023C;
+    right:0;
+    margin-top: -40px;
+    height: 40px;
+  }
+  
+  .customInputWidth{
+  	-webkit-appearance: none;
+    height: 50px;
+  	font-size: 20px;
+  }
+  
+  #textNumberString{
+    width: 50%;
+    float: right;
+  }
+  
+  .followText{
+    margin-right: 10px;
+    line-height: 40px;
+    font-style: italic;
+    font-size: 30px;
+  }
+  
+  .customButton{
+  	-webkit-appearance: none;
+    height: 50px;
+  	color: white;
+  	background-color: #FA023C;
+    float: right;
+  }
+  
+  .playText{
+    margin-left: 10px;
+    line-height: 40px;
+    font-style: italic;
+    font-size: 30px;
+  }
+  
+  .imagePadding{
+    vertical-align: top;
+    padding: 5px;
+    margin-left: 5px;
+    width: 40px;
+  }
+  
+ .leftFooter{
+  line-height: 40px;
+ 	color: white;
+ 	float: left;
+  padding-left: 20px;
+ }
+ 
+ .rightFooter{
+  padding-right: 20px;
+  line-height: 40px;
+ 	color: white;
+ 	float: right;
+ }
+ 
+/*mobile styles*/
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .subPlayersLive{
+    float: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 10vw;
+  }
+  
+  .playInGameFantasyBasketball{
+    float:none;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .addPaddingBottomForFooter{
+    padding-bottom: 100px;
+  }
+  
+  .partOfGameText{
+    width: 100%;
+    font-size: 10vw;
+  }
+  
+  .bigGameText{
+    width:100%;
+    font-size: 20vw;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .alignAllTextToTheRight{
+    float: left;
+  }
+  
+  .phoneClassThing{
+    display: none;
+  }
+  .timeBballWhere{
+    display: none;
+  }
+  
+  .customButton{
+    display: none;
+  }
+  
+  #textNumberString{
+    display: none;
+  }
+  
+  .imagePadding {
+    display: none;
+  }
+  
+  #appleIconThing{
+    display: block;
+    margin: auto;
+  }
+  
+  #androidIconThing{
+    display: inline-block;
+    margin:auto;
+  }
+  
+  .leftFooter{
+    padding: 0;
+    margin: 0;
+    height: 60px;
+    float: none;
+  }
+  
+  .rightFooter{
+    margin: 0;
+    padding: 0;
+    height: 60px;
+    float:none;
+    border-top: solid black 1px;
+    background-color: red;
+  }
+  
+  .followText{
+    display: none;
+  }
+  
+  .playText{
+    display: none;
+  }
+  
+  .primeDefaultFooter {
+    height: 120px;
+  }
+  
+}

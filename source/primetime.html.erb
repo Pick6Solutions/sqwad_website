@@ -1,0 +1,42 @@
+<div class="container-fluid addPaddingBottomForFooter" style="padding:0">
+	<div class="row">
+		<div class="vertical-spacer"></div>
+		<div class="vertical-spacer"></div>
+		<div class="vertical-spacer"></div>
+		<%= partial "/partials/prime_time_header" %>
+	</div>
+	<div class="row addBottomPadding">
+		<div class="vertical-spacer-lg show_on_phone"></div>
+		<div class= "col-sm-6 col-xs-12">
+			<div class="vertical-spacer-lg"></div>
+			<p class="partOfGameText">BE A PART OF THE</p>
+				<p class="bigGameText"><%= image_tag 'images/prime_time_bball.png', class: "timeBballWhere" %>
+				GAME</p>
+			<p class="subPlayersLive">SUB PLAYERS LIVE</p>
+			<p class="playInGameFantasyBasketball">PLAY IN-GAME FANTASY BASKETBALL</p>
+			<div class="input-group alignAllTextToTheRight">
+			   <input type="tel" class="form-control customInputWidth" placeholder="SEND YOURSELF THE APP" id="textNumberString">
+			   <span class="input-group-btn">
+			        <button class="btn customButton" type="button" id="sendTextMessage"><span>TEXT</span></button>
+			   </span>
+			</div>
+		</div>
+		<div class= "col-sm-4">
+			<%= image_tag 'images/primetime_phone.png', class: "phoneClassThing" %>
+		</div>
+	</div>
+	<div class="primeDefaultFooter">
+		<div class="leftFooter">
+			<span class="playText">PLAY</span>
+			<%= link_to image_tag('images/apple_icon.png', class: "imagePadding", id: "appleIconThing"), "https://itunes.apple.com/us/app/prime-time-basketball/id1163987973?ls=1&mt=8", target: "_blank" %>
+			<%= image_tag 'images/google_play.png', class: "imagePadding show_on_phone", id: "androidIconThing" %>
+			<span class="show_on_phone">(Android Coming Soon)</span>
+		</div>
+		<div class="rightFooter">
+			<span class="followText">FOLLOW</span>
+			<%= link_to image_tag('images/twitter.png', class: "imagePadding"), 'https://twitter.com/SqwadFan', target: "_blank" %>
+			<%= link_to image_tag('images/facebook.png', class: "imagePadding" ), 'https://www.facebook.com/Sqwadfan/', target: "_blank"%>
+			<%= link_to image_tag('images/instagram.png', class: "imagePadding"), 'https://www.instagram.com/sqwadfantasy/', target: "_blank"%>
+		</div>
+	</div>
+</div>

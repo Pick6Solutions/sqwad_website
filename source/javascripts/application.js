@@ -77,6 +77,47 @@ $(function () {
     }
 });
 
+(function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode banner closeBanner creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode".split(" "), 0);
+  branch.init('key_live_carcxq6bajBu8H01J2zBakemtrcHkBau', function(err, data) {
+
+  });
+  
+  $(function(){
+    $('#sendTextMessage').on('click', function(){
+      var number = $('#textNumberString').val()
+      
+      if(number.length < 6){
+        alert("Not a real phone number")
+      } else {
+        branch.sendSMS(
+        number,
+        {
+        tags: ['tag1', 'tag2'],
+        channel: 'facebook',
+        feature: 'dashboard',
+        stage: 'new user',
+        data: {
+            mydata: 'fromWebsite',
+            foo: 'bar',
+            '$desktop_url': 'http://sqwadapp.co/primetime',
+            '$ios_url': 'itms-apps://itunes.apple.com/app/id1163987973',
+            '$ipad_url': 'http://sqwadapp.co/primetime',
+            '$android_url': 'http://sqwadapp.co/primetime',
+            '$og_app_id': '12345',
+            '$og_title': 'PrimeTime',
+            '$og_description': 'The PrimeTime Application allows you to make live changes and be the coach of your fantasy team.',
+            '$og_image_url': 'https://s3-us-west-2.amazonaws.com/pick6-admin/badges/PrimetimeAppIcon.png'
+          }
+        },
+          { make_new_link: false }, // Default: false. If set to true, sendSMS will generate a new link even if one already exists.
+            function(err) { console.log(err); 
+          }
+        )
+      }
+      
+    })
+  })
+
 
 var onComplete = function(error) {
   if (error) {
