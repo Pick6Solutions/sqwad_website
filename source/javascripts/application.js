@@ -93,7 +93,7 @@ $(function () {
         number,
         {
         tags: ['tag1', 'tag2'],
-        channel: 'facebook',
+        channel: 'website',
         feature: 'dashboard',
         stage: 'new user',
         data: {
@@ -114,7 +114,7 @@ $(function () {
           }
         )
       }
-      
+      window.open("http://sqwadapp.co/primetime/?=thankyou")
     })
   })
 
