@@ -14,10 +14,11 @@
 				GAME</p>
 			<p class="subPlayersLive">SUB PLAYERS LIVE</p>
 			<p class="playInGameFantasyBasketball">PLAY IN-GAME FANTASY BASKETBALL</p>
+			<div class="vertical-spacer-lg show_on_phone"></div>
 			<div class="input-group alignAllTextToTheRight">
 			   <input type="tel" class="form-control customInputWidth" placeholder="SEND YOURSELF THE APP" id="textNumberString">
 			   <span class="input-group-btn">
-			        <button class="btn customButton" type="button" id="sendTextMessage"><span>TEXT</span></button>
+			        <button class="btn customButton" type="button" id="sendTextMessage" onclick="__gaTracker('send', 'event', 'buttons', 'click', 'submit-phone-number');"><span>TEXT</span></button>
 			   </span>
 			</div>
 		</div>
@@ -29,8 +30,7 @@
 		<div class="leftFooter">
 			<span class="playText">PLAY</span>
 			<%= link_to image_tag('images/apple_icon.png', class: "imagePadding", id: "appleIconThing"), "https://itunes.apple.com/us/app/prime-time-basketball/id1163987973?ls=1&mt=8", target: "_blank" %>
-			<%= image_tag 'images/google_play.png', class: "imagePadding show_on_phone", id: "androidIconThing" %>
-			<span class="show_on_phone">(Android Coming Soon)</span>
+			<%= link_to image_tag('images/google_play.png', class: "imagePadding", id: "androidIconThing"), "https://play.google.com/store/apps/details?id=com.pick6fan.primetimesqwad", target: "_blank" %>
 		</div>
 		<div class="rightFooter">
 			<span class="followText">FOLLOW</span>

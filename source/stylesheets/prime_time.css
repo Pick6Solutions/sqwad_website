@@ -6,6 +6,10 @@
   background-size: cover;
 }
 
+.sqwadrankings {
+  background-color: white;
+}
+
 .addPaddingBottomForFooter{
   padding-bottom: 40px
 }
@@ -190,13 +194,20 @@
   }
   
   #appleIconThing{
+    width: 60px;
     display: block;
     margin: auto;
   }
   
   #androidIconThing{
+    width: 55px;
     display: inline-block;
-    margin:auto;
+    margin-top: 5px;    
+  }
+
+  #inlineAndroidComingSoonText{
+    display: block;
+    line-height: 10px;
   }
   
   .leftFooter{

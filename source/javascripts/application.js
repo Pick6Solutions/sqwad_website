@@ -1,5 +1,5 @@
 var myFirebaseRef = new Firebase("https://sqwadmediumblog.firebaseio.com/");
-anotherFirebaseRef = new Firebase("https://wnba-test.firebaseio.com/")
+anotherFirebaseRef = new Firebase("https://primetimeapp.firebaseio.com/")
 
 var onCompleteSuccess = function(error) {
   if (error) {
@@ -236,7 +236,7 @@ $(function(){
 
 $(function(){
   var pathname = location.pathname
-  if(pathname === "/rankings.html" || pathname === "/rankings/"){
+  if(pathname === "/rankings.html" || pathname === "/rankings/" || pathname === "/sqwadrankings.html" || pathname === "/sqwadrankings/"){
     var startOfCurrentGameList = document.getElementById('playersCurrentRanked');
     startOfAllTimeRankList = document.getElementById('playersAllTimeRanked');
     startOfNightLeaderRanks = document.getElementById('playersNightlyRanked');

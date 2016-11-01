@@ -5,6 +5,10 @@
   margin:0;
 }
 
+.acceptPosts{
+  background-color: white;
+}
+
 .date_styles{
   color:black;
   font-family: 'Oswald', sans-serif;
@@ -12,6 +16,10 @@
 
 .acceptposts{
     background-color: white;
+}
+
+.privacy_policy{
+  background-color: white;
 }
 
 .rules{
