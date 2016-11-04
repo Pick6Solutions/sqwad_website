@@ -29,8 +29,8 @@
 	<div class="primeDefaultFooter">
 		<div class="leftFooter">
 			<span class="playText">PLAY</span>
-			<%= link_to image_tag('images/apple_icon.png', class: "imagePadding", id: "appleIconThing"), "https://itunes.apple.com/us/app/prime-time-basketball/id1163987973?ls=1&mt=8", target: "_blank" %>
-			<%= link_to image_tag('images/google_play.png', class: "imagePadding", id: "androidIconThing"), "https://play.google.com/store/apps/details?id=com.pick6fan.primetimesqwad", target: "_blank" %>
+			<%= link_to image_tag('images/apple_icon.png', class: "imagePadding", id: "appleIconThing"), "https://itunes.apple.com/us/app/prime-time-basketball/id1163987973?ls=1&mt=8", onClick:"ga('send', 'event', 'Click', 'Click to AppleStore');", target: "_blank" %>
+			<%= link_to image_tag('images/google_play.png', class: "imagePadding", id: "androidIconThing"), "https://play.google.com/store/apps/details?id=com.pick6fan.primetimesqwad", onClick:"ga('send', 'event', 'Click', 'Click to Google');", target: "_blank" %>
 		</div>
 		<div class="rightFooter">
 			<span class="followText">FOLLOW</span>
