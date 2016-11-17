@@ -15,11 +15,13 @@
 			<p class="subPlayersLive">SUB PLAYERS LIVE</p>
 			<p class="playInGameFantasyBasketball">PLAY IN-GAME FANTASY BASKETBALL</p>
 			<div class="vertical-spacer-lg show_on_phone"></div>
-			<div class="input-group alignAllTextToTheRight">
-			   <input type="tel" class="form-control customInputWidth" placeholder="SEND YOURSELF THE APP" id="textNumberString">
-			   <span class="input-group-btn">
-			        <button class="btn customButton" type="button" id="sendTextMessage"><span>TEXT</span></button>
-			   </span>
+			<div class="input-group alignAllTextToTheRight remove_on_phone">
+<!-- 			   <input type="tel" class="form-control customInputWidth" placeholder="SEND YOURSELF THE APP" id="textNumberString">
+			   <span class="input-group-btn"> -->
+			   	<%= link_to image_tag('images/app_store.svg', class: "app_store_logo_class"), "https://itunes.apple.com/us/app/prime-time-basketball/id1163987973?ls=1&mt=8" %>
+			   	<%= link_to image_tag('images/en_badge_web_generic.png', width: 160), "https://play.google.com/store/apps/details?id=com.pick6fan.primetimesqwad" %>
+<!-- 			        <button class="btn customButton" type="button" id="sendTextMessage"><span>TEXT</span></button>-->
+<!-- 			   </span> -->
 			</div>
 		</div>
 		<div class= "col-sm-4">

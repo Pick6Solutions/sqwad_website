@@ -10,6 +10,17 @@
   background-color: white;
 }
 
+/*.app_store_logo_class{
+  width: 300;
+  height: auto;
+}*/
+
+.google_play_class{
+  width: 200;
+  height: auto;
+}
+
+
 .addPaddingBottomForFooter{
   padding-bottom: 40px
 }
