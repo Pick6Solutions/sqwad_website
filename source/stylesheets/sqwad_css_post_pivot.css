@@ -1,0 +1,55 @@
+.anchor{
+	position: relative;
+	top: -70px;
+	display: block;
+	height: 0;
+	width:0;
+}
+
+.center-text{
+	position: absolute;
+	top: 50%;
+	left: 0;
+  right: 0;
+  margin-top: -9px;
+  font-size: 50px;
+	color: white;
+}
+
+.underHeaderText{
+	font-size:15px;
+  color: white;
+}
+
+.firstBlockBackground{
+	background: url(/images/pivot-background.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#rainbow {
+  background: red; /* For browsers that do not support gradients */
+  /* For Safari 5.1 to 6.0 */
+  background: -webkit-linear-gradient(left,blue,red);
+  /* For Opera 11.1 to 12.0 */
+  background: -o-linear-gradient(left,blue,red);
+  /* For Fx 3.6 to 15 */
+  background: -moz-linear-gradient(left,blue,red);
+  /* Standard syntax */
+  background: linear-gradient(to right,blue,red); 
+}
+
+.titlefontsize{
+  font-size: 50px;
+  color:white;
+}
+
+.secondBlockBackground{
+  background: url(/images/Background_2.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

@@ -1,105 +1,183 @@
 ---
 title: Sqwad Fantasy
-description: SQWAD is a real time fantasy sports platform that allows fans to challenge pros and friends for bragging rights and brand rewards.  Sign up for our beta today!
+description: SQWAD brings next level fan engagement to your team
 ---
-    
-   <video id="bgvid" preload="auto" autoplay="true">
-   	<source src="/images/background_video.webm" type="video/webm">
-    <source src="/images/background_video.mp4" type="video/mp4">
-  </video>
-  
-  <script type="text/javascript">
-		var video= $('#bgvid')[0]; 
-		var videoJ= $('#bgvid');        
-		videoJ.on('ended',function(){
-		    video.load();     
-		});
-	</script>
-
-
-<div class="se-pre-con" id="loader" style="display:none"></div>
 
 <div class="container-fluid">
 	
-	<%= partial "/partials/new_header" %>
+	<%= partial "/partials/sqwad_business_change_header" %>
 	
-	<div class="vertical-spacer"></div>
-	<div class="vertical-spacer"></div>
+	<a name="Home" id="home" class="anchor"></a>
 	
 	<div class="row">
 		
-		<div class="col-sm-12" align="center">
-			
-			<div class="vertical-spacer-lg"></div>
-						
-			<h1 class="trim-text change_size titleFont" id="shrinkDefaultText" style="margin-bottom:0">BE THE COACH OF YOUR FANTASY<br>TEAM, NOT THE GM</h1>
-			<h1 class="trim-text change_size smallTitleFont" style="margin-bottom:0">BE THE COACH OF YOUR<br>FANTASY TEAM,<br>NOT THE GM</h1>
+		<div class="col-md-12 block firstBlockBackground" style="height: 100vh; ">
+			<div class="center-text">
+				<p style="margin:0">
+					YOUR GAMEDAY, AMPLIFIED
+				</p>
+				<p class="underHeaderText">MAKE EVERY GAME AND PLAY MATTER FOR YOUR FANS</p>
+			</div>
+		</div>
 		
-			<hr id="second_hr" style="margin-top:0; margin-bottom:10px">
+	</div>
+	
+	<a name="Testimonials" id="testimonials" class="anchor"></a>
+	
+	<div class="row">
+		
+		<div class="col-md-12 block secondBlockBackground" style="height:100vh">
 			
-			<!-- on small screens this text changes in the css-->
-			<h3 class="secondaryTitle" style="margin-top:0"><span>Sign up for early access to in-game fantasy sports for cash and rewards</span></h3>
-			
-			<div class="vertical-spacer"></div>
-
 			<div class="row">
 				
-				<div class="col-sm-2 col-sm-offset-3 col-xs-4">
-					
-						<img src="images/new-file.png" alt="" class="iconImage"><br>
-						<span align="center" class="image_text">SIGN<br>UP</span>
-					
-				</div>
+				<p class="titlefontsize">A New Mobile Experience For Your Fans</p>
 				
-				<div class='col-sm-2 col-xs-4'>
-					
-					<img src="images/basketball-shirt.png" alt="" class="iconImage"><br>
-					<span align="center" class="image_text">REFER<br>FRIENDS</span>
-					
-				</div>
-				
-				<div class='col-sm-2 col-xs-4'>
-					
-					<img src="images/podium.png" alt="" class="iconImage"><br>
-					<span align="center" class="image_text">GAIN EARLY<br>ACCESS</span>
-					
-				</div>				
-			
 			</div>
 			
-			<div class="vertical-spacer"></div>
-			
-				<a href="#" data-toggle="modal" data-target="#anotherModal" class="btn customJoinButton" style="padding-top:0;padding-bottom:0;" id="idToClickForWaitlisted">Join The Beta</a>
-				<div class="vertical-spacer"></div>
+			<div class="row">
 				
-				<p class="spaceIsLimited">Space Is Limited</p>
+				<div class="col-md-6">
+					
+					<%= image_tag '/images/ScreenGroup.png' %>
+					
+				</div>
 				
-				<div class="vertical-spacer"></div>
-				
-				<%# link_to 'NEWS', "/lowdown.html", :class => "btn mybutton", :target => "_blank" %>
+				<div class="col-md-6">
+					
+					<%= image_tag '/images/profile_plus_round.png' %>
+					
+					<%= image_tag '/images/Controller.png' %>
+					
+					<%= image_tag '/images/Shield.png' %>
+					
+					<%= image_tag '/images/CombinedShape.png' %>
+					
+				</div>
 				
 			</div>
 			
 		</div>
 		
-	<div class="landing_footer" id="swiper">
-		<div class="row">
-			<div class="col-xs-2 col-xs-offset-1" style="padding:0">
-					<img src="/images/swipe_right.png" alt="" width="60px" class="swipe-icon">
-			</div>
-			<div class="col-xs-9" align="left">
-				<span class="swipeText">SWIPE RIGHT TO JOIN</span>
-			</div>
-		</div>
 	</div>
-</div>
-
-	<%= partial "/partials/contact_us" %>
 	
-	<%= partial "/partials/sign_up" %>
+	<a name="Experience" id="experience" class="anchor"></a>
+	
+	<div class="row">
 		
-	<div class="vertical-spacer-lg"></div>
+		<div class="col-md-12">
+			
+			<p>Experience</p>
+			
+			<div class="vertical-spacer-lg"></div>
+			<div class="vertical-spacer-lg"></div>
+			<div class="vertical-spacer-lg"></div>
+			<div class="vertical-spacer-lg"></div>
+			
+		</div>
+		
+	</div>
 	
-	<div class="vertical-spacer-lg"></div>
+	<a name="Stats" id="stats" class="anchor"></a>
+	
+	<div class="row">
+		
+		<div class="col-md-12">
+			
+			<p>Stats</p>
+			
+			<div class="vertical-spacer-lg"></div>
+			<div class="vertical-spacer-lg"></div>
+			<div class="vertical-spacer-lg"></div>
+			<div class="vertical-spacer-lg"></div>
+			
+		</div>
+		
+	</div>
+	
+	<a name="rewards" id="rewards" class="anchor"></a>
+	
+	<div class="row">
+		
+		<div class="col-md-12">
+			
+			<p>Rewards</p>
+			
+			<div class="vertical-spacer-lg"></div>
+			<div class="vertical-spacer-lg"></div>
+			<div class="vertical-spacer-lg"></div>
+			<div class="vertical-spacer-lg"></div>
+			
+		</div>
+		
+	</div>
+	
+	<a name="teams" id="teams" class="anchor"></a>
+	
+	<div class="row">
+		
+		<p style="font-size:50px">Our Teams</p>
+		
+		<div class="vertical-spacer-lg"></div>
+		
+		<div class="col-md-2 col-md-offset-1">
+			
+			<a href="http://winterhawks.com" target="_blank"><%= image_tag '/images/WinterhawksLogobig.png' %></a>
+			
+			<div class="vertical-spacer-lg"></div>
+			
+		</div>
+		
+		<div class="col-md-2">
+			
+			<a href="http://storm.wnba.com/" target="_blank"><%= image_tag '/images/Stormlogo.png' %></a>
+			
+			<div class="vertical-spacer-lg"></div>
+			
+		</div>
+		
+		<div class="col-md-2">
+			
+			<a href="http://gocheckers.com/" target="_blank"><%= image_tag '/images/CheckersLogo.png' %></a>
+			
+			<div class="vertical-spacer-lg"></div>
+			
+		</div>
+		
+		<div class="col-md-2">
+			
+			<a href="http://spokanechiefs.com/" target="_blank"><%= image_tag '/images/Chiefslogo.png' %></a>
+			
+			<div class="vertical-spacer-lg"></div>
+			
+		</div>
+		
+		<div class="col-md-2">
+			
+			<a href="http://www.wnba.com/" target="_blank"><%= image_tag '/images/WNBAlogo.png' %></a>
+			
+			<div class="vertical-spacer-lg"></div>
+			
+		</div>
+		
+	</div>
+	
+<!-- 	<a name="ready" id="ready" class="anchor"></a>
+	
+	<div class="row">
+		
+		<div class="col-md-12">
+			
+			<p>Ready to Start?</p>
+			
+			<div class="vertical-spacer-lg"></div>
+			<div class="vertical-spacer-lg"></div>
+			<div class="vertical-spacer-lg"></div>
+			<div class="vertical-spacer-lg"></div>
+			
+		</div>
+		
+	</div> -->
+	
+	<%= partial "/partials/footer" %>
 	
 </div>
