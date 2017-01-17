@@ -12,10 +12,6 @@ body {
 	display: none;
 }*/
 
-.index{
-	background-color: white;
-}
-
 .football{
 	background: url(/images/nfl_background.jpg);
 	-webkit-background-size: cover;
