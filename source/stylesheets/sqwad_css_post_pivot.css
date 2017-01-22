@@ -1,6 +1,9 @@
-
 .index{
   background-color: white;
+}
+
+.newsqwadheaderfont{
+  color:white;
 }
 
 .anchor{
@@ -11,18 +14,22 @@
 	width:0;
 }
 
+.imageup{
+  margin-top: -50px;
+}
+
 .center-text{
 	position: absolute;
 	top: 50%;
 	left: 0;
   right: 0;
   margin-top: -9px;
-  font-size: 50px;
+  font-size: 80px;
 	color: white;
 }
 
 .underHeaderText{
-	font-size:15px;
+	font-size:30px;
   color: white;
 }
 
@@ -57,4 +64,20 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+
+@media screen and (min-width:320px) and (max-width: 767px) {
+  
+  .center-text{
+    top: 25%;
+    font-size: 50px;
+  }
+  
+}
+
+@media screen and (min-width: 768px) and (max-width: 1080px) {
+  
+  
+  
 }

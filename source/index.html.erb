@@ -3,7 +3,7 @@ title: Sqwad Fantasy
 description: SQWAD brings next level fan engagement to your team
 ---
 
-<div class="container-fluid">
+<div class="container-fluid" style="padding:0">
 	
 	<%= partial "/partials/sqwad_business_change_header" %>
 	
@@ -11,24 +11,95 @@ description: SQWAD brings next level fan engagement to your team
 	
 	<div class="row">
 		
-		<div class="col-md-12 block firstBlockBackground" style="height: 100vh; ">
+		<div class="col-md-12 block firstBlockBackground" style="height: 100vh;">
 			<div class="center-text">
 				<p style="margin:0">
 					YOUR GAMEDAY, AMPLIFIED
 				</p>
-				<p class="underHeaderText">MAKE EVERY GAME AND PLAY MATTER FOR YOUR FANS</p>
+				<p class="underHeaderText">Team revenue through true fan engagement</p>
 			</div>
+		</div>
+	</div>
+	
+	<a name="testimonials" id="testimonials" class="anchor"></a>
+	
+	<div class="row">
+				
+		<div class="col-md-12">
+			
+			<div class="block block-bordered-lg">
+			  <div class="container text-center app-translate-15" data-transition="entrance">
+			    <blockquote class="pull-quote">
+			    	<%= image_tag '/images/StormLogo.svg', :class=>'img-circle' %>
+			      <p style="font-size:30px">
+			        “SQWAD engages our fans while giving us tangible ROI. 
+							With the platform, we sold over 300 tickets last season alone.”
+			      </p>
+			      <cite>--Kenny Dow, Sr. Manager, Marketing</cite>
+			    </blockquote>
+			  </div>
+			</div>
+			
 		</div>
 		
 	</div>
 	
-	<a name="Testimonials" id="testimonials" class="anchor"></a>
+	<a name="fantasy" id="fantasy" class="anchor"></a>
 	
 	<div class="row">
 		
-		<div class="col-md-12 block secondBlockBackground" style="height:100vh">
+<!-- 		<div class="col-md-12 block secondBlockBackground" style="height:100vh">
+ -->			
+		<div class="col-md-12">
 			
-			<div class="row">
+			<div class="block block-bordered-lg p-b-0 app-block-stats" style="padding-top:30px">
+			  <div class="container">
+			  	
+			    <div class="row">
+			      <div class="col-md-6 col-sm-6">
+			      	<%= image_tag '/images/fantasyimage.png', :class=>'app-translate-5, img-responsive' %>
+ 			        <hr class="m-t-0 m-b-lg m-x-auto visible-xs">			      
+ 			      </div>
+			      <div class="col-md-6 col-sm-6 text-xs-center text-sm-left">
+			      	<p style="font-size:40px">Your Fantasy Experience</p>
+			        <p class="lead">
+			          Our platform starts with a fantasy experience 
+								that is linked with your players, your team, and your live game.
+			        </p>
+			        <div class="row m-y-md">
+			          <div class="col-xs-4">
+			            <div class="statcard" align="center">
+			              <h1 class="statcard-number block-title">415K</h1>
+			              <span class="statcard-desc">Players Picked During Live Games</span>
+			            </div>
+			          </div>
+			          <div class="col-xs-4">
+			            <div class="statcard" align="center">
+			              <h1 class="statcard-number block-title">20</h1>
+			              <span class="statcard-desc">Avg. player changes per user, per game</span>
+			            </div>
+			          </div>
+			        </div>
+<!-- 			        <div class="row hidden-sm">
+ --><!-- 			          <div class="col-xs-6 m-b-lg">
+			         		<div class="statcard">
+			              <h1 class="statcard-number block-title">78k</h1>
+			              <span class="statcard-desc">Developers</span>
+			            </div>
+			          </div> -->
+			          <div class="col-xs-4 m-b-lg">
+			            <div class="statcard">
+			              <h1 class="statcard-number block-title">70%</h1>
+			              <span class="statcard-desc">Active User Rate</span>
+			            </div>
+			          </div>
+<!-- 			        </div>
+ -->			      </div>
+			    </div>
+			  </div>
+			</div>
+			
+<!-- 			<div class="row">
 				
 				<p class="titlefontsize">A New Mobile Experience For Your Fans</p>
 				
@@ -38,74 +109,302 @@ description: SQWAD brings next level fan engagement to your team
 				
 				<div class="col-md-6">
 					
-					<%= image_tag '/images/ScreenGroup.png' %>
+					<%# image_tag '/images/ScreenGroup.png' %>
 					
 				</div>
 				
 				<div class="col-md-6">
 					
-					<%= image_tag '/images/profile_plus_round.png' %>
+					<div class="row">
+						
+						<div class="vertical-spacer-lg"></div>
+						
+						<div class="col-md-4">
+							
+							<%# image_tag '/images/profile_plus_round.png', :width=>'100px' %>
+							
+						</div>
+						
+						<div class="col-md-8">
+							
+							<p class="newMobileTitle">GAIN POINTS FOR ENGAGING</p>
+							<p>
+								Fans gain points for checking into the game. 
+								Earning badges, playing fantasy, and refering friends.
+								It's a rewards program for being an avid fan.
+							</p>
+							
+						</div>
+						
+					</div>
 					
-					<%= image_tag '/images/Controller.png' %>
+					<div class="vertical-spacer-lg"></div>
 					
-					<%= image_tag '/images/Shield.png' %>
+					<div class="row">
+						
+						<div class="col-md-4">
+							
+							<%# image_tag '/images/Controller.png', :width=>'100px' %>
+						
+						</div>
+						
+						<div class="col-md-8">
+							
+							<p class="newMobileTitle">YOUR FANTASY EXPERIENCE</p>
+							<p>
+								Give your fans a live fantasy unique to your game.  
+								It's a live fantasy game with your players and your team
+							</p>
+							
+						</div>
+						
+					</div>
 					
-					<%= image_tag '/images/CombinedShape.png' %>
+					<div class="vertical-spacer-lg"></div>
+					
+					<div class="row">
+						
+						<div class="col-md-4">
+							
+							<%# image_tag '/images/Shield.png', :width=>'100px' %>
+							
+						</div>
+						
+						<div class="col-md-8">
+							
+							<p class="newMobileTitle">LINK BADGES WITH MILESTONES</p>
+							<p>
+								Sponsor night, OT win, player milestone. 
+								Fans earn and collect badges.
+							</p>
+							
+						</div>
+						
+					</div>
+					
+					<div class="vertical-spacer-lg"></div>
+					
+					<div class="row">
+						
+						<div class="col-md-4">
+							
+							<%# image_tag '/images/CombinedShape.png', :width=>'100px' %>
+							
+						</div>
+						
+						<div class="col-md-8">
+							
+							<p class="newMobileTitle">CUSTOM REWARD STORE</p>
+							<p>
+								Fans use points earned on team and sponsor rewards.
+								Bring value to your fans and sponsors.
+							</p>
+							
+						</div>
+						
+					</div>
 					
 				</div>
 				
+			</div> -->
+			
+		</div>
+		
+	</div>
+	
+	<a name="features" id="features" class="anchor"></a>
+	
+	<div class="row">
+				
+		<div class="col-md-12">
+			
+			<div class="block block-bordered-lg" style="padding-top:10px;padding-bottom:0">
+				
+				<div class="row">
+			    <div class="col-sm-8 col-sm-offset-2 text-center m-b-m">
+			    	<div class="vertical-spacer-lg"></div>
+			      <p class="lead m-x-auto" style="font-size:30px"><strong>Fans Gain Points For Interacting With Your Gameday</strong></p>
+			      <div class="vertical-spacer-lg"></div>
+			    </div>
+			  </div>
+
+						<%= image_tag '/images/ScreenGroup.png' %>
+						
+						<div class="vertical-spacer-lg"></div>
+				
+			  <div class="container">
+			    <div class="row">
+			      <div class="col-sm-6">
+			        <ul class="featured-list">
+			          <li class="m-b-lg">
+			            <div class="featured-list-icon text-primary">
+			              <span class="icon icon-check"></span>
+			            </div>
+			            <p class="featured-list-icon-text m-b-0"><strong>Checking into games</strong></p>
+			            <p class="featured-list-icon-text">
+			              Fans gain points for attending your games and being there early
+			            </p>
+			          </li>
+
+			          <li class="m-b-lg">
+			            <div class="featured-list-icon text-primary">
+			              <span class="icon icon-shield"></span>
+			            </div>
+			            <p class="featured-list-icon-text m-b-0"><strong>Gaining badges</strong></p>
+			            <p class="featured-list-icon-text">
+			              Reward fans for intercating with sponsors, attending games, and seeing great moments of your game
+			            </p>
+			          </li>
+
+			        </ul>
+			      </div>
+			      <div class="col-sm-6">
+			        <ul class="featured-list">
+
+			          <li class="m-b-lg">
+			            <div class="featured-list-icon text-primary">
+			              <span class="icon icon-users"></span>
+			            </div>
+			            <p class="featured-list-icon-text m-b-0"><strong>Refering Friends</strong></p>
+			            <p class="featured-list-icon-text">
+			              When fans refer friends, they both gain points.
+			            </p>
+			          </li>
+
+			          <li class="m-b-lg">
+			            <div class="featured-list-icon text-primary">
+			              <span class="icon icon-credit"></span>
+			            </div>
+			            <p class="featured-list-icon-text m-b-0"><strong>Buying tickets & merchandise</strong></p>
+			            <p class="featured-list-icon-text">
+			              When fans buy at your game they win. We can link in with your ticket & POS providers
+			            </p>
+			          </li>
+			        </ul>
+			      </div>
+			    </div>
+			  </div>
 			</div>
 			
 		</div>
 		
 	</div>
 	
-	<a name="Experience" id="experience" class="anchor"></a>
+<!-- 	<a name="fanjourney" id="fanjourney" class="anchor"></a>
 	
 	<div class="row">
 		
 		<div class="col-md-12">
 			
-			<p>Experience</p>
-			
-			<div class="vertical-spacer-lg"></div>
-			<div class="vertical-spacer-lg"></div>
-			<div class="vertical-spacer-lg"></div>
-			<div class="vertical-spacer-lg"></div>
+			<div class="block block-bordered-lg p-l-0 p-t-0 p-r-0">
+			  <div id="carousel-example-generic-2" class="carousel carousel-light slide" data-ride="carousel">
+			    <ol class="carousel-indicators">
+			      <li data-target="#carousel-example-generic-2" data-slide-to="0" class="active"></li>
+			      <li data-target="#carousel-example-generic-2" data-slide-to="1"></li>
+			      <li data-target="#carousel-example-generic-2" data-slide-to="2"></li>
+			    </ol>
+			    <div class="carousel-inner" role="listbox">
+			      <div class="item active">
+			        <div class="block">
+			          <div class="container">
+			            <div class="row">
+			              <div class="col-sm-8 col-sm-offset-2">
+			                <p class="lead m-x-auto text-center">
+			                  Instead of guessing how much time you spend on each of your tasks, why not have automagically record everything and have easy reporting without lifting a finger? <span class="hidden-xs">Well now you can with ease.</span>
+			                </p>
+			              </div>
+			            </div>
+			            <%# image_tag '/images/WNBAlogo.png', :class=>"m-t-lg app-block-game-img" %>
+			          </div>
+			        </div>
+			      </div>
+			      <div class="item">
+			        <div class="block">
+			          <div class="container">
+			            <div class="row">
+			              <div class="col-sm-8 col-sm-offset-2">
+			                <p class="lead m-x-auto text-center">
+			                  Instead of guessing how much time you spend on each of your tasks, why not have automagically record everything and have easy reporting without lifting a finger? <span class="hidden-xs">Well now you can with ease.</span>
+			                </p>
+			              </div>
+			            </div>
+			            <%# image_tag '/images/WNBAlogo.png', :class=>"m-t-lg app-block-game-img" %>
+			          </div>
+			        </div>
+			      </div>
+			      <div class="item">
+			        <div class="block">
+			          <div class="container">
+			            <div class="row">
+			              <div class="col-sm-8 col-sm-offset-2">
+			                <p class="lead m-x-auto text-center">
+			                  Instead of guessing how much time you spend on each of your tasks, why not have automagically record everything and have easy reporting without lifting a finger? <span class="hidden-xs">Well now you can with ease.</span>
+			                </p>
+			              </div>
+			            </div>
+			            <%# image_tag '/images/WNBAlogo.png', :class=>"m-t-lg app-block-game-img" %>
+			          </div>
+			        </div>
+			      </div>
+			    </div>
+			    <a class="left carousel-control" href="#carousel-example-generic-2" role="button" data-slide="prev">
+			      <span class="icon icon-chevron-thin-left" aria-hidden="true"></span>
+			      <span class="sr-only">Previous</span>
+			    </a>
+			    <a class="right carousel-control" href="#carousel-example-generic-2" role="button" data-slide="next">
+			      <span class="icon icon-chevron-thin-right" aria-hidden="true"></span>
+			      <span class="sr-only">Next</span>
+			    </a>
+			  </div>
+			</div>
 			
 		</div>
 		
-	</div>
+	</div> -->
 	
-	<a name="Stats" id="stats" class="anchor"></a>
-	
-	<div class="row">
-		
-		<div class="col-md-12">
-			
-			<p>Stats</p>
-			
-			<div class="vertical-spacer-lg"></div>
-			<div class="vertical-spacer-lg"></div>
-			<div class="vertical-spacer-lg"></div>
-			<div class="vertical-spacer-lg"></div>
-			
-		</div>
-		
-	</div>
-	
-	<a name="rewards" id="rewards" class="anchor"></a>
+	<a name="rewardtickets" id="rewardtickets" class="anchor"></a>
 	
 	<div class="row">
 		
 		<div class="col-md-12">
 			
-			<p>Rewards</p>
-			
-			<div class="vertical-spacer-lg"></div>
-			<div class="vertical-spacer-lg"></div>
-			<div class="vertical-spacer-lg"></div>
-			<div class="vertical-spacer-lg"></div>
+			<div class="block block-bordered-lg block-overflow-hidden p-b-0 app-block-design">
+			  <div class="container">
+			  	
+			  	<p class="lead" align="left" style="font-size:40px"><strong>Reward Your Fans</strong></p>
+			  	
+			    <div class="row pos-r">
+			      <div class="col-sm-7 text-xs-center text-sm-left">
+			        <p class="lead">
+			          Fans use points on team and sponsor rewards and experiences. Grow your loyalty and make every gameday matter
+			        </p>
+			        <div class="row">
+			          <div class="col-xs-12">
+			            <div class="statcard">
+			              <h1 class="statcard-number block-title">2,700+</h1>
+			              <span class="statcard-desc">rewards redeemed</span>
+			            </div>
+			          </div>
+<!-- 			          <div class="col-xs-4">
+			            <div class="statcard">
+			              <h1 class="statcard-number block-title">2k</h1>
+			              <span class="statcard-desc">gigs</span>
+			            </div>
+			          </div>
+			          <div class="col-xs-4">
+			            <div class="statcard">
+			              <h1 class="statcard-number block-title">7</h1>
+			              <span class="statcard-desc">Friends</span>
+			            </div>
+			          </div> -->
+			        </div>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="text-right app-block-design-img">
+			  	<%= image_tag '/images/rewards_image.png', :class=>"app-translate-50" %>
+			  </div>
+			</div>
 			
 		</div>
 		
@@ -114,6 +413,8 @@ description: SQWAD brings next level fan engagement to your team
 	<a name="teams" id="teams" class="anchor"></a>
 	
 	<div class="row">
+		
+		<div class="vertical-spacer-lg"></div>
 		
 		<p style="font-size:50px">Our Teams</p>
 		
@@ -161,22 +462,7 @@ description: SQWAD brings next level fan engagement to your team
 		
 	</div>
 	
-<!-- 	<a name="ready" id="ready" class="anchor"></a>
-	
-	<div class="row">
-		
-		<div class="col-md-12">
-			
-			<p>Ready to Start?</p>
-			
-			<div class="vertical-spacer-lg"></div>
-			<div class="vertical-spacer-lg"></div>
-			<div class="vertical-spacer-lg"></div>
-			<div class="vertical-spacer-lg"></div>
-			
-		</div>
-		
-	</div> -->
+	<%= partial "/partials/team_contact" %>
 	
 	<%= partial "/partials/footer" %>
 	

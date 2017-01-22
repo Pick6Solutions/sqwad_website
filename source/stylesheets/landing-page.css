@@ -366,13 +366,13 @@ video#bgvid {
 	}
 
 @media screen and (min-width: 768px) and (max-width: 1024px)  {
-.index{
+/*.index{
 		background: url(../images/out18.png) #000 no-repeat center center fixed;
 		-webkit-background-size: cover;
 	  -moz-background-size: cover;
 	  -o-background-size: cover;
 	  background-size: cover;
-	}
+	}*/
 	#shrinkDefaultText{
 	 font-size: 53px;
 	}
@@ -395,13 +395,13 @@ video#bgvid {
 }		
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
-	.index{
+/*	.index{
 		background: url(../images/out18.png) #000 no-repeat center center fixed;
 		-webkit-background-size: cover;
 	  -moz-background-size: cover;
 	  -o-background-size: cover;
 	  background-size: cover;
-	}
+	}*/
 		#bgvid {
       display: none;
     }
@@ -460,13 +460,13 @@ video#bgvid {
 }
 
 @media screen and (max-width: 600px) {
-	.index{
+/*	.index{
 		background: url(../images/out18.png) #000 no-repeat center center fixed;
 		-webkit-background-size: cover;
 	  -moz-background-size: cover;
 	  -o-background-size: cover;
 	  background-size: cover;
-	}
+	}*/
 	#bgvid {
     display: none;
    }
