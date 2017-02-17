@@ -6,6 +6,11 @@
   background-size: cover;
 }
 
+.app_privacy_policy{
+  background: white;
+  
+}
+
 /*@font-face {
   font-family: 'Oswald';
   src: url('source/fonts/Oswald-Bold.ttf');
