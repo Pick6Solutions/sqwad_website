@@ -378,7 +378,7 @@ $(function () {
     
       $.ajax({
         
-        url: "https://pick6page-contact.herokuapp.com",
+        url: "https://sqwad-site-contact.herokuapp.com/",
         
         type: "POST",
         
@@ -389,7 +389,7 @@ $(function () {
         ' Comment: ' + comment,
         
         success: function(data){
-          
+                  
           $('.se-pre-con').hide();
           
           $('#name').val(null);
@@ -408,7 +408,9 @@ $(function () {
           
         },
         
-        error: function(){
+        error: function(error){
+          
+          console.log(error)
           
           $('.se-pre-con').hide();
                     
