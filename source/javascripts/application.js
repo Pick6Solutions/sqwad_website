@@ -146,7 +146,6 @@ var makePrettyDate = function(){
     var today = new Date();
 
     var dd = today.getDate();
-    console.log(today)
     var mm = today.getMonth()+1; //January is 0!
 
     var yyyy = today.getFullYear();
@@ -345,9 +344,38 @@ $(function () {
    });
 });
 
+// $(function(){
+//   console.log("HERE")
+//   var video1 = document.getElementById('video1');
+//   var video2 = document.getElementById('video2');
+//   if(video1.readyState === 4 && video2.readyState === 4){
+//     video1.play();
+//     video2.play();
+//   }
+// })
 
+function runMyFunction(){
+  var video1 = document.getElementById('video1');
+  var video2 = document.getElementById('video2');
+  if(video1.readyState === 4 && video2.readyState === 4){
+    video1.play();
+    video2.play();
+  }
+}
 
-
+$(function(){
+  $('#video1, #video2').on('ended', function () {
+    this.load();
+    if(video1.readyState === 4 && video2.readyState === 4){
+      video1.play();
+      video2.play();
+    }
+  });
+  // $('#video2').on('ended', function () {
+  //   this.load();
+  //   this.play();
+  // });
+})
 
 $(function () {
    // swipe opens waitlisted
@@ -405,7 +433,7 @@ $(function () {
           $("#success").delay(0).queue(function(){ $(this).modal('hide').dequeue(); });
           
           $('#myModal').delay(1200).queue(function(){ $(this).modal('hide').dequeue(); });
-          
+                    
         },
         
         error: function(error){

@@ -1,16 +1,57 @@
-<div class="row" style="margin:0; background-color:black">
+<div class="row" style="background-color: #d9d8da;">
+	
+	<div class="col-md-12" style="padding-left:10%; padding-right:10%; margin-bottom:20px">
 	
 		<div class="vertical-spacer-lg"></div>
-		<div class="vertical-spacer-lg"></div>
-
-	<div class="col-sm-12">
-
-		<a data-toggle="modal" data-target="#myModal" href="#" class="btn btn-danger">Contact Us</a>
 		
-		<div class="vertical-spacer-lg"></div>
-		<%= link_to 'Privacy Policy', '/app_privacy_policy.html', target: "_blank" %>
-		<div class="vertical-spacer-lg"></div>
+		<div class="col-md-4 col-xs-12">
+			
+			<p class="footerHeaderText">SQWAD INC</p>
+			
+			<p class="alignLeftText">New York, NY</p>
+			
+			<div class="row socialIconsFooter">
+				
+				<a href="https://www.facebook.com/Sqwadfan/" target="_blank"><%= image_tag '/images/facebook.png', :class=>"social_images" %></a>
+
+				<a href="https://twitter.com/SqwadFan" target="_blank"><%= image_tag '/images/twitter.png', :class=>"social_images" %></a>
+				
+				<a href="https://www.linkedin.com/company-beta/10674727/" target="_blank"><%= image_tag '/images/linkedin_logo.png', :class=>"social_images" %></a>
+					
+			</div>
+			
+			<div class="vertical-spacer-lg"></div>
+			
+		</div>
+		
+		<div class="col-md-4 col-xs-12" class="lineUpTextCertainWays">
+			
+			<p class="footerHeaderText">Clients</p>
+			
+			<p class="alignLeftText"><%= link_to 'Charlotte Checkers', 'http://gocheckers.com/fan-zone/mobile-app', target: "_blank", :class=>"linkToTeamFooterClass" %></p>
+			
+			<p class="alignLeftText"><%= link_to 'Portland Winterhawks', 'http://winterhawks.com/theapp/', target: "_blank", :class=>"linkToTeamFooterClass" %></p>
+			
+			<p class="alignLeftText"><%= link_to 'Seattle Storm', 'http://storm.wnba.com/storm-app-tutorial/', target: "_blank", :class=>"linkToTeamFooterClass" %></p>
+			
+			<p class="alignLeftText"><%= link_to 'Spokane Chiefs', 'http://spokanechiefs.com/mobile-app', target: "_blank", :class=>"linkToTeamFooterClass" %></p>
+			
+			<p class="alignLeftText"><%= link_to 'WNBA', 'http://www.wnba.com/fantasy/', target: "_blank", :class=>"linkToTeamFooterClass" %></p>
+		
+		</div>
+		
+		<div class="col-md-4 col-xs-12" class="lineUpTextCertainWays">
+			
+			<p class="footerHeaderText">Company</p>
+			
+			<p class="alignLeftText"><a data-toggle="modal" data-target="#myModal" href="#" class="linkToTeamFooterClass" onclick="ga('send', 'event', 'Click', 'Click Contact Us In Footer');">Contact Us</a></p>
+			
+			<p class="alignLeftText"><%= link_to 'Privacy Policy', '/app_privacy_policy.html', target: "_blank", :class=>"linkToTeamFooterClass" %></p>
+			
+			<div class="vertical-spacer-lg"></div>
+			
+		</div>
 	
 	</div>
-
+	
 </div>

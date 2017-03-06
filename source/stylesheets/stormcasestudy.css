@@ -1,0 +1,40 @@
+.stormcasestudy{
+	background-color: white;
+}
+
+.stormcasestudytextheaders{
+	font-weight: bold;
+	font-size: 50px;
+}
+
+.stormcasestudybodytext{
+	text-align: left;
+	font-size: 20px;
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.stormcasestudybuttonpdf{
+	font-size: 20px;
+}
+
+.event-block-bg-img-partial{
+  background: url(/images/storm_mercury_top_pick.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 50vh;
+}
