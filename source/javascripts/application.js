@@ -365,12 +365,21 @@ function runMyFunction(){
 
 $(function(){
   $('#video1, #video2').on('ended', function () {
-    this.load();
+    video1.load();
+    video2.load();
     if(video1.readyState === 4 && video2.readyState === 4){
       video1.play();
       video2.play();
     }
   });
+  
+  // $('#video2').on('ended', function () {
+  //   video1.load();
+  //   if(video1.readyState === 4 && video2.readyState === 4){
+  //     video1.play();
+  //     video2.play();
+  //   }
+  // });
   // $('#video2').on('ended', function () {
   //   this.load();
   //   this.play();
