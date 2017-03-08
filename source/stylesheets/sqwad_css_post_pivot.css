@@ -6,6 +6,10 @@
   color:white;
 }
 
+a.newsqwadheaderfont:hover{
+  color:#FA023C !important;
+}
+
 .anchor{
 	position: relative;
 	top: -70px;
@@ -38,7 +42,7 @@
 }
 
 .linkToTeamFooterClass{
-  color:white;
+  color:black;
   text-align: left;
 }
 
