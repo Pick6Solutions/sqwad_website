@@ -5,17 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <% if getCurrentArticle() %>
+    <meta property="og:title" content="Sqwad Sports" />
+    <meta property="og:image" content="https://s3-us-west-2.amazonaws.com/pick6-admin/badges/Checkers+app+fan+Linkedin.png">
+    <meta property="og:description" content="SQWAD brings next level fan engagement to your team" />
+    <meta property="og:url" content="http://sqwadapp.co/" />
+<!--     <%# if getCurrentArticle() %>
     <% article = getCurrentArticle() %>
-        <meta property="og:title" content="<%= article['title'] %>" />
+        <meta property="og:title" content="<%# article['title'] %>" />
         <meta property="og:type" content="article" />
         <meta property="og:image" content="http://sqwadapp.co/images/sqwadhand-e630bfed.png" />
-        <meta property="og:description" content="<%= article['summary'] %>" />
-    <% else %>
-        <meta content="<%= current_page.data.description || 'SQWAD is a real time fantasy sports platform that allows fans to challenge pros and friends for bragging rights and brand rewards.  Sign up for our beta today!' %>" property="og:description">
-    <% end %>
+        <meta property="og:description" content="<%# article['summary'] %>" />
+    <%# else %>
+        <meta content="<%# current_page.data.description || 'SQWAD is a real time fantasy sports platform that allows fans to challenge pros and friends for bragging rights and brand rewards.  Sign up for our beta today!' %>" property="og:description">
+    <%# end %> -->
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_page.data.title || "Sqwad Fantasy" %></title>
+    <title><%# current_page.data.title || "Sqwad Fantasy" %>Sqwad Sports</title>
     <link rel="shortcut icon" href="../images/sqwadhand.png">
     <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">

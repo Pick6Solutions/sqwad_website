@@ -125,7 +125,7 @@ a.newsqwadheaderfont:hover{
 }
 
 .firstBlockBackground{
-	background: url(/images/top_image_fan.png) no-repeat center center fixed;
+	background: url(/images/june_home_top.png) no-repeat center center fixed;
 	-webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -164,6 +164,20 @@ a.newsqwadheaderfont:hover{
 
 .evolveImageBodyText{
   font-size: 20px;
+}
+
+.line-between-evolve{
+  color: black;
+  border: solid black;
+  border-width: 1px;
+}
+
+.buildWholeApplication{
+  font-size: 50px;
+}
+
+.integrateStatsSchedule{
+  font-size: 30px
 }
 
 .secondBlockBackground{
@@ -324,6 +338,10 @@ a.newsqwadheaderfont:hover{
   .seamlessDelivery{
     font-size: 40px;
     text-align: center;
+  }
+  
+  .buildWholeApplication{
+    font-size: 30px;
   }
   
 /*  .teamLogoSizes{

@@ -426,7 +426,7 @@ $(function () {
         ' Comment: ' + comment,
         
         success: function(data){
-                  
+                            
           $('.se-pre-con').hide();
           
           $('#name').val(null);
@@ -442,6 +442,8 @@ $(function () {
           $("#success").delay(0).queue(function(){ $(this).modal('hide').dequeue(); });
           
           $('#myModal').delay(1200).queue(function(){ $(this).modal('hide').dequeue(); });
+          
+          ga('send', 'event', 'Submit', 'Team Form Submitted');
                     
         },
         
