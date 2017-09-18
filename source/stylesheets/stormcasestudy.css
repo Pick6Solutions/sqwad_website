@@ -1,5 +1,9 @@
-.stormcasestudy{
+.casestudies{
 	background-color: white;
+}
+
+.resetTopBlockPadding{
+	padding-top: 60px;
 }
 
 .stormcasestudytextheaders{
@@ -26,15 +30,107 @@
 	height: 100%;
 }
 
+.aboutTheTeamImage{
+	display: none;
+}
+
+.text-align-left{
+	text-align: left;
+}
+
+.fontSize20{
+	font-size: 20px;
+}
+
+
+.aboutTheTeamText{
+	font-size: 20px;
+}
+
+.black-background-color{
+	background-color: black;
+}
+
+.white-background-color{
+	background-color: white;
+}
+
+.snow-background-color{
+	background-color: #DEDEDE;
+}
+
+.storm-green-background-color{
+	background-color: #122102;
+}
+
+.seattle-storm-gold-color{
+	color: #f6df3d;
+}
+
+.credit-quote-text-case{
+	font-size: 20px;
+}
+
+.marginPaddingZero{
+	margin:0;
+	padding:0;
+}
+
+.shrinkMargins{
+	margin-right: 10%;
+	margin-left: 10%;
+}
+
+.shrinkPadding{
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.case-quote{
+	font-weight: 700;
+	font-size: 60px;
+}
+
+.white-text{
+	color: white;
+}
+
+.text-below-quote-case-studies{
+	font-size: 40px;
+	margin-right: 10%;
+	margin-left: 10%;
+}
+
+.results-text-case{
+  color: #f6df3d;
+  
+}
+
+.number-results-case{
+  color:white;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.results-bottom-text{
+  color: white;
+  font-size: 20px;
+}
+
+.btn-bottom-casestudy{
+	background-color: #f6df3d;
+	color: #3e5835;
+	font-size: 40px;
+}
+
 .stormcasestudybuttonpdf{
 	font-size: 20px;
 }
 
-.event-block-bg-img-partial{
-  background: url(/images/storm_mercury_top_pick.jpg);
+.headerBlockCaseStudies{
+  background: url(/images/CaseStudyHeader.png) no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 50vh;
 }

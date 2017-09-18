@@ -24,15 +24,20 @@
       
       <div id="navbar" class="navbar-collapse collapse" data-offset="60">
         
-        <div class="pull-left nav-event-register-container hidden-xs" style="display:inline-block"><a href="javascript:void(0);" ng-click="main.scrollTop()"><%= image_tag '/images/june_logo.png', style: 'margin:10px' %></a></div>
+        <div class="pull-left nav-event-register-container hidden-xs" style="display:inline-block"><a href="/" ng-click="main.scrollTop()"><%= image_tag '/images/june_logo.png', style: 'margin:10px' %></a></div>
         
         <ul class="nav navbar-nav navbar-right" style="margin:10px">
           
-          <li class="newsqwadheaderfont"><a href="/#home" target="_self" class="newsqwadheaderfont">Case Studies</a></li>
+          <li><%= link_to "Home", "/", :class => "newsqwadheaderfont" %></li>
           
-          <li><a href="/#teams" target="_self" class="newsqwadheaderfont">About Us</a></li>
+<!--           <li class="newsqwadheaderfont"><a href="/#home" target="_self" class="newsqwadheaderfont">Case Studies</a></li>
+ -->      <li onclick="ga('send', 'event', 'Click', 'Click Case Study In Nav Bar');"><%= link_to "Case Studies", "/casestudies.html", :class => "newsqwadheaderfont" %></li>
           
-          <li><a href="/#why" target="_self" class="newsqwadheaderfont">Blog</a></li>
+          <li><%= link_to "About Us", "/about_us.html", :class => "newsqwadheaderfont" %></li>
+           
+          <!-- <li><a href="/#teams" target="_self" class="newsqwadheaderfont">About Us</a></li> -->
+          
+          <li><a href="https://medium.com/sqwadblog" target="_blank" class="newsqwadheaderfont">Blog</a></li>
           
 <!--           <li><a href="/#features" target="_self" class="newsqwadheaderfont">Features</a></li>
           
@@ -40,9 +45,11 @@
           
           <li><a href="/#press" target="_self" class="newsqwadheaderfont">Press</a></li>
           
-          <li onclick="ga('send', 'event', 'Click', 'Click Case Study In Nav Bar');"><%= link_to "Case Study", "/stormcasestudy.html", :class => "newsqwadheaderfont" %></li> -->
+          <li onclick="ga('send', 'event', 'Click', 'Click Case Study In Nav Bar');"><%# link_to "Case Study", "/stormcasestudy.html", :class => "newsqwadheaderfont" %></li> -->
                     
-          <li><a class="hide-icons" data-toggle="modal" data-target="#myModal" onclick="ga('send', 'event', 'Click', 'Click to Request A Demo Navbar');" href="#" style="background-color:#FA023C">CONTACT US</a></li>
+          <!-- <li><a class="hide-icons" data-toggle="modal" data-target="#myModal" onclick="ga('send', 'event', 'Click', 'Click to Request A Demo Navbar');" href="#" style="background-color:#FA023C">CONTACT US</a></li> -->
+          
+          <li><a class="hide-icons" target="_self" onclick="ga('send', 'event', 'Click', 'Click to Request A Demo Navbar');" href="/#contactus" style="background-color:#FA023C; border-radius:5px">CONTACT US</a></li>
           
         </ul>
 

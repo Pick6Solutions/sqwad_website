@@ -1,0 +1,218 @@
+---
+title: About Us
+description: About Sqwad and its team
+---
+
+<div class="se-pre-con" id="loader" style="display:none"></div>
+
+<div class="container-fluid" style="padding:0">
+	
+	<%= partial "/partials/sqwad_business_change_header" %>
+	
+	<div class="block headerBlockAboutUs">
+		
+		<div class="row">
+			
+			<p class="white-text stormcasestudytextheaders">"We Live For The Moments"</p>
+			
+		</div>
+		
+		<div class="row">
+			
+			<p class="white-text fontSize20 shrinkMargins">Founded in Portland, OR in 2014, 2 sports fanatics came together with the belief that a sports organization's mobile experience should be more 
+				than just an information packet, but an extension of the live action.</p>
+			
+		</div>
+		
+		<div class="vertical-spacer-lg"></div>
+		
+		<div class="row">
+			
+			<p class="white-text fontSize20">282 games later we still have the same mission:</p>
+			
+		</div>
+		
+		<div class="row">
+			
+			<p class="white-text underHeaderText shrinkMargins">To make every one of your fans feel like they are a part of the live game</p>
+			
+		</div>
+		
+	</div>
+	
+	<div class="block gameMomentsConnectedBlock">
+		
+		<div class="row">
+			
+			<p class="white-text fifteenHundredText">700,000+</p>
+			
+		</div>
+		
+		<div class="row">
+			
+			<p class="white-text shrinkMargins underHeaderText">Live game moments fans have connected with through SQWAD Platforms</p>
+			
+		</div>
+		
+		<div class="row">
+			
+			<a href="http://www.gocheckers.com/" target="_blank"><%= image_tag '/images/june_checkers_logo.png' %></a>
+			
+			<a href="http://spokanechiefs.com/" target="_blank"><%= image_tag '/images/june_chiefs_logo.png' %></a>
+			
+			<a href="http://storm.wnba.com/" target="_blank"><%= image_tag '/images/june_storm_logo.png' %></a>
+			
+			<a href="http://winterhawks.com/" target="_blank"><%= image_tag '/images/june_winterhawks_logo.png' %></a>
+			
+			<a href="http://www.wnba.com/" target="_blank"><%= image_tag '/images/june_wnba_logo.png' %></a>
+			
+		</div>
+		
+	</div>
+	
+	<div class="block white-background-color">
+		
+		<p class="fifteenHundredText">The SQWAD</p>
+		
+		<div class="vertical-spacer-lg"></div>
+		
+		<div class="row shrinkMargins">
+			
+			<div class="col-md-6">
+				
+				<%= image_tag '/images/june_nick_image.png' %>
+				
+				<div class="vertical-spacer"></div>
+				
+				<p class="foundersNames">Nick Lawson</p>
+				
+				<p>Nick is all about the stat board with KPIs & ROI. An Oakland, CA native, his love for sports and 
+					sports tech pushed him to create the SQWAD platform after working for several minor league sports 
+					teams in marketing, design, and sponsorship sales. He is the go to man for turning engagement 
+					into real revenue for teams</p>
+				
+			</div>
+			
+			<div class="col-md-6">
+				
+				<%= image_tag '/images/june_lee_image.png' %>
+				
+				<div class="vertical-spacer"></div>
+				
+				<p class="foundersNames">Lee Jorgensen</p>
+				
+				<p>Lee runs the technology behind the scenes. His love for sports led him to work at Nike and gained his technological skills from attending Epicodus coding school.</p>
+				
+				<p>Lee is continuly thinking of new ways for technology to improve the gameday experience. From the front end styles to maintaing the database he does it all. 
+					If you have ideas on how tech can make your fans gameday better, Lee is the guy to talk to!</p>
+				
+			</div>
+			
+		</div>
+		
+	</div>
+	
+	<div class="block snow-background-color">
+		
+		<div class="row">
+			
+			<p class="fontSize20">Proud Alumni of</p>
+			
+		</div>
+		
+		<div class="vertical-spacer-lg"></div>
+		
+		<div class="row shrinkMargins">
+			
+			<div class="col-md-12">
+				
+				<a href="http://alphalab.org/" target="_blank"><%= image_tag '/images/june_alpha_lab_logo.png' %></a>
+				
+				<div class="vertical-spacer-lg"></div>
+				
+			</div>
+			
+		</div>
+		
+	</div>
+		
+	<div class="block" style="background-color:black">
+		
+		<%= image_tag '/images/june_phone_icon.png' %>
+		
+		<div class="vertical-spacer-lg"></div>
+		
+		<p class="connectingFansWithSponsorsText">Enough about us, what's your story?</p>
+		
+		<p class="digitalInventorySalesText" >We love connecting with people</p>
+		
+		<div class="vertical-spacer-lg"></div>
+		
+    <form action="https://pick6page-contact.herokuapp.com" method="post"  id="contact_form">
+        
+        <div class="form-group">
+                      
+          <div class="col-md-3 col-md-offset-3 inputGroupContainer">
+            	            
+              <input name="name" placeholder="Name" class="form-input-special" id="name" type="text">
+              
+              <div class="vertical-spacer"></div>
+              
+              <input name="team" placeholder="Team" class="form-input-special" id="team" type="text">
+              
+              <div class="vertical-spacer"></div>
+              
+              <input name="email" placeholder="E-mail" class="form-input-special" id="email" type="email">
+            
+          </div>
+          
+          <div class="col-md-3 inputGroupContainer">
+          	
+          	<textarea class="form-control" style="height:76.68px" name="comment" placeholder="Tell us a little about your team & digital needs!" id="comment"></textarea>
+          	
+          	<div class="vertical-spacer"></div>
+          	
+          	<button type="submit" class="btn btn-danger" style="width:100%">Send Us An Email!</button>
+          	
+          </div>
+          
+        </div>
+
+        <!-- Success message -->
+        <div id="success" class="modal fade text-center" role="dialog" style="display:none">
+          
+            <div class="modal-dialog">
+              
+              <div class="modal-content">
+                  
+                <div class="modal-header text-left">
+                  
+                  <span class="fa fa-times" id="dismissModalButton" data-dismiss="modal"></span>
+                
+                  </div>
+                  
+                  <%= image_tag "EmailIcon.png", :height=>"200", :width=>"200" %>
+                   
+                  <h1>Request Received!</h1>
+                  
+                  <h5>Thanks for contacting us, we will get back to you shortly.</h5>
+              
+              </div>
+              
+            </div>
+            
+          </div>
+        
+        <div class="alert alert-warning" role="alert" style="display:none" id="blank_error">Oh No! One or more fields was left blank.  Fill in the fields and try again.</div>
+        
+        <div class="alert alert-danger" role="alert" style="display:none" id="posting_error">Oh No! There was a posting error!  Make sure all fields are filled in correctly and try again.</div>
+        
+        <div class="vertical-spacer-lg"></div>
+        
+    </form>
+		
+	</div>
+	
+	<%# partial "/partials/team_contact" %>
+	
+</div>

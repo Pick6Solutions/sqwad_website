@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Questrial);
+
 .new_site{
 	background: white;
 	-webkit-background-size: cover;
@@ -8,7 +10,58 @@
 
 .app_privacy_policy{
   background: white;
-  
+}
+
+.form-input-special{
+  padding-left: 35px;
+  color:black;
+  vertical-align: center;
+  border-radius:10px;
+  height: 40px;
+  width:100%;
+}
+
+#name{
+  background: url(/images/june_name_icon.png) no-repeat scroll 5px;
+  background-color: white;
+}
+
+.connectingWithFansSponsorsBlock{
+  background: url(/images/june_fans_red_bk.png) no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#team{
+  background: url(/images/june_team_icon.png) no-repeat scroll 3px;
+  background-color: white;
+}
+
+#email{
+  background: url(/images/june_email_icon.png) no-repeat scroll 5px;
+  background-color: white;
+}
+
+.connectingFansWithSponsorsText{
+  color: white;
+  font-size: 50px;
+}
+
+.evolveHeaderText{
+  color:#FA023C; 
+  font-size:60px;
+  font-weight: 700;
+}
+
+.digitalInventorySalesText{
+  font-size: 30px;
+  color: white;
+}
+
+.learnMoreClass{
+  font-size: 25px;
 }
 
 /*@font-face {
@@ -45,7 +98,7 @@
 #left-line-new-site-1{
   color:black;
   margin:0;
-  font-family: 'Oswald', sans-serif !important; 
+  font-family: 'Questrial', sans-serif !important; 
   font-weight: 700;
   font-style: bold;
   text-align: left;
@@ -74,7 +127,7 @@
 #left-line-new-site{
   color:black;
   margin:0;
-  font-family: 'Oswald', sans-serif !important; 
+  font-family: 'Questrial', sans-serif !important; 
   font-weight: 700;
   font-style: bold;
   text-align: left;
@@ -137,7 +190,7 @@
 
 
 #realTimeFantasy{
-  font-family: 'Oswald', sans-serif !important; 
+  font-family: 'Questrial', sans-serif !important; 
 }
 
 
@@ -152,7 +205,7 @@
 }
 
 .site_font{
-  font-family: 'Oswald', sans-serif !important; 
+  font-family: 'Questrial', sans-serif !important; 
 }
 
 #headerText{

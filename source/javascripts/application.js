@@ -1,6 +1,30 @@
 var myFirebaseRef = new Firebase("https://sqwadmediumblog.firebaseio.com/");
 anotherFirebaseRef = new Firebase("https://primetimeapp.firebaseio.com/")
 
+//scroll spy when below certain point change color
+$(document).ready(function(){       
+   var scroll_start = 0;
+   var startchange = $('#startColorChange');
+   var startChangeCaseStudy = $('.headerBlockCaseStudies');
+   var startChangeAboutUs = $('.headerBlockAboutUs');
+   var offset = startchange.offset();
+    if (startchange.length){
+   $(document).scroll(function() { 
+      scroll_start = $(this).scrollTop();
+      if(scroll_start > offset.top) {
+          $(".navbar-default").css('background-color', 'black');
+       } else {
+          $('.navbar-default').css('background-color', 'transparent');
+       }
+   });
+    }
+    else if (startChangeCaseStudy.length){
+      $(".navbar-default").css('background-color', 'black');
+    } else if (startChangeAboutUs.length) {
+      $(".navbar-default").css('background-color', 'black');
+    }
+});
+
 var onCompleteSuccess = function(error) {
   if (error) {
     alert("Error message: " + error);
@@ -44,6 +68,117 @@ $(function () {
 // }
 
 $(function(){
+  
+  $('#seattleStormSettings').on('click', function(){
+   $('.thirdBlockBackground')[0].style.backgroundImage = "url('/images/tickets_background.png')";
+   $('#case_icon')[0].src="/images/june_storm_case_icon.png"
+   if($('#statCaseStudy')[0]){
+     $('#statCaseStudy')[0].innerHTML = "SOLD $15,000 IN TICKETS LAST SEASON THROUGH ENGAGEMENT"
+     $('#quoteFromTeam')[0].innerHTML = '"SQWAD engages our fans while giving us tangible ROI."<br>--KENNY DOW, SR. MANAGER, MARKETING'
+     $('.learn_more_button_june')[0].href = "/casestudies.html?storm"
+   } else {
+     $('.case-quote')[0].innerHTML = '"SQWAD engages our fans while giving us tangible ROI."'
+     $('.credit-quote-text-case')[0].innerHTML = '--KENNY DOW, SR. MANAGER, MARKETING'
+     $('.text-below-quote-case-studies')[0].innerHTML = 'The Seattle Storm turns mobile engagment into direct ticketing revenue with SQWAD'
+     $('.text-below-quote-case-studies')[0].style.color = 'white'
+     $('.btn-bottom-casestudy')[0].style.backgroundColor = "#f6df3d"
+     $('.btn-bottom-casestudy')[0].style.color = "#3e5835"
+     $('.aboutTheTeamText')[0].innerHTML = "The Seattle Storm are a WNBA Franchise located in Seattle, Washington.  A storied history includes 2 WNBA titles and all-star players like Sue Bird, Jewell Loyd, and Breanna Stewart."
+     $('.aboutTheTeamText')[1].innerHTML = "-Create a mobile experience that pulls fans in and connects them with the live game"
+     $('.aboutTheTeamText')[2].innerHTML = "-Build customer insights for CRM system"
+     $('.aboutTheTeamText')[3].innerHTML = "-Turn this experience into a vessel to directly sell tickets"
+     $('.aboutTheTeamText')[4].innerHTML = "SQWAD worked with the Storm to build a team mobile app that leveraged our in-game fantasy experience to reach their engagement & revenue goals while offereing their fans a unique mobile experience"
+     $('.storm-green-background-color')[0].style.backgroundColor = '#122102'
+     $('.results-text-case')[0].style.color = "#f6df3d"
+     $('.aboveImagePhotoOrVideoText')[0].innerHTML = "App Platform"
+     $('.aboutTheTeamImage')[0].src = "/images/june_winterhawks_integrations.png"
+     $('.aboutTheTeamImage')[0].style.display = "none"
+     $('.vid-container')[0].style.display = 'block'
+     $('.number-results-case')[0].innerHTML = "1,600+"
+     $('.number-results-case')[1].innerHTML = "16 Minutes"
+     $('.number-results-case')[2].innerHTML = "92%"
+     $('.number-results-case')[3].innerHTML = "3,000"
+     $('.number-results-case')[4].innerHTML = "60%"
+     $('.number-results-case')[5].innerHTML = "$15,000"
+     $('.results-bottom-text')[0].innerHTML = "Monthly Active Users"
+     $('.results-bottom-text')[1].innerHTML = "Average screen time per user per game on the platform"
+     $('.results-bottom-text')[2].innerHTML = "Of fantasy players played from the 1st quarter to the 4th"
+     $('.results-bottom-text')[3].innerHTML = "Fans Added To The CRM System"
+     $('.results-bottom-text')[4].innerHTML = "Of accounts made on platform were new users"
+     $('.results-bottom-text')[5].innerHTML = "In additional ticket sales directly through their mobile application"
+     $('.showStormStuff')[0].style.display = 'block'
+     $('.showStormStuff')[1].style.display = 'block'
+     $('.spokanePageShow')[0].style.display = 'none'
+   }
+  })
+  
+  $('#setPortlandWinterhawks').on('click', function(){
+   $('.thirdBlockBackground')[0].style.backgroundImage = "url('/images/june_winterhawks_background.png')";
+   $('#case_icon')[0].src="/images/june_winterhawks_logo_case.png"
+   if($('#statCaseStudy')[0]){
+      $('#statCaseStudy')[0].innerHTML = "The Portland Winterhawks link their digital experience to their live game"
+      $('#quoteFromTeam')[0].innerHTML = '"Our digital experience is now a part of our gameday, even better it helps sell tickets."<br>--Kelley Robinette, VP of Marketing & Operations'
+      $('.learn_more_button_june')[0].href = "/casestudies.html?winterhawks"
+   } else {
+     $('.case-quote')[0].innerHTML = '"Our digital experience is now a part of our gameday, even better it helps sell tickets."'
+     $('.credit-quote-text-case')[0].innerHTML = '--Kelley Robinette, VP of Marketing & Operations'
+     $('.text-below-quote-case-studies')[0].innerHTML = 'The Portland Winterhawks link their digital experience to their live game'
+     $('.text-below-quote-case-studies')[0].style.color = 'red'
+     $('.btn-bottom-casestudy')[0].style.backgroundColor = "#FA023C"
+     $('.btn-bottom-casestudy')[0].style.color = "white"
+     $('.aboutTheTeamText')[0].innerHTML = "The Portland Winterhawks are a semi-professional hockey team playing in the Western Hockey League. Located in Portland, Oregon the Winterhawks have sent dozens of players to the NHL."
+     $('.aboutTheTeamText')[1].innerHTML = "-Create a mobile experience that gives fans the ability to interact with the game"
+     $('.aboutTheTeamText')[2].innerHTML = "-Integrate the mobile experience into their live gameday in Memorial Coleseum"
+     $('.aboutTheTeamText')[3].innerHTML = "-A rewards system that allowed them to have fans redeem points for autographed & game used rewards"
+     $('.aboutTheTeamText')[4].innerHTML = "Sqwad worked with the Winterhawks to build a team mobile app that leveraged our in-game fantasy experience to reach their fans in stadium. In addition we built scoreboard & social media assets for them to build further reach with their fans."
+     $('.storm-green-background-color')[0].style.backgroundColor = 'red'
+     $('.results-text-case')[0].style.color = "white"
+     $('.aboveImagePhotoOrVideoText')[0].innerHTML = "In-Game Integrations"
+     $('.aboutTheTeamImage')[0].src = "/images/june_winterhawks_integrations.png"
+     $('.aboutTheTeamImage')[0].style.display = "block"
+     $('.vid-container')[0].style.display = 'none'
+     $('.number-results-case')[0].innerHTML = "3,560"
+     $('.number-results-case')[1].innerHTML = "$1,200"
+     $('.number-results-case')[2].innerHTML = "1,800"
+     $('.results-bottom-text')[0].innerHTML = "rewards redeemed to date through the platform"
+     $('.results-bottom-text')[1].innerHTML = "In ticket sales the last month of the season directly through the platform"
+     $('.results-bottom-text')[2].innerHTML = "monthly active users"
+     $('.showStormStuff')[0].style.display = 'block'
+     $('.showStormStuff')[1].style.display = 'none'
+     $('.spokanePageShow')[0].style.display = 'none'
+   }
+  })
+  
+  $('#setSpokaneChiefs').on('click', function(){
+   $('.thirdBlockBackground')[0].style.backgroundImage = "url('/images/june_spokane_background.png')";
+   $('#case_icon')[0].src="/images/june_case_logo_spokane.png"
+   if($('#statCaseStudy')[0]){
+     $('#statCaseStudy')[0].innerHTML = "The Spokane Chiefs link sponsors to digital engagement to drive reach."
+     $('#quoteFromTeam')[0].innerHTML = ''
+     $('.learn_more_button_june')[0].href = "/casestudies.html?chiefs"
+   } else {
+     $('.case-quote')[0].innerHTML = 'The Spokane Chiefs link sponsors to digital engagement to drive reach'
+     $('.credit-quote-text-case')[0].innerHTML = ''
+     $('.text-below-quote-case-studies')[0].innerHTML = ''
+     $('.btn-bottom-casestudy')[0].style.backgroundColor = "#FA023C"
+     $('.btn-bottom-casestudy')[0].style.color = "white"
+     $('.aboutTheTeamText')[0].innerHTML = "The Spokane Chiefs are a semi-professional junior hockey team playing in the Western Hockey League. Located in Spokane, Washington the Chiefs have sent dozens of players to the NHL."
+     $('.aboutTheTeamText')[1].innerHTML = "-Create a new digital experience for fans"
+     $('.aboutTheTeamText')[2].innerHTML = "-Open digital sponsorship inventory and a way for partners to reach fans in a unique and exciting way"
+     $('.aboutTheTeamText')[3].innerHTML = ""
+     $('.aboutTheTeamText')[4].innerHTML = "SQWAD worked with the Chiefs to build a team mobile app that helped their partners reach fans throughout the season. This mobile experience engaged fans and connected them to their partners."
+     $('.storm-green-background-color')[0].style.backgroundColor = '#032D5D'
+     $('.results-text-case')[0].style.color = "white"
+     $('.aboveImagePhotoOrVideoText')[0].innerHTML = "Sponsor Integrations"
+     $('.aboutTheTeamImage')[0].src = "/images/june_spokane_integrations.png"
+     $('.aboutTheTeamImage')[0].style.display = "block"
+     $('.vid-container')[0].style.display = 'none'
+     $('.showStormStuff')[0].style.display = 'none'
+     $('.showStormStuff')[1].style.display = 'none'
+     $('.spokanePageShow')[0].style.display = 'block'
+   }
+  })
+  
   $('.articleDanger').on('click', function(){
     var id = $(this).attr('data-id');
     var refToDestroy = new Firebase("https://sqwadmediumblog.firebaseio.com/submittedArticles/" + id);
@@ -372,6 +507,7 @@ $(function(){
       video2.play();
     }
   });
+  
   
   // $('#video2').on('ended', function () {
   //   video1.load();
